@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<frontmatter xml:id="frontmatter" label="frontmatter">
+    <bibinfo>
+    <author>
+      <personname>Michael Pahlow</personname>
+      <affiliation>
+        <department>Math Division</department>
+      <institution>Green River College</institution>
+      <location>Auburn, Washington</location>
+      </affiliation>
+      <email>mpahlow@greenriver.edu</email>
+    </author>
+    <date><today/></date>
+     </bibinfo>
+        <titlepage>
+          <titlepage-items/>
+        </titlepage>
+</frontmatter>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section xml:id="section-2" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Infinite Series</title>
+  <introduction>
+    <p>
+      In the last section, we looked at infinite sequences, which are patterns of numbers. Now, we turn our attention to infinite series, which is the sum of an infinite 
+      sequence. You encountered summations in integral calculus (Math 152), where we take a finite sum and take a limit to turn it into an integral. Here we 
+      will take a brief tour of infinite series before we look at two special kinds of series - powers series and Taylor series in the next few sections. We are most
+      interested whether a series converges (adds up to a number) or diverges (adds up to infinity).
+    </p>
+    <p>
+    <alert>Summation Notation</alert>
+    </p>
+    <p>
+      Recall that sums may be written like:
+      <md>
+        1+2+3+4+5=\sum_{n=1}^5 n
+      </md>
+      or for an infinite sum
+      <md>
+        1+2+3+4+5+...=\sum_{n=1}^\infty n
+      </md>
+      
+    </p>
+
+  </introduction>
+ <objectives>
+  <title>Infinite Series</title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+    <ul>
+      <li>
+        <p>
+          Look at a few famous series.
+        </p>
+      </li>
+      <li>
+        <p>
+          Determine whether a series converges or diverges using integrals
+        </p>
+      </li>
+      <li>
+        <p>
+          Look at three other ways to tell if a series converges or diverges
+        </p>
+      </li>
+    </ul>
+  </objectives>
+  
+  <subsection>
+    <title>The Geometric and Harmonic Series</title>
+    <p>
+    <alert>Summation Notation</alert>
+    </p>
+    <p>
+      We can write out an infinite series using this compact notation:
+      <md>
+        \sum_{n=1}^\infty a_n
+      </md>
+      The sum symbol is the capital Greek letter Sigma which makes the "s"-sound for sum. Below the <m>\sum</m> is always the variable for the sum and the starting number.
+      Above the <m>\sum</m> is the ending number or infinity. The <m>a_n</m> after the <m>\sum</m> is a formula like we saw in the last section for a sequence.
+    </p>
+    <example>
+      <title>A Geometric Series</title>
+      <p>
+        Consider the series:
+        <md>
+          \sum_{n=1}^\infty \left(\frac{1}{2}\right)^n = \frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+...
+        </md>
+        If we start adding terms, we notice a pattern in the finite (partial) sums:
+      </p>
+      <p>
+      <md>
+        <mrow> \frac{1}{2} \amp + \frac{1}{4} = \frac{3}{4} </mrow>
+        <mrow> \frac{1}{2} \amp + \frac{1}{4} + \frac{1}{8} = \frac{7}{8} </mrow>
+        <mrow> \frac{1}{2} \amp + \frac{1}{4} + \frac{1}{8} + \frac{1}{16}=\frac{15}{16} </mrow>
+        <mrow> \frac{1}{2} \amp + \frac{1}{4} + \frac{1}{8} + \frac{1}{16}+\frac{1}{32}=\frac{31}{32} </mrow>
+        <mrow> \frac{1}{2} \amp + \frac{1}{4} + \frac{1}{8} +...+\left(\frac{1}{32}\right)^n=1-\left(\frac{1}{2}\right)^n</mrow>
+      </md>
+    </p>
+    <p>
+    Taking the limit of this partial sum gives:
+    <md>
+      \sum_{n=1}^\infty = \lim_{k\rightarrow\infty} \sum_{n=1}^k \left(\frac{1}{2}\right)^n = \lim_{k\rightarrow\infty} \left(1-\left(\frac{1}{2}\right)^k\right) = 1
+    </md>
+  </p>
+    </example>
+    <p>
+      Similar to a geometric sequence, a geometric series will converge or diverge depending on the ratio inside the exponent. If the ratio is less than 1, then
+      <md>
+        \sum_{n=1}^\infty c\cdot r^n = \frac{c}{1-r}
+      </md>
+      and if the ration is greater than or equal to one, then the series diverges. Another series that diverges is the harmonic series.
+    </p>
+    <example>
+      <title>The Harmonic Series</title>
+      <p>
+        Consider the series:
+        <md>
+          \sum_{n=1}^\infty \frac{1}{n} = 1 + \frac{1}{2}+\frac{1}{3}+\frac{1}{4}+...
+        </md>
+        </p>
+      <p>
+      If we start grouping terms for this series like this:
+      <md>
+        1+\frac{1}{2}+\left(\frac{1}{3}+\frac{1}{4}\right) + \left(\frac{1}{5}+\frac{1}{6}+\frac{1}{7}+\frac{1}{8} \right) +...
+      </md>
+      where the sum inside each set of "( )" adds up to something <em>greater than</em> 1/2. So the terms in the harmonic series add up to something <em>greater than</em>
+      <md>
+        1 + \frac{1}{2}+ \frac{1}{2}+ \frac{1}{2}+ \frac{1}{2}+ \frac{1}{2}+ \frac{1}{2} +...
+      </md>
+      which very slowly adds up to infinity. So the harmonic series must also diverge.
+    </p>
+    </example>
+  </subsection>
+  <subsection>
+    <title>The Integral Test</title>
+    <p>
+      We already know how to add up something with an infinite amount of terms - the integral. Recall that the limit definition of an integral is:
+      <md>
+        \int_a^b f(x) dx = \lim_{n\rightarrow\infty} \sum_{k=1}^n f(x_k)\Delta x
+      </md>
+      We also have seen that an integral can converge or diverge in the context of improper integrals. So it makes sense that we use our previous knowledge about integrals
+      to determine if an infinite series converge or diverge.
+    </p>
+    <definition>
+      <title>The Integral Test</title>
+      
+      
+      <statement>
+        <p>
+          If <m>f(x)</m> is a continuous, positive, decreasing function on <m>[1,\infty </m>) and <m>a_n = f(n)</m>, Then:
+          <md>
+            <mrow> \text{If}\amp \int_1^\infty f(x)\, dx\,\, \text{converges, then}\,  \sum_{n=1}^\infty a_n \,\, \text{converges.}</mrow>
+          </md>
+          <md>
+            <mrow> \text{If}\amp \int_1^\infty f(x) \,dx\,\, \text{diverges, then}\,  \sum_{n=1}^\infty a_n \,\, \text{diverges.} </mrow>
+          </md>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Here are some examples of the Integral test in action.
+    </p>
+    <example>
+      <p>
+        Does the series <m>\sum_{n=1}^\infty \frac{\ln{n}}{n}</m> converge or diverge?
+      </p>
+      <p>
+        Note that function is positive, continuous and decreasing for <m>n>1</m>. The related integral is 
+        <md>
+          \int_1^\infty \frac{\ln(x)}{x} dx = \lim_{b\rightarrow\infty} \int_1^b \frac{\ln(x)}{x} dx = \left. \lim_{b\rightarrow\infty} \frac{\ln(x)^2}{2}\right\vert_1^b = 
+          \lim_{b\rightarrow\infty} \frac{\ln(b)^2}{2} = \infty
+        </md>
+        Here we used a substitution to find the antiderivative. Since the integral diverges, the related series also diverges
+      </p>
+      
+    </example>
+    <example>
+      <p>
+        Does the series <m>\sum_{n=1}^\infty \frac{1}{n^2 +9}</m> converge or diverge?
+        </p>
+        <p>
+        Note that function is positive, continuous and decreasing for <m>n\geq 1</m>. The related integral is 
+        <md>
+          <mrow>\int_1^\infty \frac{1}{x^2+9} dx = \lim_{b\rightarrow\infty} \int_1^b \frac{1}{x^2+9} dx =  \left. \lim_{b\rightarrow\infty} \frac{1}{3}\arctan\left(\frac{x}{3}\right)\right\vert_1^b =</mrow>
+          <mrow>\lim_{b\rightarrow\infty} \left(\frac{1}{3}\arctan\left(\frac{b}{3}\right)-\frac{1}{3}\arctan\left(\frac{1}{3}\right)\right)= \frac{\pi}{6} - \frac{1}{3}\arctan\left(\frac{1}{3}\right)</mrow>
+        </md>
+        Which is a number, so the integral converges and the related series converges also. We did not find the value that the series converges to, but we do know that it
+        does converge.
+      </p>
+    </example>
+    <p>
+      You may have noticed this in Math 152, when talking about improper integrals. For integrals of the form:
+      <md>
+        \int_1^\infty \frac{1}{x^p} dx 
+      </md>
+    the integral converges if <m>p>1</m> since by the power rule, <m>x</m> stays in the denominator and the limit at infinity tends toward zero. And if <m>p\leq 1</m>
+    then the integral diverges, since the <m>x</m> moves to the numerator and the limit at infinity tends toward infinity. These type of series will be the most common
+    type we encounter in future sections. The related series is called a p-series and converges when <m>p>1</m> and diverges when <m>p \leq 1</m>.
+    </p>
+    <figure>
+      <caption>Some more examples of the Integral Test (9 minutes).</caption>
+        <video youtube="JHTS3WMU7aA"/>
+        
+      </figure>
+  </subsection>
+  <subsection>
+    <title>Three More Tests for Convergence/Divergence</title>
+    <p>
+      While there about ten more tests for the convergence or divergence of infinite series. We will look at just three that will also be vital in future sections.
+    </p>
+    <p>
+      <alert>The Divergence Test</alert>
+    </p>
+    <p>
+      For a series with terms <m>a_n</m>, If:
+      <md>
+        \lim_{n \rightarrow \infty} a_n \not= 0 \,\,\, \text{then}\,\,\, \sum_{n=1}^{\infty} a_n \,\,\, \text{diverges}
+      </md>
+      This can be used when in the related integral would not be quick and easy to calculate but it is clear that limit at infinity of the terms would tend toward zero.
+    </p>
+    <p>
+      <alert>The Limit Comparison Test</alert>
+    </p>
+    <p>
+      If <m>a_n</m> and <m>b_n</m> are positive sequences. Assume that the following limit exists:
+      <md>
+        \lim_{n\rightarrow \infty} \frac{a_n}{b_n} = L
+      </md>
+      </p>
+      <p>
+  <ul>
+    <li>
+      <p>
+        If <m>L>0</m>, then <m>\sum a_n</m> converges if and only is <m>b_n</m> converges.
+      </p>
+    </li>
+    <li>
+      <p>
+        If <m>L \rightarrow \infty</m> and <m>\sum a_n</m> converges, then <m>b_n</m> converges.
+      </p>
+    </li>
+    <li>
+      <p>
+        If <m>L=0</m> and <m>\sum b_n</m> converges, then <m>a_n</m> converges.
+      </p>
+    </li>
+  </ul>
+</p>
+  <p>
+    This test can be used when you have a series that is almost a p-series for which we already know when it converges or diverges.
+  </p>
+  <example>
+    <p>
+      Consider the series:
+      <md> \sum_{n=1}^\infty \frac{n^2}{n^4-1} </md>
+    </p>
+    <p>
+      This series is similar to the series <m> \sum_{n=1}^\infty \frac{1}{n^2} </m>. To use the integral test, we would have to perform a partial fraction decomposition
+      of <m>\frac{x^2}{x^4-1}</m>, which would take some time. However, if we use the limit comparison test with <m>a_n = \frac{n^2}{n^4-1}</m> and <m>b_n = \frac{1}{n^2}</m>
+      <md>
+        \lim_{n\rightarrow\infty} \frac{a_n}{b_n} = \lim_{n\rightarrow\infty} \frac{n^2\cdot n^2}{n^4-1} = 1
+      </md>
+      and since we know that the p-series converges, we know our series also converges.
+    </p>
+  </example>
+  <p>
+    Consider the series:
+    <md>
+      \sum_{n=1}^\infty \frac{1}{n^3+\sin(n)}
+    </md>
+    This series is similar to the series <m> \sum_{n=1}^\infty \frac{1}{n^3} </m> which we know is a convergent p-series. If we use the limit comparison test with <m>b_n</m>
+    as our p-series and <m>a_n</m> as the series we are considering, then
+    <md>
+      \lim_{n\rightarrow \infty} \frac{a_n}{b_n} = \lim_{n\rightarrow \infty} \frac{n^3}{n^3+\sin(n)} = 1
+    </md>
+    and since we know that the p-series converges, we know our series also converges.
+  </p>
+  <figure>
+      <caption>Some more examples of the Integral Test (27 minutes).</caption>
+        <video youtube="Ed_811IVV9Q"/>
+        
+      </figure>
+  
+  <p>
+    <alert>The Alternating Series Test</alert>
+  </p>
+  <p>
+    This is also known as the Leibniz test. If <m>a_n</m> is a positive sequence and <m>\lim_{n\rightarrow \infty} a_n = 0</m>, then the related series
+    <md>
+      S = \sum_{n=1}^\infty (-1)^{n-1} a_n \,\,\, \text{converges}
+    </md>
+  </p>
+  <paragraphs>
+    <title>Reading Check-in</title>
+    
+    
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on series.
+    </p>
+  </paragraphs>
+  </subsection>
+  
+</section>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section xml:id="section-5" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Working with Power Series</title>
+  <introduction>
+    <p>
+     Power series, Taylor series and Taylor polynomials are all useful tools, since they can replace a function like <m>\sin(x)</m> with a polynomial function. In physics
+     and engineering applications, a Taylor polynomial approximation is often sufficient to produce a useful solution.
+
+    </p>
+  </introduction>
+  
+   <objectives>
+  <title>Applications</title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+    <ul>
+      <li>
+        <p>
+          Various applications of Power series and Taylor polynomials
+        </p>
+      </li>
+      </ul>
+  </objectives>
+  <subsection>
+    <title>Applications</title>
+    
+  
+  <example>
+    <title>A Tricky Integral</title>
+    <p>
+      
+    </p>
+    
+  </example>
+
+  <example>
+    <title>Evaluating a Limit</title>
+    <p>
+      
+    </p>
+    
+  </example>
+
+  <example>
+    <title>A Pendulum Approximation</title>
+    <p>
+      
+    </p>
+    
+  </example>
+
+  <example>
+    <title>Calculating a Square Root</title>
+    <p>
+      
+    </p>
+    
+  </example>
+
+  <example>
+    <title>Einstein versus Newton</title>
+    <p>
+      
+    </p>
+    
+  </example>
+</subsection>
+</section>

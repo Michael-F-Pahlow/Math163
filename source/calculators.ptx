@@ -1,0 +1,18 @@
+<section xml:id="sec-calculators">
+    <title>Calculators</title>
+    <introduction>
+        <p>
+            These notes include a pop-up GeoGebra-3D calculator. If you click on the calculator icon on the top of each page, then a GeoGebra-3D calculator will pop-up 
+            in the lower right of the screen. You can find more about the free GeoGebra calculators at <url href="https://www.geogebra.org/"/>.
+        </p>
+        <p>
+            For a regular graphing calculator, you may use a TI-84 graphing calculator, the Desmos calculator or I recommend the Numworks calculator, which is available as 
+            a free iPhone or Android app! Or you can use the embedded emulator below.
+        </p>
+    
+    <figure>
+        <caption>The Numworks Calculator</caption>
+        <interactive iframe ="https://www.numworks.com/simulator/embed/" width="368px" height="720px"/>
+    </figure> 
+</introduction>   
+</section>

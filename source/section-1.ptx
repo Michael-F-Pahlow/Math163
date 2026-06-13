@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section xml:id="section-1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Sequences</title>
+  <introduction>
+    <p>Mathematics is the study of patterns. Patterns can be patterns of shapes, like <url href="https://fractalfoundation.org/resources/what-are-fractals/" visual="fractals"/>,
+    a pattern of calculations, like <url href="https://aperiodical.com/2021/12/pascals-triangle-and-its-secrets-introduction/" visual="Pascal's triangle"/>
+    or patterns of <url href="https://oeis.org/" visual="numbers"/>. </p>
+
+    <p>
+      For Math 163, we will be looking at sequences of numbers and more specifically, what happens with the pattern of numbers in the long run.
+      In other words, we will be taking limits of sequences at <m>\infty</m>.
+    </p>
+  </introduction>
+  <objectives>
+    <title>Sequences</title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+    <ul>
+      <li>
+        <p>
+          Turning a sequence (pattern) of numbers into a formula.
+        </p>
+      </li>
+      <li>
+        <p>
+          Explore a few famous sequences.
+        </p>
+      </li>
+      <li>
+        <p>
+          Take limits of sequences.
+        </p>
+      </li>
+    </ul>
+  </objectives>
+  
+  <subsection>
+    <title>Turning a Sequence into a Formula</title>
+    <p>Many sequences can be defined by a formula using the variable <m>n</m> where <m>n</m> represent the natural numbers 1, 2, 3, 4,...
+      you can even turn a function into a sequence by replacing the <m>x</m> in a function formula with an <m>n</m>. 
+      For example, <m>f(n) = n^2</m> is the sequence 1, 4, 9, 16,... We usually use <m>a_n</m> instead of <m>f(n)</m>
+      when we write out formulas for sequences. 
+    </p>
+    <example>
+      <title>Example: A Sequence of Fractions</title>
+       <p>
+          Consider the sequence of fractions: <m>1/2, 2/3, 3/4,.. </m>
+       </p>
+       <p> Notice that the numerator starts at one and the denominator starts at 2.
+          If we use <m>n = 1, 2, 3,...</m>, then we can define <m>a_n = \frac{n}{n+1}</m>. Formulas for sequences are not unique. 
+          <m>a_n = 1 - \frac{1}{n}</m> also generates the terms <m>1/2, 2/3, 3/4,...</m>
+        </p>
+      </example>
+       <p>
+        A common type of sequence is one that alternates signs from positive to negative. One way to achieve an alternating sign is to multiply
+        by powers of -1, since odd powers of -1 are negative and even powers of -1 are positive.
+      </p>
+    <example>
+      <title>Example: An Alternating Sequence</title>
+       <p>
+        Consider the sequence of fractions: <m>-2/3, 3/9, -4/27, 5/81,...</m>
+       </p>
+       <p>
+        There are three things to note in this sequence. First, the signs alternate, starting with a negative number. Second, the numerator starts
+        at 2 and increases by 1 for each successive term. And third, the denominator contains powers of 3, starting with <m>3^1</m>
+       </p>
+       <p>
+        Putting these together we can write down the formula <m>a_n = \frac{(-1)^n(n+1)}{3^n}</m> for <m>n= 1, 2, 3, ...</m>
+       </p>
+    </example>
+    <p>
+      We saw in the previous example, that a common pattern is powers of a number which creates an exponential factor in our sequence formula.
+      Here is another example with exponential factors.
+    </p>
+      <example>
+      <title>Example: An Sequence with Exponentials</title>
+        <p>
+        Consider the sequence <m>1, -2/3, 4/9, -8/27,...</m>
+      </p>
+      <p>
+        Here again, we have an alternating sign. The numerator consists of powers of 2 and the denominator consists of powers of 3. This sequence
+        starts at 1, which we get from an exponent of zero. Putting the pieces together, we get <m>a_n = \frac{(-1)^n 2^n}{3^n} = (\frac{-2}{3})^n</m>
+        for <m>n=0,1,2,3,...</m>
+      </p>
+    </example>
+    <p>Another operation that is common in sequences and in the infinite series that we will see in the coming sections is the factorial. Factorial is the product of 
+    integers starting at 1. (Multiplying by 0 would always give zero, so this is not a very interesting place to start.) The notation for the factorial is !. As an example,
+    <m> 5! = 1*2*3*4*5 = 120</m>. Once you have some practice using factorials, you will start to recognize the pattern.</p>
+    <p>
+    <ul>
+      <li>
+        <m>1! = 1</m>
+      </li>
+      <li>
+        <m>2! = 1\cdot 2 = 2</m>
+      </li>
+      <li>
+        <m> 3! = 1\cdot 2\cdot 3 = 6 </m>
+      </li>
+      <li>
+        <m> 4! = 1\cdot 2\cdot 3\cdot 4 = 24 </m>
+      </li>
+      <li>
+        <m> 5! = 1\cdot 2\cdot 3\cdot 4\cdot 5 = 120 </m>
+      </li>
+      <li>
+        <m> 6! = 1\cdot 2\cdot 3\cdot 4\cdot 5\cdot 6 = 720 </m>
+      </li>
+      <li>
+        <p> and so on</p>
+      </li>
+    </ul>
+  </p>
+      <example>
+      <title>Example: An Sequence with Factorials</title>
+        <p>
+        Consider the sequence <m>5/1, 25/2, 125/6, 625/24,...</m>
+      </p>
+      <p>
+        The numerator is powers of 5 and the denominator is the factorial pattern. A formula for the sequence is <m>a_n = \frac{5^n}{n!}</m>
+      </p>
+    </example>
+    <p>
+      Another common type of pattern is a pattern or either even or odd numbers.
+    </p>
+    <example>
+      <title>Example: Evan and Odd Numbers</title>
+        <p>
+        Consider the sequence: <m>1/2, 3/4, 5/6,7/8, 9/10</m>
+      </p>
+      <p>
+        The numerator is made up of consecutive odd numbers and the denominator is made up of consecutive even numbers. We can create a sequence of even numbers by simply
+        doubling the natural numbers. If <m>n=1,2,3,4,...</m> then <m>2n = 2, 4, 6, 8,...</m>. If we then add or subtract 1 to each term in this sequence will give the odd numbers.
+        <m>2n-1 = 1, 3, 5, 7,...</m> and <m>2n+1 = 3, 5, 7, 9,...</m>. In this example, we want to start at 1 in the numerator. So <m>a_n = \frac{2n-1}{2n}</m>.
+      </p>
+    </example>
+     </subsection>
+
+  <subsection>
+    <title>Three Famous Sequences</title>
+
+    <example>
+      <title>Arithmetic Sequences</title>
+      <p>
+        An arithmetic sequence is the sequence version of a linear function. It is characterized by a starting point and a common difference (slope). The common difference 
+        is what you always get when you subtractive two successive terms in an arithmetic sequence.
+      </p>
+      
+        <p>
+          Consider the sequence: 6, 10, 14, 18, ...
+        </p>
+        <p>
+          The sequence starts at 6 and increases by 4 for each successive term. Note <m>10-6 = 4, 14-10 = 4, 18-14=4</m>, etc. is the common difference.
+        </p>
+        <p>
+          A formula for this sequence is <m>a_n = 6+4n</m> if we use <m>n =0, 1, 2, 3,...</m>
+        </p>
+      </example>
+    
+    <example>
+      <title>Geometric Sequences</title>
+      <p>
+        A geometric sequence is the sequence version of an exponential function. It is characterized by a starting point and a common ratio. The common ratio is the
+        constant number you always get when you divide two successive terms.
+      </p>
+      
+        <p>
+          Consider the sequence: <m>5, 5/2, 5/4, 5/8,...</m>
+        </p>
+        <p>
+          The sequence starts at 5 and we get each new term by multiplying by <m>\frac{1}{2}</m>, which is the common ratio. A formula for this sequence is
+          <m>a_n = 5(\frac{1}{2})^n</m> for <m>n =0, 1, 2, 3,...</m>.
+        </p>
+           <p>
+        Note that if the common ratio is less than one, then the sequence is shrinking toward zero and that if the common ratio were greater than 1, then the sequence is
+        always growing. If the common ratio were 1, then the sequence would be stuck at the starting point.
+      </p>
+    </example>
+
+    <example>
+      <title>The Fibonacci Sequence </title>
+      <p>
+        The Fibonacci sequence is named after Leonardo of Pisa, also known as Fibonacci, and was introduced in his book <em>Liber Abaci</em> in 1202 to model an increasing
+        rabbit population. It is constructed by adding the two previous terms of the series to get the next term of the series. So if the first two terms of the series are 
+        <m>f_1=2</m> and <m>f_2 = 5</m>, the next term in the series would be <m>f_3 = 7</m>. A few more terms would be 12, 19, 31,... Since successive terms in the series depend on 
+        previous terms, this type of sequence is called a recursive sequence. 
+      </p>
+    </example>
+  
+    <figure>
+      <caption>Here is a video with a few more examples of these sequences (18 minutes).</caption>
+    <video youtube="-_myO_Lmdbw"/>
+    </figure>
+  
+    
+<paragraphs>
+    <title>Reading Check-in</title>
+     
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on sequences.
+    </p>
+  </paragraphs>
+  
+</subsection>
+
+  <subsection>
+    
+    <title> Limits of Sequences</title>
+    <p>
+      An important thing we want to know about infinite sequences is what happens to the sequence as the terms approach infinity.
+    </p>
+    <p>
+      If <md>\lim_{n\rightarrow\infty} a_n = L</md> where <m>L</m> is a real number, then the sequence is called convergent.
+    </p>
+    <p>
+      If the limit does not exist or approaches infinity, then the sequence is called divergent.
+    </p>
+    <p>
+      This is similar to convergent or divergent improper integrals that you encountered in Calculus II (Math 152).
+    </p>
+    <p>
+      For the most part you can calculate these limits at infinity, using the tools you learned in Calculus I for the limits of functions, things like the limit laws,
+      the squeeze theorem, l'Hospital's rule and known long-run behavior of specific functions.
+    </p>
+    <example>
+      <title>Long-run Behavior of Arctan</title>
+      <p>
+      <md> \lim_{n\rightarrow\infty} \arctan(2n) = \frac{\pi}{2} </md> 
+      </p>
+      <p>
+        This sequence converges since the long-run behavior of the arctan function tends towards <m>\frac{\pi}{2}</m>
+      </p>
+    </example>
+<example>
+  <title>l'Hopital's Rule</title>
+  
+  
+      <p>
+      <md> \lim_{n\rightarrow\infty} \frac{3+5n^2}{n+n^2} = 5 </md> 
+      </p>
+      <p>
+        This sequence converges since the long-run behavior of a rational function tends towards the ratio of its leading coefficients. Two applications of
+        l'Hopital's rule will produce the same result.
+      </p>
+    </example>
+    <example>
+      <title>Squeeze Theorem</title>
+      
+      
+      <p>
+      <md> \lim_{n\rightarrow\infty} \frac{\cos^2(n)}{2^n}= 0 </md> 
+      </p>
+      <p>
+        The limit of this sequence can be found using the squeeze theorem. Since <m>0\leq \cos^2(n) \leq 1</m>, we can trap the sequence <m>O \leq \frac{\cos^2(n)}{2^n}
+          \leq \frac{1}{2^n}</m> and since <m>\frac{1}{2^n}</m> tends towards zero, the sequence is also squeezed down to zero.
+      </p>
+    </example>
+<example>
+  <title>Limit Laws</title>
+  
+  
+      <p>
+      <md> \lim_{n\rightarrow\infty} \sqrt{\frac{n+1}{9n+1}}= \frac{1}{3} </md> 
+      </p>
+      <p>
+        Using the limit law that says we can pull the limit inside the square root, we can evaluate the limit inside the square root to get 1/9 and then take the square 
+        root of 1/9 to get 1/3.
+      </p>
+    </example>
+    <example>
+      <title>An Unbounded Sequence</title>
+      
+      
+      <p>
+      <md> \lim_{n\rightarrow\infty} (6n-5) = \infty </md> 
+      </p>
+      <p>
+        Since the sequence grows without bound, this sequence diverges.
+      </p>
+    </example>
+    <p>
+      A way of determining if a sequence converges that is unique to sequences is called the bounded-monotonic sequence property. If a sequence is bounded, where all of the 
+      terms are trapped between two numbers (similar to the squeeze theorem) and if the sequence is monotonic, meaning that it is always increasing or always decreasing,
+      then that sequence must converge. Think about it for a minute to figure out why this is true.
+    </p>
+    <example>
+      <title>A Bonunded, Monotonic Sequence</title>
+      
+      
+      <p>
+        Consider the sequence <m>a_n = \frac{3^{n+2}}{5^{n}}</m>.
+      </p>
+      <p>
+        The first few terms of the sequence are <m>\frac{9}{5}, \frac{27}{25}, \frac{81}{125}, \frac{243}{625}, ...</m> if we start the sequence at <m>n=1</m>. The sequence is bounded 
+        above by <m>\frac{9}{5}</m> and below by zero. Terms are always getting smaller, so the sequence is monotonically decreasing. Therefore, the sequence must converge.
+        Taking the limit gives zero since the can be written as <m>a_n = 9(3/5)^n</m> which is a geometric series with a common ratio less than one.
+      </p>
+      </example>
+      <example>
+        <title>A Bounded Sequence that Diverges</title>
+        
+        
+        <p>
+          Consider the sequence <m>a_n = \cos(\pi n) = 1, -1, 1, -1,...</m>
+        </p>
+        <p>
+          The sequence is clearly bounded by -1 and 1. However, there is no way to find the limit at infinity since the sequence continues to oscillate between -1 and 1 
+          without ever "settling down" a single value.
+        </p>
+      </example>
+      <example>
+        <title>A Non-Montonic Sequence that Converges</title>
+        <p>
+          Consider the sequence: <m>a_n = \frac{(-3)^n}{n!} = 1, -3, \frac{9}{2}, \frac{-27}{6},...</m>
+        </p>
+        <p>
+          Since the sequence oscillates between positive and negative values, the sequence also oscillates between increasing and decreasing, so the sequence is not
+          monotonic. The function is also bounded between some positive and negative values. (-100 and 100 will work.) However, in the long-run, the denominator grows at a
+          faster rate than the numerator and the sequence converges to zero.
+        </p>
+      </example>
+      <p>
+        Here are a few more videos with further examples.
+      </p>
+      <figure>
+        <caption>Some examples of converging or diverging sequences using limits (30 minutes)</caption>
+        <video youtube="XdkoTb8PEG0"/>
+      </figure>
+    <figure>
+      <caption>Some examples of bounded, monotonic sequences (31 minutes).</caption>
+        <video youtube="tHy3TXmZpF0"/>
+        
+      </figure>
+      <paragraphs>
+    <title>Reading Check-in</title>
+    
+    
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on limits of sequences.
+    </p>
+  </paragraphs>
+  </subsection>
+  
+</section>

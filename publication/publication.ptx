@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<publication>
+    <!-- directories are relative to the main source PreTeXt file -->
+    <source>
+        <directories external="../assets" generated="../generated-assets"/>
+    </source>
+
+    <common>
+        <worksheet margin="1in"/>
+        <worksheet> 
+            <first-page-header left="Group Names:" right="Math 163"/>   
+            <running-header right="Math 163"/>
+        </worksheet> 
+    </common>
+    <html>
+        <knowl example="no" />
+        <calculator model = "geogebra-3d"/>
+        <css palette ="greens"/>
+        </html>
+    <numbering>
+        <examples level="1"/>
+    </numbering>
+</publication>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section xml:id="section-17" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Lagrange Multipliers</title>
+   <introduction>
+    <p>
+     Power series, Taylor series and Taylor polynomials are all useful tools, since they can replace a function like <m>\sin(x)</m> with a polynomial function. In physics
+     and engineering applications, a Taylor polynomial approximation is often sufficient to produce a useful solution.
+
+    </p>
+  </introduction>
+  
+   <objectives>
+  <title>Lagrange Multipliers</title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+    <ul>
+      <li>
+        <p>
+          Look at an example of using Lagrange multipliers.
+        </p>
+      </li>
+      <li>
+        <p>
+          Learn a method for using a spreadsheet to solve an optimization problem.
+        </p>
+      </li>
+      </ul>
+  </objectives>
+  <subsection>
+    <title>A Lagrange Multipliers Example</title>
+    
+  
+  <example>
+    <title>Lagrange Multipliers by Hand</title>
+    <p>
+      
+    </p>
+    
+  </example>
+  </subsection>
+  <subsection>
+    <title>Using Excel for Optimization with Constraints</title>
+    <p>
+      
+    </p>
+  </subsection>
+</section>

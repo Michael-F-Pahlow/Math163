@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section xml:id="section-3" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Power Series</title>
+  <introduction>
+    <p>
+      A power series is an infinite polynomial that all of the functions we know and love are equal to.
+      <md>
+        f(x) = a_0 + a_1 x+ a_2 x^2 + a_3 x^3 + ... = \sum_{n=0}^\infty a_nx^n
+      </md>
+      
+      Power series are a foundational part of the study of functions. I have a calculus textbook from the 1950's that covers power series first before it covers limits,
+       derivatives and integrals. (<em>Calculus</em> by Tomlinson Fort, D. C. Heath and Company, Boston, 1951). Power series are also how a calculator or computer actually 
+       calculates function values. When you type <tag>sin(5)</tag> into your calculator, it is not actually actually evaluating the sine function but instead using the related
+       power series for sine to make its calculation! For now, I will introduce a few power series for well-known functions and when they converge and diverge before we
+       look at how we can build a power series from scratch in the next section.
+
+    </p>
+  </introduction>
+  
+   <objectives>
+  <title>Power Series</title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+    <ul>
+      <li>
+        <p>
+          Power series of some well-known functions.
+        </p>
+      </li>
+      <li>
+        <p>
+          Determine the radius of convergence of power series.
+        </p>
+      </li>
+          </ul>
+  </objectives>
+  <subsection>
+    <title>Some Well Known Power Series</title>
+    <p>
+      We will now look at a few examples of some well-known power series and also a couple of examples of how we can use a known power series to find a new power series.
+    </p>
+    <example>
+      <title>A Geometric Series</title>
+      <p>
+        One power series we can define easily is a series base on a geometric series. We saw in the last section that
+        <md>
+          \sum_{n=0}^\infty ar^n = \frac{a}{1-r}
+        </md>
+         If we let <m>a=1</m> and <m>r=x</m> then
+         <md>
+          f(x) = \sum_{n=0}^\infty x^n = \frac{1}{1-x}
+         </md>
+         
+      </p>
+      
+    </example>
+    <example>
+      <title>Another Geometric Series</title>
+      <p>
+        We can find other similar series by some factoring and substitution.
+        <md>
+          f(x) = \frac{1}{3-6x} = \frac{1}{3}\cdot\frac{1}{1-(2x)} = \frac{1}{3}\sum_{n=0}^\infty (2x)^n = \sum_{n=0} \frac{2^n}{3} x^n
+        </md>
+        We try to write a power series as a product of sequence of coefficients times powers of <m>x</m>.
+      </p>
+      
+    </example>
+    <example>
+      <title>A Third Geometric Series</title>
+      <p>
+        <md>
+          f(x) = \frac{1}{1+x^2} = \frac{1}{1-(-x^2)} = \sum_{n=0}^\infty (-x^2)^n = \sum_{n=0}^\infty (-1)^n x^{2n} = 1 - x^2 + x^4 - x^6 +...
+        </md>
+        
+      </p>
+      
+    </example>
+    <example>
+      <title>Power Series of <m>\arctan(x)</m></title>
+      <p>
+        Since a power series is just an infinite polynomial, we can differentiate or integrate a known power series using the power rule to get a new power series. Since
+        <md>
+          \int \frac{1}{1+x^2} dx = \arctan(x)
+        </md>
+        <md>
+          \int \sum_{n=0}^\infty (-1)^n x^{2n} = \sum_{n=0}^\infty \frac{(-1)^n x^{2n+1}}{2n+1}
+        </md>
+        
+      </p>
+      
+    </example>
+    <example>
+      <title>A Power Series from Differentiation</title>
+      <p>
+        Since:
+        <md>
+          \frac{d}{dx} \left(\frac{1}{1-x}\right) = \frac{1}{(1-x)^2}
+        </md>
+        <md>
+          \frac{d}{dx} \sum_{n=0}^\infty x^n = \sum_{n=1}^\infty (n)x^{n-1}
+        </md>
+        Note that when differentiating, we change the starting point of our sum from zero to one, since the <m>a_0</m> is a constant in the starting series and becomes
+        zero when we take the derivative and the new series starts at the <m>a_1</m> term.
+      </p>
+      
+    </example>
+    <example>
+      <title>Power Series of Sine, Cosine and <m>e^x</m></title>
+      <p>
+        Three of the most used series are the series for <m>\sin(x), \, \cos(x)</m> and <m>e^x</m>. We will see in the next section, how to build these series from scratch.
+        for now we define.
+        <md>
+          <mrow> e^x =  \amp \sum_{n=0}^\infty \frac{x^n}{n!}</mrow>
+          <mrow> \sin(x) =  \amp \sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{(2n+1)!}</mrow>
+          <mrow> \cos(x)=  \amp \sum_{n=0}^\infty (-1)^n\frac{x^{2n}}{(2n)!}</mrow>
+        </md>
+        Note that the derivative of the sine series is the cosine series. Also note if you replace <m>x </m> in the exponential series with <m>ix</m> where <m>i</m> is
+        the imaginary number then the sum of the cosine series plus <m>i \times</m>the sine series equals the exponential series! (Euler's formula)
+      </p>
+    </example>
+      <figure>
+      <caption>Euler's Formula on Numberphile (22 minutes).</caption>
+        <video youtube="CRj-sbi2i2I"/>
+        
+      </figure>
+    
+  </subsection>
+  <subsection>
+    <title>Intervals of Convergence</title>
+    <p>
+      A key thing we want to know for a power series is where it converges. This is analogous to finding the domain of a function. This is where we need to know a few
+      convergence/divergence tests from the previous section. When we find the <m>x-</m>values where a series converges, this interval is known as the interval of convergence.
+      For example, the base geometric series is known to converge when <m>\vert x\vert \lt 1 </m> which can also be written as an interval <m>(-1, 1)</m> or a trilinear inequality <m>-1 \lt x \lt 1</m>
+    </p>
+    <example>
+      <title>An Interval of Convergence that Includes Only One Endpoint</title>
+      <p>
+        Consider the power series:
+        <md>
+          \sum_{n=1}^\infty \frac{(x-3)^n}{n}
+        </md>
+        We need to think about what happens when we plug in various values of <m>x</m>. If <m>x=4</m>, the resulting series is the harmonic series <m>\sum_{n=1}^\infty \frac{1}{n}</m>
+        which is known to converge. If <m>x=2</m> we get an alternating series <m>\sum_{n=1}^\infty \frac{(-1)^n}{n}</m> which converges by the alternating series test. If <m> 2 \lt x \lt 4 </m>
+        The result is a geometric-like series which we can use the limit comparison test with a geometric series to show converges. Finally, if the <m>x \lt 2</m> or <m>x \gt 4</m>,
+        then the resulting sequence inside the series would not tend to zero, so it would diverge by the divergence test. Putting this all together gives and interval of convergence of
+        <m>2 \leq x \lt 4</m>
+
+      </p>
+      
+    </example>
+    <example>
+      <title>An Interval of Convergence that Includes Both Endpoints</title>
+      <p>
+        Consider the power series:
+        <md>
+          \sum_{n=1}^\infty \frac{(x-2)^n}{n^2+1}
+        </md>
+       Again we can try various values of <m>x</m>. If <m>x=3</m>, the resulting series is one where the sequence inside the series is <m>\frac{1}{n^2+1}</m> and the series 
+       can be shown to converge by the integral test, since <m>\int \frac{1}{x^2+1} dx = \arctan(x) </m>. If <m>x=1</m>, the resulting series is an alternating series that converges 
+       by the alternating series test. Since the series converges at <m>x=1</m> and <m>x=3</m>, it makes sense that it also converges for values between these two points. Like
+       in the previous example, if <m>x</m> is not between 1 and 3, then the resulting series would diverge by the divergence test.
+      </p>
+      
+    </example>
+    <example>
+      <title>An Infinite Interval of Convergence</title>
+      <p>
+        Consider the series:
+        <md>
+          \sum_{n=1}^\infty \frac{x^n}{(2n-1)!}
+        </md>
+        For any value of <m>x</m> that we choose, we get something that looks like a geometric series over a factorial. If we use the limit comparison test with <m>a_n = (x)^n/(2n-1)!</m>
+        and <m>b_n = (x)^n</m>, then the limit would always tend to zero because of the factorial in the denominator. So this power series converges for all values of<m>x</m>.
+      </p>
+      
+    </example>
+    <example>
+      <title>An Interval of Convergence that Includes Only One Point</title>
+      <p>
+        Consider the series:
+        <md>
+          \sum_{n=1}^\infty nx^n
+        </md>
+        If we let <m>x=0</m> then the resulting series would just be <m>0+0+0+0+...=0</m>. For any other value of <m>x</m>, the  resulting series would diverge by the 
+        divergence test. So this series only converges for <m>x=0</m>.
+      </p>
+    </example>
+    <figure>
+      <caption>Professor Dave Explains Power Series (7 minutes).</caption>
+        <video youtube="OxVBT83x8oc"/>
+        
+      </figure>
+      <paragraphs>
+    <title>Reading Check-in</title>
+    
+    
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on power series.
+    </p>
+  </paragraphs>
+  </subsection>
+  
+</section>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section xml:id="worksheets" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Worksheets for Math 163</title>
+  <p>Under Construction</p>
+
+  <worksheet>
+    <title>Sequences</title>
+    
+        <p> blah blah blah </p>
+  </worksheet>
+
+  <worksheet>
+    <title>Power Series</title>
+    
+        <p> blah blah blah </p>
+  </worksheet>
+  
+  <worksheet>
+    <title>Taylor Series</title>
+    
+        <p> blah blah blah </p>
+  </worksheet>
+
+  <worksheet>
+    <title>Taylor Series</title>
+    
+        <p> blah blah blah </p>
+  </worksheet>
+
+  <worksheet>
+    <title>Taylor Series</title>
+    
+        <p> blah blah blah </p>
+  </worksheet>
+
+  <worksheet>
+    <title>Taylor Series</title>
+    
+        <p> blah blah blah </p>
+  </worksheet>
+
+  <worksheet>
+    <title>Partial Derivatives</title>
+    
+    <p> blah blah blah </p>
+  </worksheet>
+
+  <worksheet>
+    <title>The Second Derivative Test</title>
+     <exercise workspace="$1">
+    
+     </exercise>
+    <p> blah blah blah </p>
+  </worksheet>
+
+  <worksheet>
+    <title>Double Integrals</title>
+    <introduction>
+      <p>
+        
+      </p>
+    </introduction>
+    <exercise>
+      <p> blah blah blah </p>
+  
+    </exercise>
+  </worksheet>  
+    
+
+  <worksheet>
+    <title>Applications of Double Integrals</title>
+    
+    
+    <p> blah blah blah </p>
+  </worksheet>
+</section>
