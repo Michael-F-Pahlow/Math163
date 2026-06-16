@@ -3,9 +3,10 @@
   <title>Lagrange Multipliers</title>
    <introduction>
     <p>
-     Power series, Taylor series and Taylor polynomials are all useful tools, since they can replace a function like <m>\sin(x)</m> with a polynomial function. In physics
-     and engineering applications, a Taylor polynomial approximation is often sufficient to produce a useful solution.
-
+     The method of Lagrange multipliers is a way to solve an optimization problem for a multi-variable function subject to one or more constraint equations. The method
+     is named after the French mathematician Joseph-Louis Lagrange who formulated the method in the 18th century. Lagrange also formulated the mean value theorem and 
+     succeeded Euler at the Berlin Academy at the invitation of Frederick the Great. His name is also one of the 72 great French men of science on the Eiffel tower. (The names
+     of 72 great French women of science are currently being added.)
     </p>
   </introduction>
   
@@ -32,21 +33,73 @@
       </ul>
   </objectives>
   <subsection>
-    <title>A Lagrange Multipliers Example</title>
-    
+    <title>A Lagrange Multipliers by Hand</title>
+    <p>
+      The method of Lagrange multipliers adds an extra variable, the Lagrange multiplier and usually denoted with <m>\lambda</m> for each constraint equation, setting up a system
+      of equations where we solve for the value of the variables and the Lagrange multiplier at the maximum or minimum for a given function. So if we have a function, <m>f(x,y,z)</m>
+      that we want to optimize that is subject to a constraint equation <m>g(x,y,z)=C</m>, then the Lagrange multiplier is used in the equation <m>\nabla f(x,y,z) = \lambda \nabla g(x,y,z) </m>.
+      This generates three equations and four unknowns. Adding the constraint equation gives a fourth equation, so overall, we would have system with four equations and four unknowns 
+      to solve. 
+    </p>
   
   <example>
-    <title>Lagrange Multipliers by Hand</title>
+     
     <p>
-      
-    </p>
-    
+      Find the extreme values of the function <m>f(x,y) = x^2 + 2y^2</m> on the circle <m>x^2+y^2 = 1</m>.
+      </p>
+      <p>
+        <m>\nabla f(x,y) = \lambda \nabla g(x,y)</m> plus the constraint equation gives the three equations:
+        <md>
+          <mrow> 2x =\amp\lambda (2x) </mrow>
+          <mrow> 4y = \amp \lambda (2y) </mrow>
+          <mrow>x^2+y^2 \amp = 1 </mrow>
+        </md>
+        </p>
+        <p>
+        From the first equation we have <m>\lambda = 1</m> or <m>x=0</m>. If <m>x=0</m>, then the last equation gives <m>y= \pm 1</m>.
+      </p>
+      <p>
+        If <m>\lambda = 1</m>, then the second equation gives <m>y=0</m>. Plugging this in the last equation gives <m>x=\pm 1</m>.
+      </p>
+      <p>
+      So we have four solution points: (0, 1), (0, -1), (1, 0) and (-1, 0). Evaluating at these four points gives maximum values for <m>f(x,y)</m> of 2 at (0, 1) and (0,-1)
+      and minimum values of 1 at (1, 0) and (-1, 0).
+      </p>
+      <p>
+        This process of Lagrange multipliers is straightforward but can be laborious. Fortunately, there is a way for Excel to do the work for us!
+      </p>
   </example>
   </subsection>
   <subsection>
     <title>Using Excel for Optimization with Constraints</title>
     <p>
-      
+      Please watch the following videos that will show you some examples on how to use Excel to optimize using Lagrange multipliers. This method uses a Solver built into
+      Excel. Frontline Systems, the company the makes the standard add-ons for Excel, used to provide there add-ons for Google sheets as well, but it appears that Google
+      sheets no longer supports the Frontline Solver. Fortunately, Green River students can get a free! copy of Excel. Here are the <url href="https://libguides.greenriver.edu/c.php?g=1398644&amp;p=10346749" visual="directions"/>
+      on how you can download your free copy of Microsoft office.
     </p>
+
+    <figure>
+      <caption>Lagrange Multipliers Example 1 (11 minutes).</caption>
+    <video youtube="35rHKc6WDSE"/>
+    </figure>
+  
+    <figure>
+      <caption>Lagrange Multipliers Example 2 (9 minutes).</caption>
+    <video youtube="x-FGhFIBszU"/>
+    </figure>
+  
+    <figure>
+      <caption>Lagrange Multipliers Example 3 (6 minutes).</caption>
+    <video youtube="sFO05iulSxk"/>
+    </figure>
+  
   </subsection>
+  <paragraphs>
+    <title>Reading Check-in</title>
+     
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on Lagrange multipliers.
+    </p>
+  </paragraphs>
 </section>
