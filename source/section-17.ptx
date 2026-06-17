@@ -32,7 +32,7 @@
       </li>
       </ul>
   </objectives>
-  <subsection>
+  <subsection xml:id="subsec-lagrange-multipliers-by-hand">
     <title>A Lagrange Multipliers by Hand</title>
     <p>
       The method of Lagrange multipliers adds an extra variable, the Lagrange multiplier and usually denoted with <m>\lambda</m> for each constraint equation, setting up a system
@@ -70,7 +70,7 @@
       </p>
   </example>
   </subsection>
-  <subsection>
+  <subsection xml:id="subsec-using-excel-for-lagrange-multipliers">
     <title>Using Excel for Optimization with Constraints</title>
     <p>
       Please watch the following videos that will show you some examples on how to use Excel to optimize using Lagrange multipliers. This method uses a Solver built into

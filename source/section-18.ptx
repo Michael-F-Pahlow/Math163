@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="section-18" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Double Integrals</title>
-  <p>Under Construction</p>
+  <introduction>
+    <p>
+      blah blah blah
+    </p>
+  </introduction>
+  <objectives>
+    <title>Double Integrals</title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+
+    <ul>
+      <li>
+        <p>
+          Calculating double integrals over rectangles
+        </p>
+      </li>
+      <li>
+        <p>
+          Iterated integrals and their properties
+        </p>
+      </li>
+      
+          </ul>
+  </objectives>
+  <subsection xml:id="subsec-double-integrals-rectangles">
+    <title>Double Integrals over Rectangles</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-iterated-integrals">
+    <title>Iterated Integrals</title>
+    <p>
+      
+    </p>
+  </subsection>
+ 
 </section>

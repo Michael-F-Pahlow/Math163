@@ -1,5 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="section-6" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>2D Vectors</title>
- <p>Under Construction</p>
+ <introduction>
+    <p>
+      blah blah blah
+    </p>
+  </introduction>
+  <objectives>
+    <title>2D-Vectors</title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+    <ul>
+      <li>
+        <p>
+          Notation and definitions for two-dimensional vectors
+        </p>
+      </li>
+      <li>
+        <p>
+          Operations and their properties for vectors
+        </p>
+      </li>
+      <li>
+        <p>
+          Applications of vectors.
+        </p>
+      </li>
+    </ul>
+  </objectives>
+  <subsection xml:id="subsec-vector-definitions">
+    <title>Definitions and Notation</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-vector-operations">
+    <title>Vector Operationsand Properties</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-vector-applications">
+    <title>Applications of Vectors</title>
+    <p>
+      
+    </p>
+  </subsection>
 </section>

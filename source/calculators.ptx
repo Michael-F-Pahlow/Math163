@@ -1,6 +1,92 @@
-<section xml:id="sec-calculators">
-    <title>Calculators</title>
-    <introduction>
+<section xml:id="sec-additional-resources">
+    <title>Additional Resources</title>
+    <subsection xml:id="subsec-textbooks">
+        <title>Textbooks</title>
+        <p>
+            
+        </p>
+    </subsection>
+    <subsection xml:id="subsec-youtube-videos">
+        <title>YouTube Videos</title>
+        <p>
+            Here is a list of some YouTube channels with content featured in these notes plus other channels with lecture-length videos.
+        </p>
+        <p>
+        <dl>
+            <li>
+                <title>Organic Chemistry Tutor</title>
+                <p>
+                    The master of STEM videos! Check out there extensive <url href="GiCojsAWRj0&amp;list=PL0o_zxa4K1BWYThyV4T2Allw6zY0jEumv" visual ="calculus playlist"/>
+                </p>
+            </li>
+            <li>
+                <title>Professor Leonard</title>
+                <p>
+                    
+                </p>
+            </li>
+            <li>
+                <title>Professor Dave Explains</title>
+                <p>
+                    
+                </p>
+            </li>
+            <li>
+                <title>3Blue1Brown</title>
+                <p>
+                    
+                </p>
+            </li>
+            
+            <li>
+                <title>Krista King</title>
+                <p>
+                    
+                </p>
+            </li>
+            <li>
+                <title>JK Math</title>
+                <p>
+                    
+                </p>
+            </li>
+            <li>
+                <title>Math is Power 4U</title>
+                <p>
+                    
+                </p>
+            </li>
+            <li>
+                <title>Nancy Pi</title>
+                <p>
+                    
+                </p>
+            </li>
+            <li>
+                <title>Dr. Trefor Bazett</title>
+                <p>
+                    
+                </p>
+            </li>
+            <li>
+                <title>Numberphile</title>
+                <p>
+                    
+                </p>
+            </li>
+            <li>
+                <title>Standup Maths</title>
+                <p>
+                    
+                </p>
+            </li>
+        </dl>
+    </p>
+    </subsection>
+    <subsection xml:id="subsec-calculators">
+        <title>Calculators</title>
+        
+    
         <p>
             These notes include a pop-up GeoGebra-3D calculator. If you click on the calculator icon on the top of each page, then a GeoGebra-3D calculator will pop-up 
             in the lower right of the screen. You can find more about the free GeoGebra calculators at <url href="https://www.geogebra.org/"/>.
@@ -12,7 +98,7 @@
     
     <figure>
         <caption>The Numworks Calculator</caption>
-        <interactive iframe ="https://www.numworks.com/simulator/embed/" width="368px" height="720px"/>
+        <interactive xml:id="numworks" iframe ="https://www.numworks.com/simulator/embed/" width="368px" height="720px"/>
     </figure> 
-</introduction>   
+</subsection>
 </section>

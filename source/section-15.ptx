@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="section-15" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Limits and Partial Derivatives</title>
-  <p>Under Construction</p>
+  <title>Partial Derivatives</title>
+  <introduction>
+    <p>
+      blah blah blah
+    </p>
+  </introduction>
+  <objectives>
+    <title>Partial Derivatives</title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+
+    <ul>
+      <li>
+        <p>
+          Notation for partial derivatives.
+        </p>
+      </li>
+      <li>
+        <p>
+          Higher-order and mixed partial derivatives.
+        </p>
+      </li>
+      <li>
+        <p>
+          The chain rule
+        </p>
+      </li>
+          </ul>
+  </objectives>
+  <subsection xml:id="subsec-pd-notation">
+    <title>Notation</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-higher-order-partials">
+    <title>Mixed Partial Derivatives</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-pd-chain-rule">
+    <title>The Chain Rule</title>
+    <p>
+      
+    </p>
+  </subsection>
 </section>

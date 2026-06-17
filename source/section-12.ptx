@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="section-12" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Calculus of Vector-Valued Functions</title>
-  <p>Under Construction</p>
+   <introduction>
+    <p>
+      blah blah blah
+    </p>
+  </introduction>
+  <objectives>
+    <title>Calculus of Vector-Valued Functions </title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+
+    <ul>
+      <li>
+        <p>
+          Derivatives of vector-valued functions
+        </p>
+      </li>
+      <li>
+        <p>
+          Integrals of vector-valued functions
+        </p>
+      </li>
+          </ul>
+  </objectives>
+  <subsection xml:id="subsec-vvf-derivatives">
+    <title>Derivatives of Vector-Valued Functions</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-vvf-integrals">
+    <title>Integrals of Vector-Valued Functions</title>
+    <p>
+      
+    </p>
+  </subsection>
 </section>

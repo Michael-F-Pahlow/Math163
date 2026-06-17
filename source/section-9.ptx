@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="section-9" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Applications of Vectors</title>
-  <p>Under Construction</p>
+  <title>The Cross Product</title>
+  <introduction>
+    <p>
+      blah blah blah
+    </p>
+  </introduction>
+  <objectives>
+    <title>The Cross Product </title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+
+    <ul>
+      <li>
+        <p>
+          The definition of the dot product
+        </p>
+      </li>
+      <li>
+        <p>
+          Applications of the dot product
+        </p>
+      </li>
+          </ul>
+  </objectives>
+  <subsection xml:id="subsec-cross-product">
+    <title>Definition of the Cross Product</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-application-cross-product">
+    <title>Applications of the Cross Product</title>
+    <p>
+      
+    </p>
+  </subsection>
+  
 </section>

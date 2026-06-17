@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="section-20" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Applications of Double Integrals</title>
- <p>Under Construction</p>
+ <introduction>
+    <p>
+      blah blah blah
+    </p>
+  </introduction>
+  <objectives>
+    <title>Applications of Double Integrals</title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+
+    <ul>
+      <li>
+        <p>
+          Double integrals in polar coordinates
+        </p>
+      </li>
+      <li>
+        <p>
+          Center of mass.
+        </p>
+      </li>
+      <li>
+        <p>
+          Applications
+        </p>
+      </li>
+                </ul>
+  </objectives>
+  <subsection xml:id="subsec-double-integral-polar">
+    <title>Double Integrals in Polar Coordinates</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-center-of-mass">
+    <title>Center of Mass</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-double-integral-applications">
+    <title>Applications of Double Integrals</title>
+    <p>
+      
+    </p>
+  </subsection>
 </section>

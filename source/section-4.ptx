@@ -36,7 +36,7 @@
       </li>
           </ul>
   </objectives>
-  <subsection>
+  <subsection xml:id="subsec-the-idea-of-a-taylor-series">
     <title>The Idea of Taylor Series</title>
     <p>
       We have already encountered the idea of a Taylor series all the way back in Calculus I (Math 151) when you learned about linear approximation. A linear approximation
@@ -64,7 +64,7 @@
       Note that a Taylor series centered at zero is called a Maclaurin series but I will refer to all series built from derivatives like this a Taylor series.
     </p>
   </subsection>
-  <subsection>
+  <subsection xml:id="subsec-well-known-taylor-series">
     <title>A Few Well-Known Taylor Series</title>
     <p>
       The Taylor series for <m>f(x)=e^x</m> centered at zero can be found by taking successive derivatives of <m>e^x</m> and plugging in zero. But since every derivative of
@@ -98,7 +98,7 @@
     </p>
   </paragraphs>
   </subsection>
-  <subsection>
+  <subsection xml:id="subsec-new-taylor-series-from-known-taylor-series">
     <title>Building New Taylor Series from Known Taylor Series.</title>
     <p>
     Like many things in mathematics, we can use previous work to guide new work. So instead of building a Taylor series from scratch: taking derivatives, plugging in values,

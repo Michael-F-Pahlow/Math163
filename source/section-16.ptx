@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="section-16" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Applications of Partial Derivatives</title>
-  <p>Under Construction</p>
+  <introduction>
+    <p>
+      blah blah blah
+    </p>
+  </introduction>
+  <objectives>
+    <title>Applications of Partial Derivatives</title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+
+    <ul>
+      <li>
+        <p>
+          Finding the tangent plane.
+        </p>
+      </li>
+      <li>
+        <p>
+          Linear approximation in higher dimensions.
+        </p>
+      </li>
+      <li>
+        <p>
+          Directional derivatives and the gradient vector.
+        </p>
+      </li>
+      <li>
+        <p>
+          The second derivative test in three dimensions.
+        </p>
+      </li>
+          </ul>
+  </objectives>
+  <subsection xml:id="subsec-tangent-plane">
+    <title>Tangent Planes</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-linear-approximation">
+    <title>Linear Approximation</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-gradient">
+    <title>The Directional Derivative and Gradient Vector</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-3d-optimization">
+    <title>The Second Derivative Test</title>
+    <p>
+      
+    </p>
+  </subsection>
 </section>

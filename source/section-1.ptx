@@ -39,7 +39,7 @@
     </ul>
   </objectives>
   
-  <subsection>
+  <subsection xml:id="subsec-turning-a-sequence-into-a-formula">
     <title>Turning a Sequence into a Formula</title>
     <p>Many sequences can be defined by a formula using the variable <m>n</m> where <m>n</m> represent the natural numbers 1, 2, 3, 4,...
       you can even turn a function into a sequence by replacing the <m>x</m> in a function formula with an <m>n</m>. 
@@ -141,7 +141,7 @@
     </example>
      </subsection>
 
-  <subsection>
+  <subsection xml:id="subsec-three-famous-sequences">
     <title>Three Famous Sequences</title>
 
     <example>
@@ -208,7 +208,7 @@
   
 </subsection>
 
-  <subsection>
+  <subsection xml:id="subsec-limits-of-sequences">
     
     <title> Limits of Sequences</title>
     <p>

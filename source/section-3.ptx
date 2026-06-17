@@ -39,7 +39,7 @@
       </li>
           </ul>
   </objectives>
-  <subsection>
+  <subsection xml:id="subsec-some-well-known-power-series">
     <title>Some Well Known Power Series</title>
     <p>
       We will now look at a few examples of some well-known power series and also a couple of examples of how we can use a known power series to find a new power series.
@@ -130,7 +130,7 @@
       </figure>
     
   </subsection>
-  <subsection>
+  <subsection xml:id="subsec-intervals-of-convergence">
     <title>Intervals of Convergence</title>
     <p>
       A key thing we want to know for a power series is where it converges. This is analogous to finding the domain of a function. This is where we need to know a few

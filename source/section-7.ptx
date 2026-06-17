@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="section-7" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>3D Vectors</title>
-  <p>Under Construction</p>
+  <introduction>
+    <p>
+      blah blah blah
+    </p>
+  </introduction>
+  <objectives>
+    <title>3D-Vectors</title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+
+    <ul>
+      <li>
+        <p>
+          Operations for three-dimensional vectors
+        </p>
+      </li>
+      <li>
+        <p>
+          GeoGebra3D tutorial
+        </p>
+      </li>
+    </ul>
+  </objectives>
+  <subsection xml:id="subsec-3d-operations">
+    <title>Operations and Properties</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-3d-vector-operations">
+    <title>Vector Operations and Properties</title>
+    <p>
+      
+    </p>
+  </subsection>
+  
 </section>

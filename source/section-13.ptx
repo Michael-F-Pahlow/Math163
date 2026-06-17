@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="section-13" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Applications of Vector-Valued Functions</title>
-  <p>Under Construction</p>
+   <introduction>
+    <p>
+      blah blah blah
+    </p>
+  </introduction>
+  <objectives>
+    <title>Applications of Vector-Valued Functions</title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+
+    <ul>
+      <li>
+        <p>
+          Calculating arclength.
+        </p>
+      </li>
+      <li>
+        <p>
+          Calculating curvature.
+        </p>
+      </li>
+      <li>
+        <p>
+          The TNB frame
+        </p>
+      </li>
+      <li>
+        <p>
+          Motion in Space
+        </p>
+      </li>
+          </ul>
+  </objectives>
+  <subsection xml:id="subsec-arclength">
+    <title>Arclength</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-curvature">
+    <title>Curvature</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-tnb-frame">
+    <title>The TNB Frame</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-3d-motion">
+    <title>Motion in Three-Dimensional Space</title>
+    <p>
+      
+    </p>
+  </subsection>
 </section>

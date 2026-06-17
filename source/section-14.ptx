@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="section-14" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Multi-Variable Functions</title>
-  <p>Under Construction</p>
+<introduction>
+    <p>
+      blah blah blah
+    </p>
+  </introduction>
+  <objectives>
+    <title>Multi-Variable Functions</title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+
+    <ul>
+      <li>
+        <p>
+          Graphing three-dimensional functions
+        </p>
+      </li>
+      <li>
+        <p>
+          Contour maps and level curves
+        </p>
+      </li>
+      <li>
+        <p>
+          Limits of multi-variable functions
+        </p>
+      </li>
+                </ul>
+  </objectives>
+  <subsection xml:id="subsec-3d-graphs">
+    <title>Graphs of Three-Dimensional Functions</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-contour-maps">
+    <title>Contour Maps</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-3d-limits">
+    <title>Limits of Three-Dimensional Functions</title>
+    <p>
+      
+    </p>
+  </subsection>
 </section>

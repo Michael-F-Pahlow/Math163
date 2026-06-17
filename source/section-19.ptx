@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="section-19" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Double Integrals in Polar Coordinates</title>
-  <p>Under Construction</p>
+  <title>Double Integrals Over General Regions</title>
+  <introduction>
+    <p>
+      blah blah blah
+    </p>
+  </introduction>
+  <objectives>
+    <title>Double Integrals Over General Regions</title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+
+    <ul>
+      <li>
+        <p>
+          Calculating double integrals over various-shaped regions
+        </p>
+      </li>
+      <li>
+        <p>
+          Switching the order of integration.
+        </p>
+      </li>
+               </ul>
+  </objectives>
+  <subsection xml:id="subsec-double-integrals-general">
+    <title>Double Integrals in General</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-switching-order-of-integration">
+    <title>Switching the Order of Integration</title>
+    <p>
+      
+    </p>
+  </subsection>
+  
 </section>

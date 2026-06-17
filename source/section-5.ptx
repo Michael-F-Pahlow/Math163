@@ -26,38 +26,100 @@
       </li>
       </ul>
   </objectives>
-  <subsection>
+  <subsection xml:id="subsec-applications-of-power-series">
     <title>Applications</title>
     
   
   <example>
     <title>A Tricky Integral</title>
     <p>
-      
+      A common integral in physics and statistics is the integral for the Gaussian or Normal distribution.
+      <md>
+        \int_0^b e^{-x^2}dx
+      </md>
+      The Fundamental Theorem of Calculus does not apply here since <m>e^{-x^2}</m> does not have an antiderivative. So how do you or your calculator calculate this integral?
     </p>
-    
+    <p>
+      If we replace <m>e^{-x^2}</m> with its Taylor series, then we can use several terms of the Taylor polynomial to get an accurate approximation.
+      <md>
+        e^{-x^2} = \sum_{n=0}^\infty \frac{(-x^2)^n}{n!} = 1 - x^2 + \frac{x^4}{2!} - \frac{x^6}{4!} + ...
+      </md>
+      </p>
+      <p>
+        Integrating this power series gives:
+        <md>
+          <mrow> \amp </mrow>
+        
+          <mrow> int_0^b e^{-x^2} dx =  \amp \int_0*b (1 - x^2 + \frac{x^4}{2!} - \frac{x^6}{4!} + ...) dx</mrow>
+          <mrow> \amp = \left. (x - \frac{x^3}{3}+\frac{x^5}{5\cdot 2!}-\frac{x^7}{7\cdot 4!})\right\vert_0^b</mrow> 
+          <mrow> \amp = b - \frac{b^3}{3}+\frac{b^5}{5\cdot 2!}-\frac{b^7}{7\cdot 4!}</mrow>
+        </md>
+        Using five or six terms for a known value of <m>b</m> should give you enough digits of desired accuracy.
+        
+      </p>
   </example>
 
   <example>
     <title>Evaluating a Limit</title>
     <p>
-      
+      Consider the limit:
+      <md>
+        \lim_{x\rightarrow 0} \frac{\sin(x)-x+\frac{1}{6}x^3}{x^5}
+      </md>
+      l'Hopital's rule can be applied to this limit. However, it would take several applications of l'Hopital's rule to get a numeric solution. If we replace <m>\sin(x)</m>
+      by its Taylor series <m>x-\frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + ...</m> then the limit becomes:
+      <md>
+        \lim_{x\rightarrow 0} \frac{\sin(x)-x+\frac{1}{6}x^3}{x^5} = \lim_{x\rightarrow 0} \frac{x-\frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + ... - x + \frac{1}{6}x^3}{x^5}
+      </md>
+      Canceling like terms in the numerator and then canceling with the <m>x^5</m> in the denominator and limit simplifies to:
+      <md>
+        \lim_{x\rightarrow 0} \frac{1}{5!} - \frac{x^2}{7!} + \frac{x^4}{9!} = \frac{1}{120}
+      </md>
     </p>
     
   </example>
 
   <example>
-    <title>A Pendulum Approximation</title>
+    <title>Applications to Physics</title>
     <p>
+      Two applications in Physics involve the linear approximations (first-degree Taylor polynomials) of sine and cosine.
+     <md>
+      <mrow> \sin(\theta) \amp \approx \theta </mrow>
+      <mrow> \cos(\theta) \amp \approx 1</mrow>
+     </md>
       
     </p>
-    
+    <p>
+      According to Newton's second law, the period (time of one swing back and forth) of a pendulum is 
+      <md>
+        \tau = 2\pi\sqrt{\frac{R\cos(\theta)}{g\sin(\theta)}}
+      </md>
+      where <m>g</m> is the acceleration of gravity, about 9.81 meters per second squared near the surface of the Earth. <m>R</m> is the length
+    </p>
+    <p>
+    For small angles less than 20 degrees, the linear of cosine is an accurate approximation. And since <m> R = L\sin(\theta) </m>, the time period is:
+    <md>
+      \tau \approx 2\pi\sqrt{\frac{L}{g}}
+    </md>
+    This is what is used to set the length of the pendulum in a grandfather clock to keep time!
+  </p>
+  <p>
+    Another application is in optics where the sine approximation is used to simplify Snell's law for lenses. This is used to make lenses for simple telescopes and cameras.
+  </p>
   </example>
 
   <example>
     <title>Calculating a Square Root</title>
     <p>
-      
+      Another well known Taylor series is the binomial series which Isaac Newton discovered in 1676:
+      <md>
+        (1+x)^k = 1 + kx + \frac{k(k-1)}{2!}x^2 + \frac{k(k-1)(k-2)}{3!}x^3+...
+      </md>
+      But the ancient world also knew a version of this that was used to calculate square roots. Let <m>x=1</m> and <m>k=\frac{1}{2}</m> for the binomial series.
+      <md>
+        \sqrt{2} = (1+1)^{1/2} = 1 + \frac{1}{2} - \frac{1}{8} + \frac{1}{16} - \frac{5}{128} + \frac{7}{256} - ...
+      </md>
+      This is what your calculator does when you ask it to calculate <m>\sqrt{2}</m>!
     </p>
     
   </example>
@@ -65,9 +127,36 @@
   <example>
     <title>Einstein versus Newton</title>
     <p>
-      
+      In Einstein's theory of special relativity, the mass of an object moving with velocity <m>v</m> is 
+      <md>
+        m=\frac{m_0}{\sqrt{1-v^2/c^2}}
+      </md>
+      where <m>m_0</m> is the rest mass of the object and <m>c</m> is the speed of light in a vacuum. The kinetic energy of the object is the difference between
+      its total energy and its potential energy at rest. <m>K = mc^2-m_0 c^2</m>
     </p>
-    
+    <p>
+      In Newtonian physics, kinetic energy is defined as <m>K=\frac{1}{2}m_0 v^2</m>. Rearranging Einstein's equation gives:
+      <md>
+        K = mc^2-m_0 c^2 = \frac{m_0 c^2}{\sqrt{1-v^2/c^2}} - m_0 c^2 = m_0 c^2 \left[ \left(1-\frac{v^2}{c^2}\right)^{-1/2}\right]
+      </md>
+      Using the Taylor series (binomial) for <m>(1-x)^{-1/2} = 1 + \frac{x}{2} + \frac{3x^2}{8}+\frac{5x^3}{16}+\frac{35x^4}{128}+..;</m> gives:
+      <md>
+        K \approx m_0 c^2\left[\left( 1 + \frac{v^2}{2c^2} + ...\right)-1\right] = \frac{1}{2}m_0 v^2
+      </md>
+      So Newton's equation is a first-degree Taylor approximation of Einstein's equation!
+    </p>
   </example>
+  <p>
+    This is just a small selection of examples. There are many more like approximations that give you the digits of <m>\pi</m> and series solutions to differential equations.
+  </p>
+<paragraphs>
+    <title>Reading Check-in</title>
+    
+    
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on applying Taylor series.
+    </p>
+  </paragraphs>
 </subsection>
+
 </section>

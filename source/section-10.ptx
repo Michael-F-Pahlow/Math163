@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="section-10" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Parametric Equations</title>
- <p>Under Construction</p>
+  <title>Object in Three-Dimensional Space</title>
+  <introduction>
+    <p>
+      blah blah blah
+    </p>
+  </introduction>
+  <objectives>
+    <title>Objects in 3D Space </title>
+     <introduction>
+
+    <p>
+    In this section we will look at:
+    </p>
+
+  </introduction>
+
+    <ul>
+      <li>
+        <p>
+          Multi-variable functions
+        </p>
+      </li>
+      <li>
+        <p>
+          Sets of parametric equations
+        </p>
+      </li>
+      <li>
+        <p>
+          Vector-valued functions
+        </p>
+      </li>
+      <li>
+        <p>
+          Alternative coordinate systems
+        </p>
+      </li>
+    </ul>
+  </objectives>
+  <subsection xml:id="subsec-3d-functions">
+    <title>Multi-variable Functions</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-parametrics">
+    <title>Sets of Parametric Equations</title>
+    <p>
+      
+    </p>
+  </subsection>
+   <subsection xml:id="subsec-vvf">
+    <title>Vector-Valued Functions</title>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsec-coordinate-systems">
+    <title>Alternative Coordinate Systems</title>
+    <p>
+      
+    </p>
+  </subsection>
 </section>

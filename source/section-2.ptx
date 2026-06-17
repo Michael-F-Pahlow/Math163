@@ -52,7 +52,7 @@
     </ul>
   </objectives>
   
-  <subsection>
+  <subsection xml:id="subsec-the-geometric-and-harmonic-series">
     <title>The Geometric and Harmonic Series</title>
     <p>
     <alert>Summation Notation</alert>
@@ -118,7 +118,7 @@
     </p>
     </example>
   </subsection>
-  <subsection>
+  <subsection xml:id="subsec-the-integral-test">
     <title>The Integral Test</title>
     <p>
       We already know how to add up something with an infinite amount of terms - the integral. Recall that the limit definition of an integral is:
@@ -190,7 +190,7 @@
         
       </figure>
   </subsection>
-  <subsection>
+  <subsection xml:id="subsec-three-convergence-tests">
     <title>Three More Tests for Convergence/Divergence</title>
     <p>
       While there about ten more tests for the convergence or divergence of infinite series. We will look at just three that will also be vital in future sections.
