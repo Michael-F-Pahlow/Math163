@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
@@ -29,7 +29,10 @@ htmlPresentation: false,
 </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<meta name="twitter:title" content="Math 163 Notes">
+<meta property="og:title" content="Math 163 Notes">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.42"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -51,16 +54,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.2';
+eBookConfig.runestone_version = '8.1.7';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.d0616b3d72ab3b06.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.af9055d29ed602c4.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<script src="_static/prefix-runtime.917dfc3cfe0bb764.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.39f982db166f319d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/dist/diagcess/diagcess.js"></script><script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="pahlow-Math163Notes" class="pretext article ignore-math">
@@ -68,16 +71,15 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="math163notes.html"><span class="title">Math 163 Notes</span></a></h1>
 <p class="byline">Michael Pahlow</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search book" commandfor="ptx-search-dialog" command="show-modal"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog" closedby="closerequest"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close search" id="ptx-search-close" class="ptx-search-close" commandfor="ptx-search-dialog" command="close"><span class="material-symbols-outlined">close</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
-</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
 <span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
 <script>
@@ -94,7 +96,7 @@ var ggbApp = new GGBApplet({"appName": "3d",
     "disableAutoScale": false},
 true);
 </script><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="section-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="math163notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\foo}{b^{ar}}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -107,60 +109,163 @@ true);
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Sequences</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#section-1-4" class="internal"><span class="codenumber">1.1</span> <span class="title">Turning a Sequence into a Formula</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#section-1-5" class="internal"><span class="codenumber">1.2</span> <span class="title">Three Famous Sequences</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#section-1-6" class="internal"><span class="codenumber">1.3</span> <span class="title">Limits of Sequences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#subsec-turning-a-sequence-into-a-formula" class="internal"><span class="codenumber">1.1</span> <span class="title">Turning a Sequence into a Formula</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#subsec-three-famous-sequences" class="internal"><span class="codenumber">1.2</span> <span class="title">Three Famous Sequences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#subsec-limits-of-sequences" class="internal"><span class="codenumber">1.3</span> <span class="title">Limits of Sequences</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Infinite Series</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#section-2-4" class="internal"><span class="codenumber">2.1</span> <span class="title">The Geometric and Harmonic Series</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#section-2-5" class="internal"><span class="codenumber">2.2</span> <span class="title">The Integral Test</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#section-2-6" class="internal"><span class="codenumber">2.3</span> <span class="title">Three More Tests for Convergence/Divergence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#subsec-the-geometric-and-harmonic-series" class="internal"><span class="codenumber">2.1</span> <span class="title">The Geometric and Harmonic Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#subsec-the-integral-test" class="internal"><span class="codenumber">2.2</span> <span class="title">The Integral Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#subsec-three-convergence-tests" class="internal"><span class="codenumber">2.3</span> <span class="title">Three More Tests for Convergence/Divergence</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="section-3.html" class="internal"><span class="codenumber">3</span> <span class="title">Power Series</span></a></div>
 <ul class="structural toc-item-list active">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#section-3-4" class="internal"><span class="codenumber">3.1</span> <span class="title">Some Well Known Power Series</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#section-3-5" class="internal"><span class="codenumber">3.2</span> <span class="title">Intervals of Convergence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#subsec-some-well-known-power-series" class="internal"><span class="codenumber">3.1</span> <span class="title">Some Well Known Power Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#subsec-intervals-of-convergence" class="internal"><span class="codenumber">3.2</span> <span class="title">Intervals of Convergence</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-4.html" class="internal"><span class="codenumber">4</span> <span class="title">Taylor Series</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-4.html#section-4-4" class="internal"><span class="codenumber">4.1</span> <span class="title">The Idea of Taylor Series</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-4.html#section-4-5" class="internal"><span class="codenumber">4.2</span> <span class="title">A Few Well-Known Taylor Series</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-4.html#section-4-6" class="internal"><span class="codenumber">4.3</span> <span class="title">Building New Taylor Series from Known Taylor Series.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-4.html#subsec-the-idea-of-a-taylor-series" class="internal"><span class="codenumber">4.1</span> <span class="title">The Idea of Taylor Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-4.html#subsec-well-known-taylor-series" class="internal"><span class="codenumber">4.2</span> <span class="title">A Few Well-Known Taylor Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-4.html#subsec-new-taylor-series-from-known-taylor-series" class="internal"><span class="codenumber">4.3</span> <span class="title">Building New Taylor Series from Known Taylor Series.</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-5.html" class="internal"><span class="codenumber">5</span> <span class="title">Working with Power Series</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-5.html#section-5-4" class="internal"><span class="codenumber">5.1</span> <span class="title">Applications</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-5.html#subsec-applications-of-power-series" class="internal"><span class="codenumber">5.1</span> <span class="title">Applications</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-6.html" class="internal"><span class="codenumber">6</span> <span class="title">2D Vectors</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-7.html" class="internal"><span class="codenumber">7</span> <span class="title">3D Vectors</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-8.html" class="internal"><span class="codenumber">8</span> <span class="title">Vector Calculations</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-9.html" class="internal"><span class="codenumber">9</span> <span class="title">Applications of Vectors</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-10.html" class="internal"><span class="codenumber">10</span> <span class="title">Parametric Equations</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-11.html" class="internal"><span class="codenumber">11</span> <span class="title">Vector-Valued Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-12.html" class="internal"><span class="codenumber">12</span> <span class="title">Calculus of Vector-Valued Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-13.html" class="internal"><span class="codenumber">13</span> <span class="title">Applications of Vector-Valued Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-14.html" class="internal"><span class="codenumber">14</span> <span class="title">Multi-Variable Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-15.html" class="internal"><span class="codenumber">15</span> <span class="title">Limits and Partial Derivatives</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-16.html" class="internal"><span class="codenumber">16</span> <span class="title">Applications of Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-6.html" class="internal"><span class="codenumber">6</span> <span class="title">2D Vectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6.html#subsec-vector-definitions" class="internal"><span class="codenumber">6.1</span> <span class="title">Definitions and Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6.html#subsec-vector-operations" class="internal"><span class="codenumber">6.2</span> <span class="title">Vector Operations and Properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6.html#subsec-vector-applications" class="internal"><span class="codenumber">6.3</span> <span class="title">Applications of Vectors</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-7.html" class="internal"><span class="codenumber">7</span> <span class="title">3D Vectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7.html#subsec-3d-vector-operations" class="internal"><span class="codenumber">7.1</span> <span class="title">Operations and Properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7.html#geogebra-3d" class="internal"><span class="codenumber">7.2</span> <span class="title">GeoGebra 3D</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-8.html" class="internal"><span class="codenumber">8</span> <span class="title">The Dot Product</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-8.html#subsec-dot-product" class="internal"><span class="codenumber">8.1</span> <span class="title">Definition of the Dot Product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-8.html#subsec-properties-dot-product" class="internal"><span class="codenumber">8.2</span> <span class="title">Properties of the Dot Product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-8.html#subsec-application-dot-product" class="internal"><span class="codenumber">8.3</span> <span class="title">Applications of the Dot Product</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-9.html" class="internal"><span class="codenumber">9</span> <span class="title">The Cross Product</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-9.html#subsec-def-cross-product" class="internal"><span class="codenumber">9.1</span> <span class="title">Definition of the Cross Product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-9.html#subsec-prop-cross-product" class="internal"><span class="codenumber">9.2</span> <span class="title">Properties of the Cross Product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-9.html#subsec-application-cross-product" class="internal"><span class="codenumber">9.3</span> <span class="title">Applications of the Cross Product</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-10.html" class="internal"><span class="codenumber">10</span> <span class="title">Object in Three-Dimensional Space</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-10.html#subsec-3d-functions" class="internal"><span class="codenumber">10.1</span> <span class="title">Multi-variable Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-10.html#subsec-coordinate-systems" class="internal"><span class="codenumber">10.2</span> <span class="title">Alternative Coordinate Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-10.html#subsec-parametrics" class="internal"><span class="codenumber">10.3</span> <span class="title">Sets of Parametric Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-10.html#subsec-vvf" class="internal"><span class="codenumber">10.4</span> <span class="title">Vector-Valued Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-11.html" class="internal"><span class="codenumber">11</span> <span class="title">Vector-Valued Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-11.html#subsec-vvf-graphs" class="internal"><span class="codenumber">11.1</span> <span class="title">Graphing Vector-Valued Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-11.html#subsec-vvf-limits" class="internal"><span class="codenumber">11.2</span> <span class="title">Limits and Continuity</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-12.html" class="internal"><span class="codenumber">12</span> <span class="title">Calculus of Vector-Valued Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-12.html#subsec-vvf-derivatives" class="internal"><span class="codenumber">12.1</span> <span class="title">Derivatives of Vector-Valued Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-12.html#subsec-vvf-integrals" class="internal"><span class="codenumber">12.2</span> <span class="title">Integrals of Vector-Valued Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-13.html" class="internal"><span class="codenumber">13</span> <span class="title">Applications of Vector-Valued Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-13.html#subsec-arclength" class="internal"><span class="codenumber">13.1</span> <span class="title">Arclength</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-13.html#subsec-curvature" class="internal"><span class="codenumber">13.2</span> <span class="title">Curvature</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-13.html#subsec-tnb-frame" class="internal"><span class="codenumber">13.3</span> <span class="title">The T-N-B Frame</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-13.html#subsec-3d-motion" class="internal"><span class="codenumber">13.4</span> <span class="title">Motion in Three-Dimensional Space</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-14.html" class="internal"><span class="codenumber">14</span> <span class="title">Multi-Variable Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-14.html#subsec-3d-graphs" class="internal"><span class="codenumber">14.1</span> <span class="title">Plots of Multi-Variable Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-14.html#subsec-contour-maps" class="internal"><span class="codenumber">14.2</span> <span class="title">Contour Maps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-14.html#subsec-3d-limits" class="internal"><span class="codenumber">14.3</span> <span class="title">Limits and Continuity of Three-Dimensional Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-15.html" class="internal"><span class="codenumber">15</span> <span class="title">Partial Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-15.html#subsec-pd-notation" class="internal"><span class="codenumber">15.1</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-15.html#subsec-higher-order-partials" class="internal"><span class="codenumber">15.2</span> <span class="title">Mixed Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-15.html#subsec-pd-chain-rule" class="internal"><span class="codenumber">15.3</span> <span class="title">The Chain Rule</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-16.html" class="internal"><span class="codenumber">16</span> <span class="title">Applications of Partial Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-16.html#subsec-tangent-plane" class="internal"><span class="codenumber">16.1</span> <span class="title">Tangent Planes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-16.html#subsec-linear-approximation" class="internal"><span class="codenumber">16.2</span> <span class="title">Linear Approximation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-16.html#subsec-gradient" class="internal"><span class="codenumber">16.3</span> <span class="title">The Directional Derivative and Gradient Vector</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-16.html#subsec-3d-optimization" class="internal"><span class="codenumber">16.4</span> <span class="title">The Second Derivative Test</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-17.html" class="internal"><span class="codenumber">17</span> <span class="title">Lagrange Multipliers</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-17.html#section-17-4" class="internal"><span class="codenumber">17.1</span> <span class="title">A Lagrange Multipliers by Hand</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-17.html#section-17-5" class="internal"><span class="codenumber">17.2</span> <span class="title">Using Excel for Optimization with Constraints</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-17.html#subsec-lagrange-multipliers-by-hand" class="internal"><span class="codenumber">17.1</span> <span class="title">A Lagrange Multipliers by Hand</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-17.html#subsec-using-excel-for-lagrange-multipliers" class="internal"><span class="codenumber">17.2</span> <span class="title">Using Excel for Optimization with Constraints</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-18.html" class="internal"><span class="codenumber">18</span> <span class="title">Double Integrals</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-19.html" class="internal"><span class="codenumber">19</span> <span class="title">Double Integrals in Polar Coordinates</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-20.html" class="internal"><span class="codenumber">20</span> <span class="title">Applications of Double Integrals</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculators.html" class="internal"><span class="codenumber">21</span> <span class="title">Calculators</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-18.html" class="internal"><span class="codenumber">18</span> <span class="title">Double Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-18.html#subsec-double-integrals-rectangles" class="internal"><span class="codenumber">18.1</span> <span class="title">Double Integrals over Rectangles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-18.html#subsec-iterated-integrals" class="internal"><span class="codenumber">18.2</span> <span class="title">Iterated Integrals</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-19.html" class="internal"><span class="codenumber">19</span> <span class="title">Double Integrals Over General Regions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-19.html#subsec-double-integrals-general" class="internal"><span class="codenumber">19.1</span> <span class="title">Double Integrals in General</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-19.html#subsec-switching-order-of-integration" class="internal"><span class="codenumber">19.2</span> <span class="title">Switching the Order of Integration</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-20.html" class="internal"><span class="codenumber">20</span> <span class="title">Applications of Double Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-20.html#subsec-double-integral-polar" class="internal"><span class="codenumber">20.1</span> <span class="title">Double Integrals in Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-20.html#subsec-center-of-mass" class="internal"><span class="codenumber">20.2</span> <span class="title">Center of Mass</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-20.html#subsec-double-integral-applications" class="internal"><span class="codenumber">20.3</span> <span class="title">Applications of Double Integrals</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-additional-resources.html" class="internal"><span class="codenumber">21</span> <span class="title">Additional Resources</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-additional-resources.html#subsec-textbooks" class="internal"><span class="codenumber">21.1</span> <span class="title">Textbooks</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-additional-resources.html#subsec-youtube-videos" class="internal"><span class="codenumber">21.2</span> <span class="title">YouTube Videos</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-additional-resources.html#subsec-calculators" class="internal"><span class="codenumber">21.3</span> <span class="title">Calculators</span></a></div></li>
+</ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="section-3">
@@ -199,106 +304,106 @@ f(x) = a_0 + a_1 x+ a_2 x^2 + a_3 x^3 + ... = \sum_{n=0}^\infty a_nx^n
 </ul>
 <div class="autopermalink" data-description="Objectives 3: Power Series"><a href="#section-3-3" title="Copy heading and permalink for Objectives 3: Power Series" aria-label="Copy heading and permalink for Objectives 3: Power Series">🔗</a></div>
 </article>
-<section class="subsection" id="section-3-4">
+<section class="subsection" id="subsec-some-well-known-power-series">
 <h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Some Well Known Power Series</span>
 </h3>
-<div class="para" id="section-3-4-2">We will now look at a few examples of some well-known power series and also a couple of examples of how we can use a known power series to find a new power series.<div class="autopermalink" data-description="Paragraph"><a href="#section-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-some-well-known-power-series-2">We will now look at a few examples of some well-known power series and also a couple of examples of how we can use a known power series to find a new power series.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-some-well-known-power-series-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="example example-like" id="section-3-4-3"><h4 class="heading">
+<article class="example example-like" id="subsec-some-well-known-power-series-3"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Geometric Series.</span>
 </h4>
-<div class="para logical" id="section-3-4-3-2">
+<div class="para logical" id="subsec-some-well-known-power-series-3-2">
 <div class="para">One power series we can define easily is a series base on a geometric series. We saw in the last section that</div>
-<div class="displaymath process-math" id="section-3-4-3-2-1">
+<div class="displaymath process-math" id="subsec-some-well-known-power-series-3-2-1">
 \begin{equation*}
 \sum_{n=0}^\infty ar^n = \frac{a}{1-r}
 \end{equation*}
 </div>
 <div class="para">If we let <span class="process-math">\(a=1\)</span> and <span class="process-math">\(r=x\)</span> then</div>
-<div class="displaymath process-math" id="section-3-4-3-2-4">
+<div class="displaymath process-math" id="subsec-some-well-known-power-series-3-2-4">
 \begin{equation*}
 f(x) = \sum_{n=0}^\infty x^n = \frac{1}{1-x}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#section-3-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-some-well-known-power-series-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.1: A Geometric Series"><a href="#section-3-4-3" title="Copy heading and permalink for Example 3.1: A Geometric Series" aria-label="Copy heading and permalink for Example 3.1: A Geometric Series">🔗</a></div>
+<div class="autopermalink" data-description="Example 3.1: A Geometric Series"><a href="#subsec-some-well-known-power-series-3" title="Copy heading and permalink for Example 3.1: A Geometric Series" aria-label="Copy heading and permalink for Example 3.1: A Geometric Series">🔗</a></div>
 </article>
-<article class="example example-like" id="section-3-4-4"><h4 class="heading">
+<article class="example example-like" id="subsec-some-well-known-power-series-4"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Another Geometric Series.</span>
 </h4>
-<div class="para logical" id="section-3-4-4-2">
+<div class="para logical" id="subsec-some-well-known-power-series-4-2">
 <div class="para">We can find other similar series by some factoring and substitution.</div>
-<div class="displaymath process-math" id="section-3-4-4-2-1">
+<div class="displaymath process-math" id="subsec-some-well-known-power-series-4-2-1">
 \begin{equation*}
 f(x) = \frac{1}{3-6x} = \frac{1}{3}\cdot\frac{1}{1-(2x)} = \frac{1}{3}\sum_{n=0}^\infty (2x)^n = \sum_{n=0} \frac{2^n}{3} x^n
 \end{equation*}
 </div>
 <div class="para">We try to write a power series as a product of sequence of coefficients times powers of <span class="process-math">\(x\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#section-3-4-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-some-well-known-power-series-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.2: Another Geometric Series"><a href="#section-3-4-4" title="Copy heading and permalink for Example 3.2: Another Geometric Series" aria-label="Copy heading and permalink for Example 3.2: Another Geometric Series">🔗</a></div>
+<div class="autopermalink" data-description="Example 3.2: Another Geometric Series"><a href="#subsec-some-well-known-power-series-4" title="Copy heading and permalink for Example 3.2: Another Geometric Series" aria-label="Copy heading and permalink for Example 3.2: Another Geometric Series">🔗</a></div>
 </article>
-<article class="example example-like" id="section-3-4-5"><h4 class="heading">
+<article class="example example-like" id="subsec-some-well-known-power-series-5"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Third Geometric Series.</span>
 </h4>
-<div class="para logical" id="section-3-4-5-2">
-<div class="displaymath process-math" id="section-3-4-5-2-1">
+<div class="para logical" id="subsec-some-well-known-power-series-5-2">
+<div class="displaymath process-math" id="subsec-some-well-known-power-series-5-2-1">
 \begin{equation*}
 f(x) = \frac{1}{1+x^2} = \frac{1}{1-(-x^2)} = \sum_{n=0}^\infty (-x^2)^n = \sum_{n=0}^\infty (-1)^n x^{2n} = 1 - x^2 + x^4 - x^6 +...
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#section-3-4-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-some-well-known-power-series-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.3: A Third Geometric Series"><a href="#section-3-4-5" title="Copy heading and permalink for Example 3.3: A Third Geometric Series" aria-label="Copy heading and permalink for Example 3.3: A Third Geometric Series">🔗</a></div>
+<div class="autopermalink" data-description="Example 3.3: A Third Geometric Series"><a href="#subsec-some-well-known-power-series-5" title="Copy heading and permalink for Example 3.3: A Third Geometric Series" aria-label="Copy heading and permalink for Example 3.3: A Third Geometric Series">🔗</a></div>
 </article>
-<article class="example example-like" id="section-3-4-6"><h4 class="heading">
+<article class="example example-like" id="subsec-some-well-known-power-series-6"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Power Series of <span class="process-math">\(\arctan(x)\)</span>.</span>
 </h4>
-<div class="para logical" id="section-3-4-6-2">
+<div class="para logical" id="subsec-some-well-known-power-series-6-2">
 <div class="para">Since a power series is just an infinite polynomial, we can differentiate or integrate a known power series using the power rule to get a new power series. Since</div>
-<div class="displaymath process-math" id="section-3-4-6-2-1">
+<div class="displaymath process-math" id="subsec-some-well-known-power-series-6-2-1">
 \begin{equation*}
 \int \frac{1}{1+x^2} dx = \arctan(x)
 \end{equation*}
 </div>
-<div class="displaymath process-math" id="section-3-4-6-2-2">
+<div class="displaymath process-math" id="subsec-some-well-known-power-series-6-2-2">
 \begin{equation*}
 \int \sum_{n=0}^\infty (-1)^n x^{2n} = \sum_{n=0}^\infty \frac{(-1)^n x^{2n+1}}{2n+1}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#section-3-4-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-some-well-known-power-series-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.4: Power Series of \arctan(x)"><a href="#section-3-4-6" title="Copy heading and permalink for Example 3.4: Power Series of \arctan(x)" aria-label="Copy heading and permalink for Example 3.4: Power Series of \arctan(x)">🔗</a></div>
+<div class="autopermalink" data-description="Example 3.4: Power Series of \arctan(x)"><a href="#subsec-some-well-known-power-series-6" title="Copy heading and permalink for Example 3.4: Power Series of \arctan(x)" aria-label="Copy heading and permalink for Example 3.4: Power Series of \arctan(x)">🔗</a></div>
 </article>
-<article class="example example-like" id="section-3-4-7"><h4 class="heading">
+<article class="example example-like" id="subsec-some-well-known-power-series-7"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Power Series from Differentiation.</span>
 </h4>
-<div class="para logical" id="section-3-4-7-2">
+<div class="para logical" id="subsec-some-well-known-power-series-7-2">
 <div class="para">Since:</div>
-<div class="displaymath process-math" id="section-3-4-7-2-1">
+<div class="displaymath process-math" id="subsec-some-well-known-power-series-7-2-1">
 \begin{equation*}
 \frac{d}{dx} \left(\frac{1}{1-x}\right) = \frac{1}{(1-x)^2}
 \end{equation*}
 </div>
-<div class="displaymath process-math" id="section-3-4-7-2-2">
+<div class="displaymath process-math" id="subsec-some-well-known-power-series-7-2-2">
 \begin{equation*}
 \frac{d}{dx} \sum_{n=0}^\infty x^n = \sum_{n=1}^\infty (n)x^{n-1}
 \end{equation*}
 </div>
 <div class="para">Note that when differentiating, we change the starting point of our sum from zero to one, since the <span class="process-math">\(a_0\)</span> is a constant in the starting series and becomes zero when we take the derivative and the new series starts at the <span class="process-math">\(a_1\)</span> term.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#section-3-4-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-some-well-known-power-series-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.5: A Power Series from Differentiation"><a href="#section-3-4-7" title="Copy heading and permalink for Example 3.5: A Power Series from Differentiation" aria-label="Copy heading and permalink for Example 3.5: A Power Series from Differentiation">🔗</a></div>
+<div class="autopermalink" data-description="Example 3.5: A Power Series from Differentiation"><a href="#subsec-some-well-known-power-series-7" title="Copy heading and permalink for Example 3.5: A Power Series from Differentiation" aria-label="Copy heading and permalink for Example 3.5: A Power Series from Differentiation">🔗</a></div>
 </article>
-<article class="example example-like" id="section-3-4-8"><h4 class="heading">
+<article class="example example-like" id="subsec-some-well-known-power-series-8"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Power Series of Sine, Cosine and <span class="process-math">\(e^x\)</span>.</span>
 </h4>
-<div class="para logical" id="section-3-4-8-2">
+<div class="para logical" id="subsec-some-well-known-power-series-8-2">
 <div class="para">Three of the most used series are the series for <span class="process-math">\(\sin(x), \, \cos(x)\)</span> and <span class="process-math">\(e^x\text{.}\)</span> We will see in the next section, how to build these series from scratch. for now we define.</div>
-<div class="displaymath process-math" id="section-3-4-8-2-3">
+<div class="displaymath process-math" id="subsec-some-well-known-power-series-8-2-3">
 \begin{align*}
 e^x =  \amp \sum_{n=0}^\infty \frac{x^n}{n!}\\
 \sin(x) =  \amp \sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{(2n+1)!}\\
@@ -306,91 +411,91 @@ e^x =  \amp \sum_{n=0}^\infty \frac{x^n}{n!}\\
 \end{align*}
 </div>
 <div class="para">Note that the derivative of the sine series is the cosine series. Also note if you replace <span class="process-math">\(x \)</span> in the exponential series with <span class="process-math">\(ix\)</span> where <span class="process-math">\(i\)</span> is the imaginary number then the sum of the cosine series plus <span class="process-math">\(i \times\)</span>the sine series equals the exponential series! (Euler’s formula)</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#section-3-4-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-some-well-known-power-series-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.6: Power Series of Sine, Cosine and e^x"><a href="#section-3-4-8" title="Copy heading and permalink for Example 3.6: Power Series of Sine, Cosine and e^x" aria-label="Copy heading and permalink for Example 3.6: Power Series of Sine, Cosine and e^x">🔗</a></div>
+<div class="autopermalink" data-description="Example 3.6: Power Series of Sine, Cosine and e^x"><a href="#subsec-some-well-known-power-series-8" title="Copy heading and permalink for Example 3.6: Power Series of Sine, Cosine and e^x" aria-label="Copy heading and permalink for Example 3.6: Power Series of Sine, Cosine and e^x">🔗</a></div>
 </article>
-<figure class="figure figure-like" id="section-3-4-9"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/CRj-sbi2i2I?&amp;modestbranding=1&amp;rel=0" id="section-3-4-9-2"></iframe></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Euler’s Formula on Numberphile (22 minutes).<div class="autopermalink" data-description="Figure 3.7"><a href="#section-3-4-9" title="Copy heading and permalink for Figure 3.7" aria-label="Copy heading and permalink for Figure 3.7">🔗</a></div></figcaption>
-</figure><div class="autopermalink" data-description="Subsection 3.1: Some Well Known Power Series"><a href="#section-3-4" title="Copy heading and permalink for Subsection 3.1: Some Well Known Power Series" aria-label="Copy heading and permalink for Subsection 3.1: Some Well Known Power Series">🔗</a></div>
+<figure class="figure figure-like" id="subsec-some-well-known-power-series-9"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/CRj-sbi2i2I?&amp;modestbranding=1&amp;rel=0" id="subsec-some-well-known-power-series-9-2"></iframe></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Euler’s Formula on Numberphile (22 minutes).<div class="autopermalink" data-description="Figure 3.7"><a href="#subsec-some-well-known-power-series-9" title="Copy heading and permalink for Figure 3.7" aria-label="Copy heading and permalink for Figure 3.7">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Subsection 3.1: Some Well Known Power Series"><a href="#subsec-some-well-known-power-series" title="Copy heading and permalink for Subsection 3.1: Some Well Known Power Series" aria-label="Copy heading and permalink for Subsection 3.1: Some Well Known Power Series">🔗</a></div>
 </section>
-<section class="subsection" id="section-3-5">
+<section class="subsection" id="subsec-intervals-of-convergence">
 <h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Intervals of Convergence</span>
 </h3>
-<div class="para" id="section-3-5-2">A key thing we want to know for a power series is where it converges. This is analogous to finding the domain of a function. This is where we need to know a few convergence/divergence tests from the previous section. When we find the <span class="process-math">\(x-\)</span>values where a series converges, this interval is known as the interval of convergence. For example, the base geometric series is known to converge when <span class="process-math">\(\vert x\vert \lt 1 \)</span> which can also be written as an interval <span class="process-math">\((-1, 1)\)</span> or a trilinear inequality <span class="process-math">\(-1 \lt x \lt 1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-3-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="subsec-intervals-of-convergence-2">A key thing we want to know for a power series is where it converges. This is analogous to finding the domain of a function. This is where we need to know a few convergence/divergence tests from the previous section. When we find the <span class="process-math">\(x-\)</span>values where a series converges, this interval is known as the interval of convergence. For example, the base geometric series is known to converge when <span class="process-math">\(\vert x\vert \lt 1 \)</span> which can also be written as an interval <span class="process-math">\((-1, 1)\)</span> or a trilinear inequality <span class="process-math">\(-1 \lt x \lt 1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-intervals-of-convergence-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="example example-like" id="section-3-5-3"><h4 class="heading">
+<article class="example example-like" id="subsec-intervals-of-convergence-3"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">An Interval of Convergence that Includes Only One Endpoint.</span>
 </h4>
-<div class="para logical" id="section-3-5-3-2">
+<div class="para logical" id="subsec-intervals-of-convergence-3-2">
 <div class="para">Consider the power series:</div>
-<div class="displaymath process-math" id="section-3-5-3-2-1">
+<div class="displaymath process-math" id="subsec-intervals-of-convergence-3-2-1">
 \begin{equation*}
 \sum_{n=1}^\infty \frac{(x-3)^n}{n}
 \end{equation*}
 </div>
 <div class="para">We need to think about what happens when we plug in various values of <span class="process-math">\(x\text{.}\)</span> If <span class="process-math">\(x=4\text{,}\)</span> the resulting series is the harmonic series <span class="process-math">\(\sum_{n=1}^\infty \frac{1}{n}\)</span> which is known to converge. If <span class="process-math">\(x=2\)</span> we get an alternating series <span class="process-math">\(\sum_{n=1}^\infty \frac{(-1)^n}{n}\)</span> which converges by the alternating series test. If <span class="process-math">\(2 \lt x \lt 4 \)</span> The result is a geometric-like series which we can use the limit comparison test with a geometric series to show converges. Finally, if the <span class="process-math">\(x \lt 2\)</span> or <span class="process-math">\(x \gt 4\text{,}\)</span> then the resulting sequence inside the series would not tend to zero, so it would diverge by the divergence test. Putting this all together gives and interval of convergence of <span class="process-math">\(2 \leq x \lt 4\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#section-3-5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-intervals-of-convergence-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.8: An Interval of Convergence that Includes Only One Endpoint"><a href="#section-3-5-3" title="Copy heading and permalink for Example 3.8: An Interval of Convergence that Includes Only One Endpoint" aria-label="Copy heading and permalink for Example 3.8: An Interval of Convergence that Includes Only One Endpoint">🔗</a></div>
+<div class="autopermalink" data-description="Example 3.8: An Interval of Convergence that Includes Only One Endpoint"><a href="#subsec-intervals-of-convergence-3" title="Copy heading and permalink for Example 3.8: An Interval of Convergence that Includes Only One Endpoint" aria-label="Copy heading and permalink for Example 3.8: An Interval of Convergence that Includes Only One Endpoint">🔗</a></div>
 </article>
-<article class="example example-like" id="section-3-5-4"><h4 class="heading">
+<article class="example example-like" id="subsec-intervals-of-convergence-4"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">An Interval of Convergence that Includes Both Endpoints.</span>
 </h4>
-<div class="para logical" id="section-3-5-4-2">
+<div class="para logical" id="subsec-intervals-of-convergence-4-2">
 <div class="para">Consider the power series:</div>
-<div class="displaymath process-math" id="section-3-5-4-2-1">
+<div class="displaymath process-math" id="subsec-intervals-of-convergence-4-2-1">
 \begin{equation*}
 \sum_{n=1}^\infty \frac{(x-2)^n}{n^2+1}
 \end{equation*}
 </div>
 <div class="para">Again we can try various values of <span class="process-math">\(x\text{.}\)</span> If <span class="process-math">\(x=3\text{,}\)</span> the resulting series is one where the sequence inside the series is <span class="process-math">\(\frac{1}{n^2+1}\)</span> and the series can be shown to converge by the integral test, since <span class="process-math">\(\int \frac{1}{x^2+1} dx = \arctan(x) \text{.}\)</span> If <span class="process-math">\(x=1\text{,}\)</span> the resulting series is an alternating series that converges by the alternating series test. Since the series converges at <span class="process-math">\(x=1\)</span> and <span class="process-math">\(x=3\text{,}\)</span> it makes sense that it also converges for values between these two points. Like in the previous example, if <span class="process-math">\(x\)</span> is not between 1 and 3, then the resulting series would diverge by the divergence test.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#section-3-5-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-intervals-of-convergence-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.9: An Interval of Convergence that Includes Both Endpoints"><a href="#section-3-5-4" title="Copy heading and permalink for Example 3.9: An Interval of Convergence that Includes Both Endpoints" aria-label="Copy heading and permalink for Example 3.9: An Interval of Convergence that Includes Both Endpoints">🔗</a></div>
+<div class="autopermalink" data-description="Example 3.9: An Interval of Convergence that Includes Both Endpoints"><a href="#subsec-intervals-of-convergence-4" title="Copy heading and permalink for Example 3.9: An Interval of Convergence that Includes Both Endpoints" aria-label="Copy heading and permalink for Example 3.9: An Interval of Convergence that Includes Both Endpoints">🔗</a></div>
 </article>
-<article class="example example-like" id="section-3-5-5"><h4 class="heading">
+<article class="example example-like" id="subsec-intervals-of-convergence-5"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">An Infinite Interval of Convergence.</span>
 </h4>
-<div class="para logical" id="section-3-5-5-2">
+<div class="para logical" id="subsec-intervals-of-convergence-5-2">
 <div class="para">Consider the series:</div>
-<div class="displaymath process-math" id="section-3-5-5-2-1">
+<div class="displaymath process-math" id="subsec-intervals-of-convergence-5-2-1">
 \begin{equation*}
 \sum_{n=1}^\infty \frac{x^n}{(2n-1)!}
 \end{equation*}
 </div>
 <div class="para">For any value of <span class="process-math">\(x\)</span> that we choose, we get something that looks like a geometric series over a factorial. If we use the limit comparison test with <span class="process-math">\(a_n = (x)^n/(2n-1)!\)</span> and <span class="process-math">\(b_n = (x)^n\text{,}\)</span> then the limit would always tend to zero because of the factorial in the denominator. So this power series converges for all values of<span class="process-math">\(x\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#section-3-5-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-intervals-of-convergence-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.10: An Infinite Interval of Convergence"><a href="#section-3-5-5" title="Copy heading and permalink for Example 3.10: An Infinite Interval of Convergence" aria-label="Copy heading and permalink for Example 3.10: An Infinite Interval of Convergence">🔗</a></div>
+<div class="autopermalink" data-description="Example 3.10: An Infinite Interval of Convergence"><a href="#subsec-intervals-of-convergence-5" title="Copy heading and permalink for Example 3.10: An Infinite Interval of Convergence" aria-label="Copy heading and permalink for Example 3.10: An Infinite Interval of Convergence">🔗</a></div>
 </article>
-<article class="example example-like" id="section-3-5-6"><h4 class="heading">
+<article class="example example-like" id="subsec-intervals-of-convergence-6"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">An Interval of Convergence that Includes Only One Point.</span>
 </h4>
-<div class="para logical" id="section-3-5-6-2">
+<div class="para logical" id="subsec-intervals-of-convergence-6-2">
 <div class="para">Consider the series:</div>
-<div class="displaymath process-math" id="section-3-5-6-2-1">
+<div class="displaymath process-math" id="subsec-intervals-of-convergence-6-2-1">
 \begin{equation*}
 \sum_{n=1}^\infty nx^n
 \end{equation*}
 </div>
 <div class="para">If we let <span class="process-math">\(x=0\)</span> then the resulting series would just be <span class="process-math">\(0+0+0+0+...=0\text{.}\)</span> For any other value of <span class="process-math">\(x\text{,}\)</span> the  resulting series would diverge by the divergence test. So this series only converges for <span class="process-math">\(x=0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#section-3-5-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-intervals-of-convergence-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.11: An Interval of Convergence that Includes Only One Point"><a href="#section-3-5-6" title="Copy heading and permalink for Example 3.11: An Interval of Convergence that Includes Only One Point" aria-label="Copy heading and permalink for Example 3.11: An Interval of Convergence that Includes Only One Point">🔗</a></div>
+<div class="autopermalink" data-description="Example 3.11: An Interval of Convergence that Includes Only One Point"><a href="#subsec-intervals-of-convergence-6" title="Copy heading and permalink for Example 3.11: An Interval of Convergence that Includes Only One Point" aria-label="Copy heading and permalink for Example 3.11: An Interval of Convergence that Includes Only One Point">🔗</a></div>
 </article>
-<figure class="figure figure-like" id="section-3-5-7"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/OxVBT83x8oc?&amp;modestbranding=1&amp;rel=0" id="section-3-5-7-2"></iframe></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Professor Dave Explains Power Series (7 minutes).<div class="autopermalink" data-description="Figure 3.12"><a href="#section-3-5-7" title="Copy heading and permalink for Figure 3.12" aria-label="Copy heading and permalink for Figure 3.12">🔗</a></div></figcaption>
+<figure class="figure figure-like" id="subsec-intervals-of-convergence-7"><div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/OxVBT83x8oc?&amp;modestbranding=1&amp;rel=0" id="subsec-intervals-of-convergence-7-2"></iframe></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Professor Dave Explains Power Series (7 minutes).<div class="autopermalink" data-description="Figure 3.12"><a href="#subsec-intervals-of-convergence-7" title="Copy heading and permalink for Figure 3.12" aria-label="Copy heading and permalink for Figure 3.12">🔗</a></div></figcaption>
 </figure>
-<section class="paragraphs" id="section-3-5-8"><h4 class="heading"><span class="title">Reading Check-in.</span></h4>
-<div class="para" id="section-3-5-8-2">Check our WAMAP course page for a few questions that go along with today’s reading on power series.<div class="autopermalink" data-description="Paragraph"><a href="#section-3-5-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="paragraphs" id="subsec-intervals-of-convergence-8"><h4 class="heading"><span class="title">Reading Check-in.</span></h4>
+<div class="para" id="subsec-intervals-of-convergence-8-2">Check our WAMAP course page for a few questions that go along with today’s reading on power series.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-intervals-of-convergence-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Paragraphs: Reading Check-in"><a href="#section-3-5-8" title="Copy heading and permalink for Paragraphs: Reading Check-in" aria-label="Copy heading and permalink for Paragraphs: Reading Check-in">🔗</a></div>
-</section><div class="autopermalink" data-description="Subsection 3.2: Intervals of Convergence"><a href="#section-3-5" title="Copy heading and permalink for Subsection 3.2: Intervals of Convergence" aria-label="Copy heading and permalink for Subsection 3.2: Intervals of Convergence">🔗</a></div>
+<div class="autopermalink" data-description="Paragraphs: Reading Check-in"><a href="#subsec-intervals-of-convergence-8" title="Copy heading and permalink for Paragraphs: Reading Check-in" aria-label="Copy heading and permalink for Paragraphs: Reading Check-in">🔗</a></div>
+</section><div class="autopermalink" data-description="Subsection 3.2: Intervals of Convergence"><a href="#subsec-intervals-of-convergence" title="Copy heading and permalink for Subsection 3.2: Intervals of Convergence" aria-label="Copy heading and permalink for Subsection 3.2: Intervals of Convergence">🔗</a></div>
 </section><div class="autopermalink" data-description="Section 3: Power Series"><a href="#section-3" title="Copy heading and permalink for Section 3: Power Series" aria-label="Copy heading and permalink for Section 3: Power Series">🔗</a></div>
 </section>
 </div>
@@ -401,5 +506,6 @@ e^x =  \amp \sum_{n=0}^\infty \frac{x^n}{n!}\\
 <div id="ptx-page-footer" class="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
+<script>diagcess.Base.init()</script>
 </body>
 </html>

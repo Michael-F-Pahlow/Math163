@@ -14,12 +14,12 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Parametric Equations</title>
+<title>Object in Three-Dimensional Space</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: false,
@@ -29,7 +29,10 @@ htmlPresentation: false,
 </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<meta name="twitter:title" content="Math 163 Notes">
+<meta property="og:title" content="Math 163 Notes">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.42"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -51,16 +54,16 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.2';
+eBookConfig.runestone_version = '8.1.7';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.d0616b3d72ab3b06.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.af9055d29ed602c4.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<script src="_static/prefix-runtime.917dfc3cfe0bb764.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.39f982db166f319d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/dist/diagcess/diagcess.js"></script><script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="pahlow-Math163Notes" class="pretext article ignore-math">
@@ -68,16 +71,15 @@ eBookConfig.enable_chatcodes =  false;
 <h1 class="heading"><a href="math163notes.html"><span class="title">Math 163 Notes</span></a></h1>
 <p class="byline">Michael Pahlow</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search book" commandfor="ptx-search-dialog" command="show-modal"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog" closedby="closerequest"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close search" id="ptx-search-close" class="ptx-search-close" commandfor="ptx-search-dialog" command="close"><span class="material-symbols-outlined">close</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
-</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
 <span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
 <script>
@@ -94,7 +96,7 @@ var ggbApp = new GGBApplet({"appName": "3d",
     "disableAutoScale": false},
 true);
 </script><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="section-9.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="math163notes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section-11.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\foo}{b^{ar}}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -107,69 +109,346 @@ true);
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Sequences</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#section-1-4" class="internal"><span class="codenumber">1.1</span> <span class="title">Turning a Sequence into a Formula</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#section-1-5" class="internal"><span class="codenumber">1.2</span> <span class="title">Three Famous Sequences</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#section-1-6" class="internal"><span class="codenumber">1.3</span> <span class="title">Limits of Sequences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#subsec-turning-a-sequence-into-a-formula" class="internal"><span class="codenumber">1.1</span> <span class="title">Turning a Sequence into a Formula</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#subsec-three-famous-sequences" class="internal"><span class="codenumber">1.2</span> <span class="title">Three Famous Sequences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-1.html#subsec-limits-of-sequences" class="internal"><span class="codenumber">1.3</span> <span class="title">Limits of Sequences</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Infinite Series</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#section-2-4" class="internal"><span class="codenumber">2.1</span> <span class="title">The Geometric and Harmonic Series</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#section-2-5" class="internal"><span class="codenumber">2.2</span> <span class="title">The Integral Test</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#section-2-6" class="internal"><span class="codenumber">2.3</span> <span class="title">Three More Tests for Convergence/Divergence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#subsec-the-geometric-and-harmonic-series" class="internal"><span class="codenumber">2.1</span> <span class="title">The Geometric and Harmonic Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#subsec-the-integral-test" class="internal"><span class="codenumber">2.2</span> <span class="title">The Integral Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-2.html#subsec-three-convergence-tests" class="internal"><span class="codenumber">2.3</span> <span class="title">Three More Tests for Convergence/Divergence</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-3.html" class="internal"><span class="codenumber">3</span> <span class="title">Power Series</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#section-3-4" class="internal"><span class="codenumber">3.1</span> <span class="title">Some Well Known Power Series</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#section-3-5" class="internal"><span class="codenumber">3.2</span> <span class="title">Intervals of Convergence</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#subsec-some-well-known-power-series" class="internal"><span class="codenumber">3.1</span> <span class="title">Some Well Known Power Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-3.html#subsec-intervals-of-convergence" class="internal"><span class="codenumber">3.2</span> <span class="title">Intervals of Convergence</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-4.html" class="internal"><span class="codenumber">4</span> <span class="title">Taylor Series</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-4.html#section-4-4" class="internal"><span class="codenumber">4.1</span> <span class="title">The Idea of Taylor Series</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-4.html#section-4-5" class="internal"><span class="codenumber">4.2</span> <span class="title">A Few Well-Known Taylor Series</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-4.html#section-4-6" class="internal"><span class="codenumber">4.3</span> <span class="title">Building New Taylor Series from Known Taylor Series.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-4.html#subsec-the-idea-of-a-taylor-series" class="internal"><span class="codenumber">4.1</span> <span class="title">The Idea of Taylor Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-4.html#subsec-well-known-taylor-series" class="internal"><span class="codenumber">4.2</span> <span class="title">A Few Well-Known Taylor Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-4.html#subsec-new-taylor-series-from-known-taylor-series" class="internal"><span class="codenumber">4.3</span> <span class="title">Building New Taylor Series from Known Taylor Series.</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-5.html" class="internal"><span class="codenumber">5</span> <span class="title">Working with Power Series</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-5.html#section-5-4" class="internal"><span class="codenumber">5.1</span> <span class="title">Applications</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-5.html#subsec-applications-of-power-series" class="internal"><span class="codenumber">5.1</span> <span class="title">Applications</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-6.html" class="internal"><span class="codenumber">6</span> <span class="title">2D Vectors</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-7.html" class="internal"><span class="codenumber">7</span> <span class="title">3D Vectors</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-8.html" class="internal"><span class="codenumber">8</span> <span class="title">Vector Calculations</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-9.html" class="internal"><span class="codenumber">9</span> <span class="title">Applications of Vectors</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="section-10.html" class="internal"><span class="codenumber">10</span> <span class="title">Parametric Equations</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-11.html" class="internal"><span class="codenumber">11</span> <span class="title">Vector-Valued Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-12.html" class="internal"><span class="codenumber">12</span> <span class="title">Calculus of Vector-Valued Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-13.html" class="internal"><span class="codenumber">13</span> <span class="title">Applications of Vector-Valued Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-14.html" class="internal"><span class="codenumber">14</span> <span class="title">Multi-Variable Functions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-15.html" class="internal"><span class="codenumber">15</span> <span class="title">Limits and Partial Derivatives</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-16.html" class="internal"><span class="codenumber">16</span> <span class="title">Applications of Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-6.html" class="internal"><span class="codenumber">6</span> <span class="title">2D Vectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6.html#subsec-vector-definitions" class="internal"><span class="codenumber">6.1</span> <span class="title">Definitions and Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6.html#subsec-vector-operations" class="internal"><span class="codenumber">6.2</span> <span class="title">Vector Operations and Properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-6.html#subsec-vector-applications" class="internal"><span class="codenumber">6.3</span> <span class="title">Applications of Vectors</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-7.html" class="internal"><span class="codenumber">7</span> <span class="title">3D Vectors</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7.html#subsec-3d-vector-operations" class="internal"><span class="codenumber">7.1</span> <span class="title">Operations and Properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-7.html#geogebra-3d" class="internal"><span class="codenumber">7.2</span> <span class="title">GeoGebra 3D</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-8.html" class="internal"><span class="codenumber">8</span> <span class="title">The Dot Product</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-8.html#subsec-dot-product" class="internal"><span class="codenumber">8.1</span> <span class="title">Definition of the Dot Product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-8.html#subsec-properties-dot-product" class="internal"><span class="codenumber">8.2</span> <span class="title">Properties of the Dot Product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-8.html#subsec-application-dot-product" class="internal"><span class="codenumber">8.3</span> <span class="title">Applications of the Dot Product</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-9.html" class="internal"><span class="codenumber">9</span> <span class="title">The Cross Product</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-9.html#subsec-def-cross-product" class="internal"><span class="codenumber">9.1</span> <span class="title">Definition of the Cross Product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-9.html#subsec-prop-cross-product" class="internal"><span class="codenumber">9.2</span> <span class="title">Properties of the Cross Product</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-9.html#subsec-application-cross-product" class="internal"><span class="codenumber">9.3</span> <span class="title">Applications of the Cross Product</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="section-10.html" class="internal"><span class="codenumber">10</span> <span class="title">Object in Three-Dimensional Space</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-10.html#subsec-3d-functions" class="internal"><span class="codenumber">10.1</span> <span class="title">Multi-variable Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-10.html#subsec-coordinate-systems" class="internal"><span class="codenumber">10.2</span> <span class="title">Alternative Coordinate Systems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-10.html#subsec-parametrics" class="internal"><span class="codenumber">10.3</span> <span class="title">Sets of Parametric Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-10.html#subsec-vvf" class="internal"><span class="codenumber">10.4</span> <span class="title">Vector-Valued Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-11.html" class="internal"><span class="codenumber">11</span> <span class="title">Vector-Valued Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-11.html#subsec-vvf-graphs" class="internal"><span class="codenumber">11.1</span> <span class="title">Graphing Vector-Valued Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-11.html#subsec-vvf-limits" class="internal"><span class="codenumber">11.2</span> <span class="title">Limits and Continuity</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-12.html" class="internal"><span class="codenumber">12</span> <span class="title">Calculus of Vector-Valued Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-12.html#subsec-vvf-derivatives" class="internal"><span class="codenumber">12.1</span> <span class="title">Derivatives of Vector-Valued Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-12.html#subsec-vvf-integrals" class="internal"><span class="codenumber">12.2</span> <span class="title">Integrals of Vector-Valued Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-13.html" class="internal"><span class="codenumber">13</span> <span class="title">Applications of Vector-Valued Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-13.html#subsec-arclength" class="internal"><span class="codenumber">13.1</span> <span class="title">Arclength</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-13.html#subsec-curvature" class="internal"><span class="codenumber">13.2</span> <span class="title">Curvature</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-13.html#subsec-tnb-frame" class="internal"><span class="codenumber">13.3</span> <span class="title">The T-N-B Frame</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-13.html#subsec-3d-motion" class="internal"><span class="codenumber">13.4</span> <span class="title">Motion in Three-Dimensional Space</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-14.html" class="internal"><span class="codenumber">14</span> <span class="title">Multi-Variable Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-14.html#subsec-3d-graphs" class="internal"><span class="codenumber">14.1</span> <span class="title">Plots of Multi-Variable Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-14.html#subsec-contour-maps" class="internal"><span class="codenumber">14.2</span> <span class="title">Contour Maps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-14.html#subsec-3d-limits" class="internal"><span class="codenumber">14.3</span> <span class="title">Limits and Continuity of Three-Dimensional Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-15.html" class="internal"><span class="codenumber">15</span> <span class="title">Partial Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-15.html#subsec-pd-notation" class="internal"><span class="codenumber">15.1</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-15.html#subsec-higher-order-partials" class="internal"><span class="codenumber">15.2</span> <span class="title">Mixed Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-15.html#subsec-pd-chain-rule" class="internal"><span class="codenumber">15.3</span> <span class="title">The Chain Rule</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-16.html" class="internal"><span class="codenumber">16</span> <span class="title">Applications of Partial Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-16.html#subsec-tangent-plane" class="internal"><span class="codenumber">16.1</span> <span class="title">Tangent Planes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-16.html#subsec-linear-approximation" class="internal"><span class="codenumber">16.2</span> <span class="title">Linear Approximation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-16.html#subsec-gradient" class="internal"><span class="codenumber">16.3</span> <span class="title">The Directional Derivative and Gradient Vector</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-16.html#subsec-3d-optimization" class="internal"><span class="codenumber">16.4</span> <span class="title">The Second Derivative Test</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-17.html" class="internal"><span class="codenumber">17</span> <span class="title">Lagrange Multipliers</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-17.html#section-17-4" class="internal"><span class="codenumber">17.1</span> <span class="title">A Lagrange Multipliers by Hand</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-17.html#section-17-5" class="internal"><span class="codenumber">17.2</span> <span class="title">Using Excel for Optimization with Constraints</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-17.html#subsec-lagrange-multipliers-by-hand" class="internal"><span class="codenumber">17.1</span> <span class="title">A Lagrange Multipliers by Hand</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-17.html#subsec-using-excel-for-lagrange-multipliers" class="internal"><span class="codenumber">17.2</span> <span class="title">Using Excel for Optimization with Constraints</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-18.html" class="internal"><span class="codenumber">18</span> <span class="title">Double Integrals</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-19.html" class="internal"><span class="codenumber">19</span> <span class="title">Double Integrals in Polar Coordinates</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-20.html" class="internal"><span class="codenumber">20</span> <span class="title">Applications of Double Integrals</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculators.html" class="internal"><span class="codenumber">21</span> <span class="title">Calculators</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-18.html" class="internal"><span class="codenumber">18</span> <span class="title">Double Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-18.html#subsec-double-integrals-rectangles" class="internal"><span class="codenumber">18.1</span> <span class="title">Double Integrals over Rectangles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-18.html#subsec-iterated-integrals" class="internal"><span class="codenumber">18.2</span> <span class="title">Iterated Integrals</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-19.html" class="internal"><span class="codenumber">19</span> <span class="title">Double Integrals Over General Regions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-19.html#subsec-double-integrals-general" class="internal"><span class="codenumber">19.1</span> <span class="title">Double Integrals in General</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-19.html#subsec-switching-order-of-integration" class="internal"><span class="codenumber">19.2</span> <span class="title">Switching the Order of Integration</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-20.html" class="internal"><span class="codenumber">20</span> <span class="title">Applications of Double Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-20.html#subsec-double-integral-polar" class="internal"><span class="codenumber">20.1</span> <span class="title">Double Integrals in Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-20.html#subsec-center-of-mass" class="internal"><span class="codenumber">20.2</span> <span class="title">Center of Mass</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-20.html#subsec-double-integral-applications" class="internal"><span class="codenumber">20.3</span> <span class="title">Applications of Double Integrals</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-additional-resources.html" class="internal"><span class="codenumber">21</span> <span class="title">Additional Resources</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-additional-resources.html#subsec-textbooks" class="internal"><span class="codenumber">21.1</span> <span class="title">Textbooks</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-additional-resources.html#subsec-youtube-videos" class="internal"><span class="codenumber">21.2</span> <span class="title">YouTube Videos</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-additional-resources.html#subsec-calculators" class="internal"><span class="codenumber">21.3</span> <span class="title">Calculators</span></a></div></li>
+</ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="section-10">
 <h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Parametric Equations</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Object in Three-Dimensional Space</span>
 </h2>
-<div class="para" id="section-10-2">Under Construction<div class="autopermalink" data-description="Paragraph"><a href="#section-10-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="section-10-2">
+<div class="para" id="section-10-2-1">For the rest of the quarter, we will be exploring objects in three-dimensional space. There are multiple ways to represent an object in three-dimensional space and depending on what you want to calculate, one of these ways is usually easier than the others. Another handy tool besides GeoGebra is <a class="external" href="https://c3d.libretexts.org/CalcPlot3D/index.html" target="_blank"><code class="code-inline tex2jax_ignore">CalcPlot3D</code></a>. I will utilized this tool throughout this section and you may recognize it from the WAMAP login page!<div class="autopermalink" data-description="Paragraph"><a href="#section-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="objectives goal-like" id="section-10-3"><h3 class="heading">
+<span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Objects in 3D Space</span>
+</h3>
+<div class="introduction" id="section-10-3-2">
+<div class="para" id="section-10-3-2-1">In this section we will look at:<div class="autopermalink" data-description="Paragraph"><a href="#section-10-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section 10: Parametric Equations"><a href="#section-10" title="Copy heading and permalink for Section 10: Parametric Equations" aria-label="Copy heading and permalink for Section 10: Parametric Equations">🔗</a></div>
+</div>
+<ul class="disc" id="section-10-3-3">
+<li id="section-10-3-3-1">
+<div class="para" id="section-10-3-3-1-1">Multi-variable functions<div class="autopermalink" data-description="Paragraph"><a href="#section-10-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#section-10-3-3-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="section-10-3-3-2">
+<div class="para" id="section-10-3-3-2-1">Alternative coordinate systems<div class="autopermalink" data-description="Paragraph"><a href="#section-10-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#section-10-3-3-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="section-10-3-3-3">
+<div class="para" id="section-10-3-3-3-1">Sets of parametric equations<div class="autopermalink" data-description="Paragraph"><a href="#section-10-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#section-10-3-3-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="section-10-3-3-4">
+<div class="para" id="section-10-3-3-4-1">Vector-valued functions<div class="autopermalink" data-description="Paragraph"><a href="#section-10-3-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#section-10-3-3-4" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives 10: Objects in 3D Space"><a href="#section-10-3" title="Copy heading and permalink for Objectives 10: Objects in 3D Space" aria-label="Copy heading and permalink for Objectives 10: Objects in 3D Space">🔗</a></div>
+</article>
+<section class="subsection" id="subsec-3d-functions">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multi-variable Functions</span>
+</h3>
+<div class="para" id="subsec-3d-functions-2">We are used to writing functions <span class="process-math">\(y=f(x)\)</span> for writing functions in two dimensions and maybe even are used to writing equations like <span class="process-math">\(x^2+y^2 = 1\)</span> in two dimensions. Extending this idea to three dimensions we can write functions like <span class="process-math">\(z=f(x,y)\)</span> or <span class="process-math">\(x^2+y^2+z^2=1\text{.}\)</span> Here are a few common functions.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-3d-functions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="subsec-3d-functions-3"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Planes.</span>
+</h4>
+<div class="para" id="subsec-3d-functions-3-2">A plane can be written as a function: <span class="process-math">\(f(x,y) = ax+by+c\)</span> where <span class="process-math">\(a, b\)</span> and <span class="process-math">\(c\)</span> are constants or as an implicit equation: <span class="process-math">\(ax+by+cz=d\text{.}\)</span> Like the slope of a line and intercepts, the constants control the "tilt" of the plane and the intercepts. Here is a plot of the plane: <span class="process-math">\(z = x-\frac{1}{3}y+5\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-3d-functions-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="subsec-3d-functions-3-3"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/assets/plane.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>An example plane<div class="autopermalink" data-description="Figure 10.2"><a href="#subsec-3d-functions-3-3" title="Copy heading and permalink for Figure 10.2" aria-label="Copy heading and permalink for Figure 10.2">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Example 10.1: Planes"><a href="#subsec-3d-functions-3" title="Copy heading and permalink for Example 10.1: Planes" aria-label="Copy heading and permalink for Example 10.1: Planes">🔗</a></div>
+</article>
+<article class="example example-like" id="subsec-3d-functions-4"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cylinders.</span>
+</h4>
+<div class="para" id="subsec-3d-functions-4-2">A cylinder is simply a circle extended in a third dimension. The equation <span class="process-math">\(x^2+y^2 = r^2\)</span> would describe a circle on the <span class="process-math">\(xy\)</span>-plane and but in three dimensions this circle would extend infinitely in the <span class="process-math">\(z\)</span>-direction to form a cylinder. Here is a plot of the cylinder <span class="process-math">\(x^2+y^2=4\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-3d-functions-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="subsec-3d-functions-4-3"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/assets/cylinder.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>An example cylinder<div class="autopermalink" data-description="Figure 10.4"><a href="#subsec-3d-functions-4-3" title="Copy heading and permalink for Figure 10.4" aria-label="Copy heading and permalink for Figure 10.4">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Example 10.3: Cylinders"><a href="#subsec-3d-functions-4" title="Copy heading and permalink for Example 10.3: Cylinders" aria-label="Copy heading and permalink for Example 10.3: Cylinders">🔗</a></div>
+</article>
+<article class="example example-like" id="subsec-3d-functions-5"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Spheres.</span>
+</h4>
+<div class="para" id="subsec-3d-functions-5-2">The equation of a sphere is similar to the equation of a circle <span class="process-math">\(x^2+y^2+z^2=r^2\text{.}\)</span> Here is a plot of the sphere <span class="process-math">\(x^2+y^2+z^2=4\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-3d-functions-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="subsec-3d-functions-5-3"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/assets/sphere.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>An example sphere<div class="autopermalink" data-description="Figure 10.6"><a href="#subsec-3d-functions-5-3" title="Copy heading and permalink for Figure 10.6" aria-label="Copy heading and permalink for Figure 10.6">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Example 10.5: Spheres"><a href="#subsec-3d-functions-5" title="Copy heading and permalink for Example 10.5: Spheres" aria-label="Copy heading and permalink for Example 10.5: Spheres">🔗</a></div>
+</article>
+<div class="para" id="subsec-3d-functions-6">Write three dimensional shapes using the familiar function notation or equations with the variables <span class="process-math">\(x, y\)</span> and <span class="process-math">\(z\)</span> works well when the shapes have flat sides or are defined by functions like exponentials, logarithms or powers. But for some shapes it is easier to change to a coordinate system that fits the shape.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-3d-functions-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 10.1: Multi-variable Functions"><a href="#subsec-3d-functions" title="Copy heading and permalink for Subsection 10.1: Multi-variable Functions" aria-label="Copy heading and permalink for Subsection 10.1: Multi-variable Functions">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-coordinate-systems">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Alternative Coordinate Systems</span>
+</h3>
+<div class="para" id="subsec-coordinate-systems-2">The variables <span class="process-math">\(x, y\)</span> and <span class="process-math">\(z\)</span> define a grid made of cubes where a point like (5, 1, -4) means start at the origin and move for squares in the positive <span class="process-math">\(x\)</span> direction, one sqaure in the positive <span class="process-math">\(y\)</span> direction and down 4 squares in he <span class="process-math">\(z\)</span>direction. This coordinate system is called the Cartesian coordinaes system (after Rene DeCarte) or the rectangular coordinate system since the origin and a given point would be opposite corners of a recatangle. There are two other common coordinate systems that we use: one defined by cyclinders and one defined by spheres.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-coordinate-systems-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="assemblage-cylindrical-coordinates"><h4 class="heading"><span class="title">Cylindircal Coordinates.</span></h4>
+<div class="para" id="assemblage-cylindrical-coordinates-2">This coordinate system is formed by circles in the <span class="process-math">\(xy\)</span>-plane (polar coordinates) and keeping <span class="process-math">\(z\)</span> as the third dimension. To convert between the Cartesian coordinate system <span class="process-math">\((x,y,z)\)</span> and cylindrical coordinates <span class="process-math">\((r,\theta,z)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#assemblage-cylindrical-coordinates-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="assemblage-cylindrical-coordinates-3">
+<div class="para"><em class="alert">Polar to Cartesian</em></div>
+<div class="displaymath process-math" id="assemblage-cylindrical-coordinates-3-2">
+\begin{align*}
+x= \amp r\cos(\theta)\\
+y= \amp r\sin(\theta)\\
+z = \amp z
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#assemblage-cylindrical-coordinates-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="assemblage-cylindrical-coordinates-4">
+<div class="para"><em class="alert">Cartesian to Polar</em></div>
+<div class="displaymath process-math" id="assemblage-cylindrical-coordinates-4-2">
+\begin{align*}
+r=\amp \sqrt{x^2+y^2} \\
+\theta = \amp \arctan(y/x) \\
+z= \amp z 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#assemblage-cylindrical-coordinates-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Cylindircal Coordinates"><a href="#assemblage-cylindrical-coordinates" title="Copy heading and permalink for Assemblage: Cylindircal Coordinates" aria-label="Copy heading and permalink for Assemblage: Cylindircal Coordinates">🔗</a></div>
+</article>
+<div class="para" id="subsec-coordinate-systems-4">In cyclindircal coordinates a cylinder is defiend as <span class="process-math">\(r=\)</span>consant and a sphere is defined as <span class="process-math">\(r^2+z^2=c^2\text{.}\)</span> Another coordinate system is defined be a series of concentric spheres.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-coordinate-systems-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="assemblage-spherical-coordinates"><h4 class="heading"><span class="title">Spherical Coordinates.</span></h4>
+<div class="para" id="assemblage-spherical-coordinates-2">Spherical coordinates are defined by two angles. One angle going around the <span class="process-math">\(z-\)</span>axis is <span class="process-math">\(\theta\)</span> which is the same <span class="process-math">\(\theta\)</span> in cylindiral and polar coordinates. A second angle is defined as the angle between the <span class="process-math">\(z-\)</span>axis and a radius vector. This angle is <span class="process-math">\(\phi\text{.}\)</span> The third coordinate is the radius which extends from the radius to a point on the sphere and is called <span class="process-math">\(\rho\)</span> which looks like a "p" but is pronounced rho and makes the "r"-sound in Greek.<div class="autopermalink" data-description="Paragraph"><a href="#assemblage-spherical-coordinates-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="assemblage-spherical-coordinates-4">
+<div class="para"><em class="alert">Spherical to Cartesian</em></div>
+<div class="displaymath process-math" id="assemblage-spherical-coordinates-4-2">
+\begin{align*}
+x=\amp \rho\sin(\phi)\cos(\theta) \\
+y=\amp \rho\sin(\phi)\sin(\theta) \\
+z=\amp \rho\cos(\phi) 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#assemblage-spherical-coordinates-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="assemblage-spherical-coordinates-5">
+<div class="para"><em class="alert">Cartesian to Spherical</em></div>
+<div class="displaymath process-math" id="assemblage-spherical-coordinates-5-2">
+\begin{align*}
+\amp 
+\end{align*}
+</div>
+<div class="displaymath process-math" id="assemblage-spherical-coordinates-5-3">
+\begin{align*}
+\rho=\amp \sqrt{x^2+y^2+z^2} \\
+\theta =\amp \arctan(y/x)\\
+\phi =\amp \arccos\left(\frac{z}{\sqrt{x^2+y^2+z^2}}\right)
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#assemblage-spherical-coordinates-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Spherical Coordinates"><a href="#assemblage-spherical-coordinates" title="Copy heading and permalink for Assemblage: Spherical Coordinates" aria-label="Copy heading and permalink for Assemblage: Spherical Coordinates">🔗</a></div>
+</article>
+<div class="para" id="subsec-coordinate-systems-6">In spherical coordinates a sphere is simply defiend as <span class="process-math">\(\rho=\)</span>constant.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-coordinate-systems-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 10.2: Alternative Coordinate Systems"><a href="#subsec-coordinate-systems" title="Copy heading and permalink for Subsection 10.2: Alternative Coordinate Systems" aria-label="Copy heading and permalink for Subsection 10.2: Alternative Coordinate Systems">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-parametrics">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Sets of Parametric Equations</span>
+</h3>
+<div class="para logical" id="subsec-parametrics-2">
+<div class="para">Another way to define an object in three-dimensional space is by using a set of parametric equations. This defines a space curve. For parametric equations we first define a parameter, usually <span class="process-math">\(t\)</span> for time. As an example the set of parametric equations:</div>
+<div class="displaymath process-math" id="subsec-parametrics-2-2">
+\begin{equation*}
+\begin{cases} x(t) = \cos(t) \amp\\ y(t) = \sin(t) \amp\\ z(t)=0.1t \amp\\ \end{cases}
+\end{equation*}
+</div>
+<div class="para">draws a helix.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-parametrics-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="subsec-parametrics-3"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/assets/helix.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>An example helix<div class="autopermalink" data-description="Figure 10.8"><a href="#subsec-parametrics-3" title="Copy heading and permalink for Figure 10.8" aria-label="Copy heading and permalink for Figure 10.8">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="subsec-parametrics-4">More on parametric equations in future sections.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-parametrics-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 10.3: Sets of Parametric Equations"><a href="#subsec-parametrics" title="Copy heading and permalink for Subsection 10.3: Sets of Parametric Equations" aria-label="Copy heading and permalink for Subsection 10.3: Sets of Parametric Equations">🔗</a></div>
+</section>
+<section class="subsection" id="subsec-vvf">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Vector-Valued Functions</span>
+</h3>
+<div class="para" id="subsec-vvf-2">A vector-valued function is simply a set of parametric equations written as the components of a vector. Such as <span class="process-math">\(\mathbf{r}(t) =\langle t^2, t+5, -4t^3\text{.}\)</span> Evaluating this function at a value for <span class="process-math">\(t\)</span> creates a vector: <span class="process-math">\(\mathbf{r}(2) = \langle 1, 6, -4 \rangle\text{.}\)</span> If we take <span class="process-math">\(t\)</span> to be time then <span class="process-math">\(\mathbf{r}(t)\)</span> would be a position vector. Vector-valued functions are very useful in calculus to define things like velocity and acceleration vectors and tangent vectors. We will explore this in the next few sections.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-vvf-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-vvf-3">I would like to close this section by encouraging you to play around with <a class="external" href="https://c3d.libretexts.org/CalcPlot3D/index.html" target="_blank"><code class="code-inline tex2jax_ignore">CalcPlot3D</code></a> which can not only plot 3D functions and space curves but can also plot vector-valued functions and you can also use cylindrical and spherical coordinates! This is tool that was made for this class. Here is a playlist  <a class="external" href="https://www.youtube.com/watch?v=cvVhsSbNn6E\amp;list=PLp3sDbrG06vTtUb4_B9W47txBl0_glcck" target="_blank"><code class="code-inline tex2jax_ignore">playlist</code></a> of YouTube videos for using CalcPlot3D.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-vvf-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="paragraphs" id="subsec-vvf-4"><h4 class="heading"><span class="title">Reading Check-in.</span></h4>
+<div class="para" id="subsec-vvf-4-2">Check our WAMAP course page for a few questions that go along with today’s reading on different ways to think about three-dimensional objects.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-vvf-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Reading Check-in"><a href="#subsec-vvf-4" title="Copy heading and permalink for Paragraphs: Reading Check-in" aria-label="Copy heading and permalink for Paragraphs: Reading Check-in">🔗</a></div>
+</section><div class="autopermalink" data-description="Subsection 10.4: Vector-Valued Functions"><a href="#subsec-vvf" title="Copy heading and permalink for Subsection 10.4: Vector-Valued Functions" aria-label="Copy heading and permalink for Subsection 10.4: Vector-Valued Functions">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 10: Object in Three-Dimensional Space"><a href="#section-10" title="Copy heading and permalink for Section 10: Object in Three-Dimensional Space" aria-label="Copy heading and permalink for Section 10: Object in Three-Dimensional Space">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
@@ -179,5 +458,6 @@ true);
 <div id="ptx-page-footer" class="ptx-page-footer">
 <a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
+<script>diagcess.Base.init()</script>
 </body>
 </html>
