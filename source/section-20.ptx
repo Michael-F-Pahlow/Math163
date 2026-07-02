@@ -3,7 +3,9 @@
   <title>Applications of Double Integrals</title>
  <introduction>
     <p>
-      blah blah blah
+      In this final section we will look at a few applications. First we will look at integrating using polar coordinates, which is not technically an application but 
+      polar coordinates are often used in physics and engineering applications to simplify calculations. Then we will look at calculating center of mass before wrapping 
+      up with a few more application examples.
     </p>
   </introduction>
   <objectives>
@@ -37,8 +39,92 @@
   <subsection xml:id="subsec-double-integral-polar">
     <title>Double Integrals in Polar Coordinates</title>
     <p>
-      
+      When integrating over the <m>xy-</m>plane and using <m>x</m> and <m>y</m> as our variables, we divide up the region into tiny rectangles whose base is <m>dx \cdot dy</m>.
+      In polar coordinates, the plane is divided up into circular sectors shaped like slices of pizza or pieces of pie. The area of a sector is radius times arc length and\\ 
+      <m>A = r\cdot s = r(r\theta)</m> as we shrink the area down to the d-level (calculus!) we get <m>dA = dr(r d\theta)</m>. Since <m>\theta</m> is measured in radians and
+      is unitless, <m>r dr d\theta</m> has units of area units squared. <m>f(r,\theta)</m> provides the height and so the double integral 
+      <md>
+        \int_a^b \int_c^d f(r,\theta) r dr d\theta
+      </md>
+      calculates a volume. Integrating in polar coordinates simplifies calculations greatly for circular-like regions. 
     </p>
+    <example>
+      <p>
+        Calculate the double integral
+        <md>
+          \int\int_{R} (x+y) dA
+        </md>
+        over the area pictured below. (This region is called an annulus.)
+      </p>
+      <figure>
+        <caption>An annulus</caption>
+        <image source="assets/2dpolar1.png">
+          <shortdescription>an annulus or the area between a circle of radius 2 and a circle of radius 4 for angles between zero and pi over 2.</shortdescription>
+        </image>
+      </figure>
+      <p>
+        The region can be described in polar coordinates as <m>2\leq r \leq 4</m> and <m>0 \leq \theta \leq \frac{\pi}{2}</m>. We also need to convert the function
+        to polar coordinates using <m>x=r\cos(\theta)</m> and <m>y=r\sin(\theta)</m>. The double integral is then
+        <md>
+          \int_0^{\frac{\pi}{2}} \int_2^4 (r\cos(\theta)+r\sin(\theta))r dr d\theta = \int_0^{\frac{\pi}{2}} r^2(\cos(\theta)+\sin(\theta)) dr d\theta =
+        </md>
+        <md>
+          \left( \int_0^{\frac{\pi}{2}}(\cos(\theta)+\sin(\theta))d\theta\right)\cdot \left(\int_2^4 r^2 dr\right) = \left(\left. -\sin(\theta)+\cos(\theta)\right\vert_0^{\frac{\pi}{2}}\right)\cdot
+          \left(\left. \frac{r^3}{3}\right\vert_2^4\right)
+        </md>
+        <md>
+          =(2)\left(\frac{56}{3}\right) = \frac{112}{3}
+        </md>
+      </p>
+    </example>
+    <example>
+      <p>
+        Calculate the double integral
+        <md>
+          \int\int_R \frac{1}{(x^2+y^2)^2}dA
+        </md>
+        over the region pictured below:
+      </p>
+<figure>
+  <caption>A quarter of a shifted circle</caption>
+  <image source="assets/2dpolar2.png">
+    <shortdescription>The top right section of a circle of radius 1 with center at (1,0).</shortdescription>
+  </image>
+</figure>
+<p>
+  This region can be described in polar coordinates as <m>0\leq \theta \leq \frac{\pi}{4}</m> since the point <m>(x,y)=(1,1)</m> is <m>(r,\theta) = (1, \pi/4)</m> in 
+  polar coordinates. And <m>\sec(\theta) \leq r \leq 2\cos(\theta)</m> since the circle has polar equation <m>r=2\cos(\theta)</m> and the line <m>x=1</m> has polar equation
+  <m>r=\sec(\theta)</m>. Note that <m>x^2+y^2 = r^2</m> so our double integral is 
+  <md>
+    \int_0^{\frac{\pi}{4}} \int_{\sec(\theta)}^{2\cos(\theta)} \frac{ r}{(r^2)^2} dr d\theta = \int_0^{\frac{\pi}{4}} \int_{\sec(\theta)}^{2\cos(\theta)} r^{-3} dr d\theta =
+  </md>
+  <md>
+    \int_0^{\frac{\pi}{4}} \left(\left. -\frac{1}{2}r^{-2} \right\vert_{\sec(\theta)}^{2\cos(\theta)}\right) d\theta = \int_0^{\frac{\pi}{4}} \left(\frac{1}{2}cos^2(\theta) - \frac{1}{8}\sec^2(\theta)\right) d\theta =
+  </md>
+  <md>
+    =\left.\left( \frac{1}{4}(\theta + \frac{1}{2}\sin(2\theta))-\frac{1}{8}\tan(\theta) \right)\right\vert_0^{\pi/4} = \frac{\pi}{16}
+  </md>
+  
+</p>
+    </example>
+    <p>
+      Here are two more video examples:
+    </p>
+    <figure>
+    <caption>Double integral in polar coordinates example 1</caption>
+    <video youtube="YQfta_poP1k"/>
+  </figure>
+<figure>
+    <caption>Double integral in polar coordinates example 1</caption>
+    <video youtube="xmwN1K3nF3I"/>
+  </figure>
+<paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on...
+    </p>
+  </paragraphs>
+
   </subsection>
   <subsection xml:id="subsec-center-of-mass">
     <title>Center of Mass</title>
@@ -49,7 +135,118 @@
   <subsection xml:id="subsec-double-integral-applications">
     <title>Applications of Double Integrals</title>
     <p>
-      
+      Recall from Math 152, that the center of mass of a region with uniform density is <m>(\bar{x},\bar{y}) = (M_y/M, M_x/M)</m> where <m>M</m> is the mass or area and
+      <m>M_y</m> and <m>M_x</m> are the moments of mass. Defining center of mass with double integrals is more straight-forward:
     </p>
+    <assemblage xml:id="assemblage-COM">
+      <title>Center of Mass</title>
+      <p>
+        For a region with area <m>A</m> and uniform density:
+        <md>
+          \bar{x} = \frac{1}{A}\int\int_R x dA, \quad \bar{y} = \frac{1}{A}\int\int_R y dA
+        </md>
+        Note that with this more general definition, it is easy to convert to polar coordinates and also to generalize to higher dimensions.
+      </p>
+    </assemblage>
+    <example>
+      <p>
+        Find the center of mass of the region bounded by <m>y=1-x^2</m> and the <m>x-</m>axis. 
+      </p>
+      <p>
+        A picture is always helpful.
+      </p>
+      <figure>
+    <caption>Our region</caption>
+      <image source="assets/comass1.png">
+        <description>
+        <p>
+        a graph where the region between y = 1 minus x squared and the x axis is shaded.
+        </p>
+        </description>
+      </image>
+</figure>
+      <p>
+        Recall that the center of mass must lie along line of symmetry. Here the <m>y-</m>axis is a line of symmetry so <m>\bar{x}=0</m>. The area is 
+        <md>
+          \int_{-1}^1 (1 - x^2)dx = \left. (x - \frac{1}{3}x^3)\right\vert_{-1}^1 = \frac{4}{3]}
+        </md>
+        The double integral we need to calculate is 
+        <md>
+          \int_{-1}^1 \int_{0}^{1-x^2} y dy dx = \int_{-1}^1 \left(\left. \frac{y^2}{2}\right\vert_0^{1-x^2}\right)dx =
+        </md>
+        <md>
+          \frac{1}{2}\int_{-1}^1 (1-2x^2+x^4)dx = \left.\frac{1}{2}\left( x - \frac{2}{3}x^3 + \frac{x^5}{5}\right)\right\vert_{-1}^1 = \frac{16}{15}
+        </md>
+        So <m>\bar{y} = (16/15)/(4/3) = 0.8</m> and <m>(\bar{x},\bar{y}) = (0,0.8)</m>.
+      </p>
+    </example>
+    <p>
+      This method is easily adaptable for a non-uniform density.
+    </p>
+    <example>
+      <p>
+        Find the center of mass of the region pictured below with density <m>\rho(x,y) = x/(x^2+y^2)</m>.
+      </p>
+      <figure>
+    <caption>Annulus in the first quadrant</caption>
+      <image source="assets/comass2.png">
+        <description>
+        <p>
+        An annulus in the first quadrant with outer radius 8 and inner radius 4.
+        </p>
+        </description>
+      </image>
+</figure>
+<p>
+  Mass is density times area or in terms of double integrals <m>M = \int\int_R \rho(x,y) dA</m>. The moments of mass are similarly defined as 
+  <md>
+    M_y = \int\int_R \rho(x,y) x dA, \quad M_x = \int\int_R \rho(x,y) y dA
+  </md>
+  In this example it is easier to calculate with polar coordinates. We make the following conversions:
+  <md>
+    <mrow>\rho(x,y) =\, \amp \frac{r\cos(\theta)}{r^2} = \frac{\cos(\theta)}{r}</mrow>
+    <mrow>x=\, \amp r\cos(\theta)</mrow>
+    <mrow>y=\, \amp r\sin(\theta)</mrow>
+    <mrow>dA=\, \amp r dr d\theta</mrow>
+  </md>
+  We have there double integrals to calculate over the region <m>4\leq r \leq 8</m> and <m>0 \leq \theta \leq \pi/2</m>.
+  <md>
+    <mrow>M=\, \amp\int_0^{\pi/2} \int_4^8 \frac{\cos(\theta)}{r} r dr d\theta = \int_0^{\pi/2} \int_4^8 \cos(\theta)dr d\theta=(\sin(\theta)\vert_{0}^{\pi/2})(r\vert_4^8) = 4</mrow> 
+    <mrow>M_x=\, \amp \int_0^{\pi/2} \int_4^8 \frac{\cos(\theta)}{r}(r\sin(\theta)) r dr d\theta = \int_0^{\pi/2} \int_4^8 (r\sin(\theta)\cos(\theta)) dr d\theta </mrow>
+      <mrow> \amp = \left(\left.\frac{r^2}{2}\right\vert_4^8 \right)\left(\left.-\frac{1}{2}\cos^2(\theta)\right\vert_0^{\pi/2}\right) = 12 </mrow>
+       <mrow>M_y=\, \amp \int_0^{\pi/2} \int_4^8 \frac{\cos(\theta)}{r}(r\cos(\theta)) r dr d\theta = \int_0^{\pi/2} \int_4^8 (r\cos^2(\theta)) dr d\theta </mrow>
+      <mrow> \amp = \left(\left.\frac{r^2}{2}\right\vert_4^8 \right)\left(\left.\frac{1}{2}(\theta+\sin(\theta)\cos(\theta))\right\vert_0^{\pi/2}\right) = 6\pi </mrow>
+  </md>
+  And the center of mass is
+  <md>
+    (\bar{x},\bar{y}) = \left(\frac{M_y}{M},\frac{M_x}{M}\right) = \left(\frac{3\pi}{2},3\right)
+  </md>
+  
+</p>
+    </example>
+    <p>
+     Here are a few more examples using double integrals
+    </p>
+    <example>
+      <p>
+        Under Construction
+      </p>
+    </example>
+    <example>
+      <p>
+        Under Construction
+      </p>
+    </example>
+    <example>
+      <p>
+        Under Construction
+      </p>
+    </example>
+    <paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on applications of double integrals.
+    </p>
+  </paragraphs>
   </subsection>
 </section>

@@ -3,7 +3,13 @@
     <subsection xml:id="subsec-textbooks">
         <title>Textbooks</title>
         <p>
-            
+            This course utilizes <em>Openstax Calculus: Volume 2</em> (Chapters 5 and 6) and <em>OPenstax Calculus: Volume </em> (Chapters 2 to 5) both by Gilbert Strang
+            and Edwin "Jed" Herman, et. al. Both text can be read online for free and downloaded as a PDF for free from <url href="https://openstax.org/" visual="openstax.org"/>
+        </p>
+        <p>
+            Another excellent resource are <url href="https://tutorial.math.lamar.edu/" visual="Paul's Online Math Notes"/> by Paul Davies at Lamar University. These notes cover math from algebra to differential 
+            equations and are great if you need a quick review of a topic. I have been using them since I was in college! Thankfully, Professor Davies has been updating and improving his notes
+            since 2003.
         </p>
     </subsection>
     <subsection xml:id="subsec-youtube-videos">
@@ -22,66 +28,69 @@
             <li>
                 <title>Professor Leonard</title>
                 <p>
-                    
+                   Full length (90 to 150 minute) lecture videos from prealgebra to differential equations plus statistics! Check out his <url href="https://www.youtube.com/watch?v=FoNLQvf4NUs&amp;list=PLDesaqWTN6EQ2J4vgsN1HyBeRADEh4Cw-&amp;index=14"
+                   visual = "Calculus 2 Playlist"/> and <url href="https://www.youtube.com/watch?v=tGVnBAHLApA&amp;list=PLDesaqWTN6ESk16YRmzuJ8f6-rnuy0Ry7" visual="Calculus 3 Playlist"/>
                 </p>
             </li>
             <li>
                 <title>Professor Dave Explains</title>
                 <p>
-                    
+                   He explains many things in STEM in short videos. Here is his <url href="https://www.youtube.com/watch?v=rBVi_9qAKTU&amp;list=PLybg94GvOJ9ELZEe9s2NXTKr41Yedbw7M" visual="Calculus Playlist"/> 
                 </p>
             </li>
             <li>
                 <title>3Blue1Brown</title>
                 <p>
-                    
+                 Mathematician Grant Sanderson's chanel. Here is his <url href="https://www.youtube.com/watch?v=WUvTyaaNkzM&amp;list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"
+                 visual = "Essence of Calculus Playlist"/>     
                 </p>
             </li>
             
             <li>
                 <title>Krista King</title>
                 <p>
-                    
+                A math teacher explains it all in short example videos. Here are her <url href="https://www.youtube.com/watch?v=n_nNLLjOQs0&amp;list=PLJ8OrXpbC-BMObozItpbiZ8f2pjf3qS9M&amp;index=155"
+                visual ="Calculus II"/> and <url href="https://www.youtube.com/watch?v=CxtgMNAQr8g&amp;list=PLJ8OrXpbC-BMdeuQfJDVRJ5DPMduSzVow" visual ="Calculus III"/> playlists.
                 </p>
             </li>
             <li>
                 <title>JK Math</title>
                 <p>
-                    
+                 I discovered this channel while writing these notes. The <url href="https://www.youtube.com/@JKMath/playlists" visual="JK Mathematics"/> channel is loaded with 
+                 simple and clear tutorials.  
                 </p>
             </li>
             <li>
                 <title>Math is Power 4U</title>
                 <p>
-                    
+                  If you have ever watched a WAMAP question video, you have seen video on this <url href="https://www.youtube.com/@Mathispower4u" visual="channel"/>
                 </p>
             </li>
             <li>
                 <title>Nancy Pi</title>
                 <p>
-                    
+                 A great <url href="https://www.youtube.com/@NancyPi/playlists" visual = "channel"/> with review videos for algebra and calculus.
                 </p>
             </li>
             <li>
                 <title>Dr. Trefor Bazett</title>
                 <p>
-                    
+                 Canadian mathematician's <url href="https://www.youtube.com/@DrTrefor/courses" visual="channel"/> which covers every math class at Green River.
                 </p>
             </li>
             <li>
-                <title>Numberphile</title>
+                <title>Just for Fun</title>
+                
                 <p>
-                    
-                </p>
-            </li>
-            <li>
-                <title>Standup Maths</title>
-                <p>
-                    
+                     Brady Haran's <url href="https://www.numberphile.com/" visual="Numberphile"/> is the coolest math site on the internet. Here is the <url href="https://www.youtube.com/numberphile" visual = "Numberphile YouTube channel"/>.
+    The funniest math related YouTube channel is Matt Parker's <url href="https://www.youtube.com/@standupmaths" visual="Stand-Up Maths Channel"/>. Also check out Matt's podcast called
+    <em>A Problem Squared</em>. And also check out Matt on <url href="https://www.youtube.com/watch?v=65r_1TzJXaQ" visual= "Adam Savage's Tested"/>. 
                 </p>
             </li>
         </dl>
     </p>
+
+
     </subsection>
     <subsection xml:id="subsec-calculators">
         <title>Calculators</title>

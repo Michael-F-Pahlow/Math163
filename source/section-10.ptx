@@ -3,7 +3,9 @@
   <title>Object in Three-Dimensional Space</title>
   <introduction>
     <p>
-      blah blah blah
+      For the rest of the quarter, we will be exploring objects in three-dimensional space. There are multiple ways to represent an object in three-dimensional space and 
+      depending on what you want to calculate, one of these ways is usually easier than the others. Another handy tool besides GeoGebra is <url href="https://c3d.libretexts.org/CalcPlot3D/index.html" visual="CalcPlot3D"/>.
+      I will utilized this tool throughout this section and you may recognize it from the WAMAP login page!
     </p>
   </introduction>
   <objectives>
@@ -24,6 +26,11 @@
       </li>
       <li>
         <p>
+          Alternative coordinate systems
+        </p>
+      </li>
+      <li>
+        <p>
           Sets of parametric equations
         </p>
       </li>
@@ -32,35 +39,162 @@
           Vector-valued functions
         </p>
       </li>
-      <li>
-        <p>
-          Alternative coordinate systems
-        </p>
-      </li>
+      
     </ul>
   </objectives>
   <subsection xml:id="subsec-3d-functions">
     <title>Multi-variable Functions</title>
     <p>
-      
+      We are used to writing functions <m>y=f(x)</m> for writing functions in two dimensions and maybe even are used to writing equations like <m>x^2+y^2 = 1</m> in two dimensions.
+      Extending this idea to three dimensions we can write functions like <m>z=f(x,y)</m> or <m>x^2+y^2+z^2=1</m>. Here are a few common functions.
+    </p>
+    <example>
+      <title>Planes</title>
+      <p>
+        A plane can be written as a function: <m>f(x,y) = ax+by+c</m> where <m>a, b</m> and <m>c</m> are constants or as an implicit equation: <m>ax+by+cz=d</m>.
+        Like the slope of a line and intercepts, the constants control the "tilt" of the plane and the intercepts. Here is a plot of the plane: <m>z = x-\frac{1}{3}y+5</m>
+      </p>
+      <figure>
+        <caption>An example plane</caption>
+       <image source="assets/plane.png"/>
+    
+      </figure>
+    </example>
+    <example>
+      <title>Cylinders</title>
+      <p>
+        A cylinder is simply a circle extended in a third dimension. The equation <m>x^2+y^2 = r^2</m> would describe a circle on the <m>xy</m>-plane and but in three dimensions
+        this circle would extend infinitely in the <m>z</m>-direction to form a cylinder. Here is a plot of the cylinder <m>x^2+y^2=4</m>
+      </p>
+      <figure>
+        <caption>An example cylinder</caption>
+       <image source="assets/cylinder.png"/>
+      </figure>
+    </example>
+    <example>
+      <title>Spheres</title>
+      <p>
+        The equation of a sphere is similar to the equation of a circle <m>x^2+y^2+z^2=r^2</m>. Here is a plot of the sphere <m>x^2+y^2+z^2=4</m>
+      </p>
+      <figure>
+        <caption>An example sphere</caption>
+       <image source="assets/sphere.png"/>
+      </figure>
+    </example>
+    <p>
+      Write three dimensional shapes using the familiar function notation or equations with the variables <m>x, y</m> and <m>z</m> works well when the shapes have flat sides or are
+      defined by functions like exponentials, logarithms or powers. But for some shapes it is easier to change to a coordinate system that fits the shape.
+    </p>
+  </subsection>
+
+  <subsection xml:id="subsec-coordinate-systems">
+    <title>Alternative Coordinate Systems</title>
+    <p>
+      The variables <m>x, y</m> and <m>z</m> define a grid made of cubes where a point like (5, 1, -4) means start at the origin and move for squares in the positive <m>x</m> direction, one 
+      sqaure in the positive <m>y</m> direction and down 4 squares in he <m>z</m>direction. This coordinate system is called the Cartesian coordinaes system (after Rene DeCarte)
+      or the rectangular coordinate system since the origin and a given point would be opposite corners of a recatangle. There are two other common coordinate systems that we use: one 
+      defined by cyclinders and one defined by spheres.
+    </p>
+    <assemblage xml:id="assemblage-cylindrical-coordinates">
+      <title>Cylindircal Coordinates</title>
+      <p>
+        This coordinate system is formed by circles in the <m>xy</m>-plane (polar coordinates) and keeping <m>z</m> as the third dimension. To convert between the Cartesian
+          coordinate system <m> (x,y,z)</m> and cylindrical coordinates <m>(r,\theta,z)</m>
+      </p>
+      <p>
+        <alert>Polar to Cartesian</alert>
+        <md>
+          <mrow>x= \amp r\cos(\theta)</mrow>
+          <mrow>y= \amp r\sin(\theta)</mrow>
+          <mrow>z = \amp z</mrow>
+        </md>
+      </p>
+      <p>
+        <alert>Cartesian to Polar</alert>
+        <md>
+          <mrow>r=\amp \sqrt{x^2+y^2} </mrow>
+          <mrow>\theta = \amp \arctan(y/x) </mrow>
+          <mrow>z= \amp z </mrow>
+        </md>
+      </p>
+    </assemblage>
+    <p>
+      In cyclindircal coordinates a cylinder is defiend as <m>r=</m>consant and a sphere is defined as <m>r^2+z^2=c^2</m>. Another coordinate system is defined be a 
+      series of concentric spheres.
+    </p>
+    <assemblage xml:id="assemblage-spherical-coordinates">
+      <title>Spherical Coordinates</title>
+      <p>
+        Spherical coordinates are defined by two angles. One angle going around the <m>z-</m>axis is <m>\theta</m> which is the same <m>\theta</m> in cylindiral and
+        polar coordinates. A second angle is defined as the angle between the <m>z-</m>axis and a radius vector. This angle is <m>\phi</m>. The third coordinate
+        is the radius which extends from the radius to a point on the sphere and is called <m>\rho</m> which looks like a "p" but is pronounced rho and makes the "r"-sound in
+        Greek.
+      </p>
+      <figure>
+        <caption>Spherical Coordinates</caption>
+        <image source="assets/sphericalcoordinates.png"/>
+      </figure>
+      <p>
+        <alert>Spherical to Cartesian</alert>
+        <md>
+          <mrow> x=\amp \rho\sin(\phi)\cos(\theta) </mrow>
+          <mrow> y=\amp \rho\sin(\phi)\sin(\theta) </mrow>
+          <mrow> z=\amp \rho\cos(\phi) </mrow>
+        </md>
+      </p>
+      <p>
+        <alert>Cartesian to Spherical</alert>
+        <md>
+          <mrow> \amp </mrow>
+        </md>
+        <md>
+          <mrow> \rho=\amp \sqrt{x^2+y^2+z^2} </mrow>
+          <mrow> \theta =\amp \arctan(y/x)</mrow>
+          <mrow> \phi =\amp \arccos\left(\frac{z}{\sqrt{x^2+y^2+z^2}}\right)</mrow>
+        </md>
+      </p>
+    </assemblage> 
+    <p>
+      In spherical coordinates a sphere is simply defiend as <m>\rho=</m>constant.
     </p>
   </subsection>
   <subsection xml:id="subsec-parametrics">
     <title>Sets of Parametric Equations</title>
     <p>
-      
+      Another way to define an object in three-dimensional space is by using a set of parametric equations. This defines a space curve. For parametric equations we first define
+      a parameter, usually <m>t</m> for time. As an example the set of parametric equations:
+    <md>
+      \begin{cases} x(t) = \cos(t) \amp\\ y(t) = \sin(t) \amp\\ z(t)=0.1t \amp\\ \end{cases}
+    </md>
+    draws a helix.
+    </p>
+    <figure>
+      <caption>An example helix</caption>
+     <image source="assets/helix.png"/>
+    </figure>
+    <p>
+      More on parametric equations in future sections.
     </p>
   </subsection>
    <subsection xml:id="subsec-vvf">
     <title>Vector-Valued Functions</title>
     <p>
-      
-    </p>
-  </subsection>
-  <subsection xml:id="subsec-coordinate-systems">
-    <title>Alternative Coordinate Systems</title>
+      A vector-valued function is simply a set of parametric equations written as the components of a vector. Such as <m>\mathbf{r}(t) =\langle t^2, t+5, -4t^3</m>. Evaluating
+      this function at a value for <m>t</m> creates a vector: <m>\mathbf{r}(2) = \langle 1, 6, -4 \rangle</m>. If we take <m>t</m> to be time then <m>\mathbf{r}(t)</m> would
+      be a position vector. Vector-valued functions are very useful in calculus to define things like velocity and acceleration vectors and tangent vectors. We will explore
+      this in the next few sections.
+      </p>
+      <p>
+        I would like to close this section by encouraging you to play around with <url href="https://c3d.libretexts.org/CalcPlot3D/index.html" visual="CalcPlot3D"/> which 
+        can not only plot 3D functions and space curves but can also plot vector-valued functions and you can also use cylindrical and spherical coordinates! This is tool
+        that was made for this class. Here is a playlist  <url href="https://www.youtube.com/watch?v=cvVhsSbNn6E\amp;list=PLp3sDbrG06vTtUb4_B9W47txBl0_glcck" visual="playlist"/> of
+         YouTube videos for using CalcPlot3D.
+      </p>
+      <paragraphs>
+    <title>Reading Check-in</title>
     <p>
-      
+      Check our WAMAP course page for a few questions that go along with today's reading on different ways to think about three-dimensional objects.
     </p>
+  </paragraphs>
   </subsection>
 </section>

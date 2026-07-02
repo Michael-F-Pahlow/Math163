@@ -3,7 +3,8 @@
   <title>The Dot Product</title>
   <introduction>
     <p>
-      blah blah blah
+      We saw in the last section one way to with vectors is scalar multiplication. When you multiply a scalar times a vector the result is a rescaled vector. A second way 
+      to multiply vectors is the <m>dot product</m>. Here we will multiply two vectors in such a way that the result will be a scalar.
     </p>
   </introduction>
   <objectives>
@@ -22,6 +23,11 @@
           The definition of the dot product
         </p>
       </li>
+       <li>
+        <p>
+          Properties of the dot product
+        </p>
+      </li>
       <li>
         <p>
           Applications of the dot product
@@ -32,14 +38,192 @@
   <subsection xml:id="subsec-dot-product">
     <title>Definition of the Dot Product</title>
     <p>
-      
+      Given two vectors <m>\mathbf{u} = \langle a, b, c \rangle</m> and <m>\mathbf{v} = \langle x ,y ,z \rangle</m>, then dot product is:
+      <md>
+      \mathbf{u}\cdot\mathbf{v} = ax + by + cz.
+      </md>
+        </p>
+        <example>
+          <p>
+            Suppose you are a company that produces and sells smartphones, TVs and laptops. Smartphones sell for $400, TVs sell for $1000 and laptops sell for $900. 
+            Further suppose that you sell 200 smartphones, 300 TVs and 500 laptops, how much total revenue would you generate?
+          </p>
+          <p>
+            We can create two vectors, one with the revenue per unit for each it and another vector for each quantity sold:
+            <md>
+              <mrow>\mathbf{R} =  \amp \langle \text{\$}400, \text{\$}1000, \text{\$}900 \rangle \,\,\amp \text{revenue in dollars per item}</mrow>
+              <mrow>\mathbf{Q} =  \amp \langle 200, 300, 500 \rangle\,\, \amp\text{quantity in number of untis sold}</mrow>
+            </md>
+            Multiplying revenue per item times number of units sold will give the total dollar amount generated from the sale of each item. If we add up the total dollar
+            amount for each item, we will get the overall total revenue. But this is the exact definition of the dot product!
+            <md>
+              \mathbf{R}\cdot\mathbf{Q} = 400\cdot 200 + 1000\cdot 300 + 900\cdot 500 = \text{\$}830,000
+            </md>
+            
+          </p>
+        </example>
+  </subsection>
+  <subsection xml:id="subsec-properties-dot-product">
+    <title>Properties of the Dot Product</title>
+    <p>
+      The dot product has several algebraic properties and one important geometric property. The algebraic properties are what you would expect from an operation defined
+      by multiplying and adding:
     </p>
+    <assemblage>
+      <title>Properties of the Dot Product</title>
+      <p>
+        <md>
+          <mrow>\text{Commutative}\,\,\,\,\,\,\,\,\,\, \amp \mathbf{u}\cdot\mathbf{v} = \mathbf{v}\cdot\mathbf{u}</mrow>
+          <mrow>\text{Distributive} \,\,\,\,\,\,\,\,\,\,\amp \mathbf{u}\cdot(\mathbf{v}+\mathbf{w}) = \mathbf{u}\cdot\mathbf{v} + \mathbf{u}\cdot\mathbf{w}</mrow>
+          <mrow>\text{Associative}\,\,\,\,\, \,\,\,\,\,\amp c(\mathbf{u}\cdot\mathbf{v}) = (c\mathbf{u})\cdot\mathbf{v} = \mathbf{u}\cdot(c\mathbf{v})</mrow>
+          <mrow>\text{Zero Product}\,\,\,\,\, \,\,\,\,\,\amp \mathbf{u}\cdot\langle 0,0,0\rangle = 0</mrow>
+          <mrow>\text{Magnitude} \,\,\,\,\,\,\,\,\,\,\amp \mathbf{v}\cdot\mathbf{v} = x^2 + y^2 + z^2 ||\mathbf{v}||^2</mrow>
+        </md>
+      </p>
+    </assemblage>
+    <example>
+      <title>The Commutative Property</title>
+      <p>
+        <md>
+          \langle -7, 5, 4 \rangle\cdot\langle 0,1,0 \rangle = 5 =\langle 0,1,0\rangle\cdot\langle -7, 5, 4 \rangle
+        </md>
+        
+      </p>
+      
+    </example>
+    <example>
+      <title>Distributive Property</title>
+      <p>
+        <md>
+        \langle 2, 1, -3\rangle(\langle 4, 1, 9\rangle \cdot \langle -5, 0, -6 \rangle) = \langle 2, 1, -3\rangle\cdot\langle -1, 1, 3 \rangle = -10
+        </md>
+      </p>
+      <p>
+        <md>
+          \langle 2, 1, -3\rangle\cdot\langle 4, 1, 9\rangle + \langle 2, 1, -3\rangle\cdot\langle -5, 0, -6\rangle = -18 + 8 = -10
+        </md>
+        
+      </p>
+    </example>
+    <p>
+      Another important property of the dot product is its geometric interpretation
+    </p>
+    <assemblage>
+      <title>The Geometry of the Dot Product</title>
+      <p>
+        Given two vectors <m>\mathbf{u}</m> and <m>\mathbf{v}</m> with an angle of <m>\theta</m> between them
+        <md>
+          \mathbf{u}\cdot\mathbf{v} = ||\mathbf{u}||\cdot||\mathbf{v}||\cos(\theta)
+        </md>
+        Note that if the vectors are separated by a right angle, then the dot product equals zero since <m>\cos(90^{\circ}) = 0.</m> If this is the case then the vectors 
+        are called <em>orthogonal</em>.
+      </p>
+    </assemblage>
+    <example>
+      <p>
+        If a 3-meter long vector and a 2-meter long vector are separated by and angle of 60 degrees, what is the dot product of these two vectors?
+      </p>
+      <p>
+        Since we are given the magnitudes of the two vectors and the angle between them:
+        <md>
+          \mathbf{u}\cdot\mathbf{v} = (3)(2)\cos(60^{\circ}) = (3)(2)(1/2) = 3
+        </md>
+        
+      </p>
+    </example>
+    <example>
+      <p>
+        What is the angle between the vectors <m>\langle 2,1\rangle</m> and <m>\langle -1,3 \rangle</m>?
+      </p>
+      <p>
+        First, we know that <m>\langle 2,1\rangle\cdot\langle -1,3\rangle = 1</m> and second, we can calculate the magnitude of each vector.
+        <md>
+          ||\langle 2,1\rangle|| = \sqrt{5} \,\,\, \text{and} \,\,\, ||\langle -1, 3\rangle|| = \sqrt{10}
+        </md>
+        Plugging this all into the geometric definition for the dot product gives:
+        <md>
+          1 = \sqrt{5}\sqrt{10}\cos(\theta)
+        </md>
+        and solving for <m>\theta</m> gives:
+       <md>\theta = \arccos\left(\frac{1}{\sqrt{50}}\right) \approx 1.429 \,\,\, \text{radians} </md>
+      </p>
+    </example>
+  <p>
+    You can explore this geometric property of the dot product using this GeoGebra visualization:
+  </p>
+  <figure>
+
+  <caption>Dot Product Visualization</caption>
+
+  <interactive xml:id="dot-product-visualization" geogebra="Yu6869By" width="100%" reset-icon="yes"/>
+
+</figure>
   </subsection>
   <subsection xml:id="subsec-application-dot-product">
     <title>Applications of the Dot Product</title>
     <p>
-      
+      We will finish this section with a few examples of applications of the dot product.
     </p>
+<example>
+  <title>Velocity</title>
+  <p>
+    A container ship leaves port traveling on a course of 15 degrees north of east. Its engine generates a speed of 20 knots along that path. THe ocean current moves the ship northeast 
+    at a speed of 2 knots. Considering both the engine and the current, how fast is the ship traveling along its course? 
+  </p>
+  <p>
+    We know that the ship's engines contribute a speed of 20 knots along its course. We want to know how much the ocean current contributes to this speed. We are given
+    speed (magnitude of velocity) and direction for both the ship and the current from which we can form the vectors:
+    <md>
+      <mrow>\text{Ship}\,\,\,\, \amp\mathbf{S} =\langle 20\cos(15^{\circ}),20\sin(15^{\circ})\rangle \approx \langle 19.319, 5.176 \rangle </mrow>
+      <mrow>\text{Current}\,\,\,\,\amp \mathbf{C} =\langle 2\cos(45^{\circ}),2\sin(45^{\circ})\rangle \approx \langle 1.414, 1.414 \rangle </mrow>
+    </md>
+    Here the components point in the <m>x</m> and <m>y</m>-directions. We want a vector for the current that points in the direction of the ship's course. This is called
+    the scalar projection and is denoted by 
+    <md>
+      \text{comp}_\mathbf{S} \mathbf{C} = \frac{\mathbf{S}\cdot\mathbf{C}}{||\mathbf{S}} = \frac{||\mathbf{S}||\cdot||\mathbf{C}||\cos{\theta}}{||\mathbf{S}||}=||\mathbf{C}||\cos(45^{\circ}-15^{\circ}) = 2\frac{\sqrt{3}}{2}
+    </md>
+    Which is approximately 1.73 knots. Adding this to the 20 knots generated by the ship's engines and the ship is traveling at 21.73 knots along its course.
+  </p>
+</example>
+<example>
+  <title>Work</title>
+  <p>
+    Suppose a wagon is pulled 100 meters along a horizontal path by a constant of force of 70 Newtons. THe handle of the wagon is held at a angle of 35 degrees
+    above the horizontal. How much work is done by the force?
+  </p>
+  <p>
+    Work is defined as a force vector dotted with a displacement vector. In this example, we are given the magnitudes of a force vector (70 Newtons) and a displacement
+    vector (100 meters) as well as the angle between these vectors. So:
+    <md>
+      \text{Work} = W = \mathbf{F}\cdot\mathbf{D} = (70)(100)\cos(35^{\circ}) \approx 5734.06\,\,\,\text{Joules}
+    </md>
+  </p>
+  
+</example>
+<example>
+  <title>Bond Angle</title>
+  <p>
+    A molecule of methane, CH_4, is structured with the four hydrogen atoms at the four vertices of a regular tetrahedron and the carbon at the centroid of the tetrahedron.
+    The <em>bond angle</em> is the angle formed by the H-C-H combination. What is the bond angle?
+  </p>
+  <p>
+    Since we are only after the angle we can model our molecule as a tetrahedron with vertices at the points (1, 0, 0), (0, 1, 0), (0, 0, 1) and (1, 1, 1). This puts the 
+    centroid at <m>(\frac{1}{2}, \frac{1}{2}, \frac{1}{2})</m>. We can then form one vector extending from the centroid to (1, 0, 0) and get <m>\langle \frac{1}{2}, -\frac{-}{2}, -\frac{1}{2}</m>.
+    Another vector from the centroid to (0, 1, 0) is <m>\langle -\frac{1}{2}, \frac{1}{2}, -\frac{1}{2} \rangle</m>. The dot product of these vectors is <m>-\frac{1}{4}</m>. 
+    You can check to see that this would be the dot product no matter which two vertices we choose. The magnitude of each of these vectors is <m>\frac{\sqrt{3}}{2}</m>.The bond angle is then:
+    <md>
+      -\frac{1}{4} = \left(\frac{\sqrt{3}}{2}\right)\left(\frac{\sqrt{3}}{2}\right)\cos(\theta) \rightarrow \theta = \arccos\left(-\frac{1}{3}\right) \approx 1.9106 \approx 109.47^{\circ}
+    </md>
+    
+  </p>
+  
+</example>
+    <paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on dot products
+    </p>
+  </paragraphs>
   </subsection>
   
 </section>

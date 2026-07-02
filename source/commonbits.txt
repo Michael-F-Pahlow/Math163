@@ -1,0 +1,32 @@
+<paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on...
+    </p>
+  </paragraphs>
+
+  <figure>
+    <caption>title</caption>
+    <interactive geogebra="..."/>
+  </figure>
+
+  <figure>
+    <caption>title</caption>
+    <interactive desmos="..."/>
+  </figure>
+
+    <figure>
+    <caption>video title</caption>
+    <video youtube="..."/>
+  </figure>
+
+  <figure>
+    <caption>...</caption>
+      <image source="assets/file.png" width="100%">
+        <description>
+        <p>
+        blah blah blah
+        </p>
+        </description>
+      </image>
+</figure>

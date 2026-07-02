@@ -3,7 +3,8 @@
   <title>Partial Derivatives</title>
   <introduction>
     <p>
-      blah blah blah
+      For multi-variable functions, we need to take a derivative for each variable. These derivatives are called partial derivatives. Fortunately we already know all
+      of the derivative rules from Math 151, so we move quickly through this section to applications in the next section.
     </p>
   </introduction>
   <objectives>
@@ -37,19 +38,165 @@
   <subsection xml:id="subsec-pd-notation">
     <title>Notation</title>
     <p>
-      
+      Partial derivatives are denoted with "curly" d's instead of straight d's like ordinary derivatives. So the partial derivatives with respect to <m>x</m> and <m>y</m> are
+      denoted as 
+      <md>
+        \frac{\partial f}{\partial x} \quad \text{and} \quad \frac{\partial f}{\partial y}
+      </md>
+      This is can challenging to write for those with less than neat handwriting and is also difficult to typeset. An alternative, easier notation is to use the a subscript 
+      for the derivatives.
+      <md>
+        <mrow> \frac{\partial f}{\partial x}=\,\amp f_x(x,y)</mrow>
+        <mrow> \frac{\partial f}{\partial y}=\,\amp f_y(x,y)</mrow>
+      </md>
+      This subscript notation is also much easier for second or other higher-order derivatives.
     </p>
+    <p>
+      When we take a partial derivative, we simply take the derivative for the given variable while treating the other variable as a constant.
+    </p>
+    <example>
+      <p>
+        Consider the function <m>f(x,y) = x^4 y + xy^{-2}</m>. The partial derivatives are
+        <md>
+          <mrow>f_x = \,\amp 4x^3 y + y^{-2} </mrow>
+          <mrow>f_y = \,\amp x^4 y -2xy^{-3} </mrow>
+        </md>
+      </p>
+    </example>
+    <example>
+      <p>
+        Consider the function <m>f(x,y) = \ln(x^2+y^2)</m>. The partial derivatives are
+        <md>
+          <mrow>f_x = \,\amp \frac{2x}{x^2+y^2} </mrow>
+          <mrow>f_y = \,\amp \frac{2y}{x^2+y^2} </mrow>
+        </md>
+      </p>
+    </example>
+    <example>
+      <p>
+        Consider the function <m>f(x,y) = y^2/(1+x^2)^3</m>. The partial derivatives are
+        <md>
+          <mrow>f_x = \,\amp \frac{-6xy^2}{(1+x^2)^4}</mrow>
+          <mrow>f_y = \,\amp \frac{2y}{(1+x^2)^3} </mrow>
+        </md>
+      </p>
+    </example>
+    <example>
+      <p>
+        Consider the function <m>f(x,y) = y^x</m>. The partial derivatives are
+        <md>
+          <mrow>f_x = \,\amp \ln(x)y^x \quad\text{exponential rule since x is the variable and y is a constant}</mrow>
+          <mrow>f_y = \,\amp xy^{x-1} \quad\text{power rule since y is the variable and x is a constant}</mrow>
+        </md>
+      </p>
+    </example>
   </subsection>
   <subsection xml:id="subsec-higher-order-partials">
     <title>Mixed Partial Derivatives</title>
     <p>
-      
+      Since we have two partial derivatives for a function with two input variables we can then calculate two derivatives from each of these derivatives. Using the 
+      subscript notation, we would write <m>f_{xx}</m> for the second partial derivative with respect to <m>x</m> and <m>f_{xy}</m> for the partial derivative first with
+      respect to <m>x</m> and second with respect to <m>y</m>. Since we are mixing variables for this second derivative, this is called a mixed partial derivative.
     </p>
+    <example>
+      <p>
+        Consider the function <m>f(x,y) = x^3+y^2 e^x</m> Then the first and second order partial derivatives are:
+        <md>
+          <mrow>f_x =\,\amp 3x^2+y^2 e^x</mrow>
+          <mrow>f_y =\,\amp 2ye^x</mrow>
+          <mrow>f_{xx} =\,\amp 6x+y^2 e^x</mrow>
+          <mrow>f_{xy} =\,\amp 2ye^x</mrow>
+          <mrow>f_{yy} =\,\amp 2e^x</mrow>
+          <mrow>f_{yx} =\,\amp 2ye^x</mrow>
+        </md>
+        Notice that the mixed partial derivatives are equal.
+      </p>
+    </example>
+    <p>
+      Mixed partial derivatives are always equal. This is known as Clairaut's Theorem. Not only does <m>f_{xy}=f_{yx}</m> but other higher-order mixed partials are also 
+      equal, so <m>f_{xxxy} = f_{xxyx} = f_{xyxx} = f_{yxxx}</m> (all of the mixed partials with one derivative with respect to <m>y</m> and three derivatives with respect
+      to <m>y</m>).
+    </p>
+    <example>
+      <p>
+        Calculate <m>f_{yxx}</m> for the function <m>f(x,y) = \cos(x+y^2)</m>
+      </p>
+      <p>
+        By Clairaut's theorem, we can calculate two derivatives with respect to <m>x</m> and one derivative with respect to <m>y</m> in order. For this function, it is easier
+        to calculate derivatives with respect to <m>x</m>, we will start there:
+        <md>
+          <mrow>f_x= \amp -\sin(x+y^2)</mrow>
+          <mrow>f_{xx}= \amp -\cos(x+y^2)</mrow>
+          <mrow>f_{xxy}= \amp -2y\cos(x+y^2) = f_{yxx}</mrow>
+        </md>
+      </p>
+    </example>
+    <p>
+      Here is a video with more examples.
+    </p>
+    <figure>
+      <caption>Partial Derivative Examples (18 minutes)</caption>
+      <video youtube="RVwcBGzQcT8"/>
+    </figure>
+    <paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on partial derivatives.
+    </p>
+  </paragraphs>
   </subsection>
   <subsection xml:id="subsec-pd-chain-rule">
     <title>The Chain Rule</title>
     <p>
-      
+      For the chain rule it is more convenient to use Leibniz (curly d) notation. For function <m>f(x(t),y(t))</m> where <m>t</m> is the "inside" variable. By the chain rule
+      <md>
+        \frac{\partial f}{\partial t} = \frac{\partial f}{\partial x}\frac{\partial x}{\partial t} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial t}
+      </md>
+      </p>
+      <example>
+        <p>
+          Calculate <m>\frac{\partial f}{\partial t}  </m> for the function <m>f(x,y) = 4x^2 + 3y^2</m> where <m>x(t) = \sin(t)</m> and <m>y(t) = \cos(t)</m>.
+          Start be calculating the derivatives with respect to <m>x</m> and <m>y</m>.
+          <md>
+            <mrow> \frac{\partial f}{\partial x} =\,\amp f_x = 8x </mrow>
+            <mrow> \frac{\partial f}{\partial y} =\,\amp f_y = 6y </mrow>
+          </md>
+          Now calculate the derivatives with respect to <m>t</m>.
+          <md>
+            <mrow> \frac{\partial x}{\partial t} =\,\amp\, \cos(t) </mrow>
+            <mrow> \frac{\partial y}{\partial t} =\,\amp -\sin(t) </mrow>
+          </md>
+          Plugging it all into the chain rule formula gives:
+          <md>
+        \frac{\partial f}{\partial t} = \frac{\partial f}{\partial x}\frac{\partial x}{\partial t} + \frac{\partial f}{\partial y}\frac{\partial y}{\partial t}
+      </md>
+      <md>
+        = (8x)(\cos(t))+ (6y)(-\sin(t)) = 8(\sin(t))(\cos(t))-6(\cos(t))(\sin(t)) = 2\sin(t)\cos(t)
+      </md>
+        </p>
+      </example>
+      <p>
+        For inside functions of two-variables the chain rule for <m>z=f(x(u,v),y(u,v))</m> is 
+        <md>
+        \frac{\partial f}{\partial u} = \frac{\partial z}{\partial x}\frac{\partial x}{\partial u} + \frac{\partial z}{\partial y}\frac{\partial y}{\partial u}
+      </md>
+      and
+      <md>
+        \frac{\partial f}{\partial v} = \frac{\partial z}{\partial x}\frac{\partial x}{\partial v} + \frac{\partial z}{\partial y}\frac{\partial y}{\partial v}
+      </md>
+      </p>
+       <p>
+      Here is a video with more examples.
     </p>
+    <figure>
+      <caption>Partial Derivative Examples (21 minutes)</caption>
+      <video youtube="XipB_uEexF0"/>
+    </figure>
+      <paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on the chain rule.
+    </p>
+  </paragraphs>
   </subsection>
 </section>

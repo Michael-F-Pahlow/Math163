@@ -147,8 +147,17 @@
     </p>
   </example>
   <p>
-    This is just a small selection of examples. There are many more like approximations that give you the digits of <m>\pi</m> and series solutions to differential equations.
+    This is just a small selection of examples. There are many more like approximations that give you the digits of <m>\pi</m> and series solutions to differential equations. Here are 
+    two videos with some more examples.
   </p>
+  <figure>
+    <caption>Applications of Taylor Series (13 minutes)</caption>
+    <video youtube="eI6CXChwjeQ"/>
+  </figure>
+  <figure>
+    <caption>Applications of Taylor Series (12 minutes)</caption>
+    <video youtube="eX1hvWxmJVE"/>
+  </figure>
 <paragraphs>
     <title>Reading Check-in</title>
     

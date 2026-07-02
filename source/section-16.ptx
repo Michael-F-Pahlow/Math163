@@ -3,7 +3,7 @@
   <title>Applications of Partial Derivatives</title>
   <introduction>
     <p>
-      blah blah blah
+      In this section, we turn our attention so applications of partial derivatives.
     </p>
   </introduction>
   <objectives>
@@ -19,7 +19,7 @@
     <ul>
       <li>
         <p>
-          Finding the tangent plane.
+          Calculating a tangent plane at a point.
         </p>
       </li>
       <li>
@@ -42,25 +42,299 @@
   <subsection xml:id="subsec-tangent-plane">
     <title>Tangent Planes</title>
     <p>
-      
+      Similar to a tangent line in two-dimensions, we can form a tangent plane in three-dimensions (or a hyperplane in higher dimensions). The equation of a tangent
+          plane at the point <m>(x,y)=(a,b)</m>is 
+          <md>
+            L(x,y) = f(a,b) + f_x(a,b)(x-a) + f_y(a,b)(y-b)
+          </md>
     </p>
+    <example>
+      <p>
+        Find the plane tangent to <m>f(x,y) = x^2 y+ xy^3</m> at the point (2, 1). Start by calculating the partial derivatives
+        <md>
+          <mrow>f_x = \, \amp 2xy + y^3</mrow>
+          <mrow>f_y = \, \amp x^2 + 3xy^2</mrow>
+        </md>
+        Plug the point into the original function and partial derivatives.
+        <md>
+          <mrow>f(2,1) = \, \amp 4 + 2 = 6</mrow>
+          <mrow>f_x(2,1) = \, \amp 4 + 1 = 5</mrow>
+          <mrow>f_y(2,1) = \, \amp 4 + 6 = 10</mrow>
+        </md>
+        Plugging it all into the tangent plane formula and get
+        <md>
+          L(x,y) = 6 + 5(x-2) + 10(y-1)
+        </md>
+      </p>
+    </example>
+    <p>
+      Here is a video with another examples.
+    </p>
+    <figure>
+      <caption>Tangent Planes (6 minutes)</caption>
+      <video youtube="wqtr4Udz8AY"/>
+    </figure>
   </subsection>
   <subsection xml:id="subsec-linear-approximation">
     <title>Linear Approximation</title>
     <p>
-      
+      The tangent plane also defines a linear approximation (or first-degree Taylor approximation) of <m>f(x,y)</m> at a given point. 
     </p>
+    <example>
+      <p>
+        Estimate <m>(2.01)^3(1.02)^2</m> using a linear approximation. We can define a function <m>f(x,y)=x^3 y^2</m>. <m>f(2,3) = 2^3 1^2 = 8</m> is easily calculated, so
+        we will use the point (2,3). The linear approximation, calculated in the same steps as the last example, is:
+        <md>
+          <mrow>f_x = \, \amp 3x^2 y^2</mrow>
+          <mrow>f_y = \, \amp 2x^3 y</mrow>
+          <mrow>f(2,1) = \, \amp 8</mrow>
+          <mrow>f_x(2,1) = \, \amp 12</mrow>
+          <mrow>f_y(2,1) = \,\amp 16</mrow>
+          <mrow>L(x,y) = \, \amp 8 + 12(x-2) + 16(y-1)</mrow>
+        </md>
+        Plugging (2.01, 1.02) into the linear approximation gives
+        <md>
+          (2.01)^3(1.02)^2 \approx L(2.01, 1.02) = 8 + 12(2.01-2)+16(1.02-1) = 8.44
+        </md>
+        <m>(2.01)^3(1.02)^2 = 8.44867328</m>, so our approximation matches the first two decimal places.
+      </p>
+    </example>
+    <example>
+      <p>
+        Let <m>B=W/H^2</m> defines a person's body mass index (BMI), where <m>W</m> is a person's weight in kilograms and <m>H</m> is a person's height in meters. Find
+        the approximate BMI for a person weighs 89.7 kilograms and is 1.98 kilometers (198 centimeters) tall. The point <m>(W,H) = (90,2)</m> gives a BMI of <m>B = 22.5</m>.
+        Calculating the derivatives and writing out the linear approximation gives:
+        <md>
+          <mrow>B_W=\, \amp \frac{1}{H^2}</mrow>
+          <mrow>B_H=\, \amp -\frac{2W}{H^3}</mrow>
+          <mrow>B(90,2)=\, \amp 22.5</mrow>
+          <mrow>B_W(90,2)=\, \amp 0.25</mrow>
+          <mrow>B_H(90,2)=\, \amp -22.5</mrow>
+          <mrow>L(H,W)=\, \amp 22.5 + 0.25(W-90)-22.5(H-2)</mrow>
+        </md>
+        So <m>B(89.7,1.98) \approx L(89.7,1.98) = 22.5 + 0.25(89.7-90)-22.5(1.98-2) = 22.9425</m>
+      </p>
+    </example>
+    <p>
+      Here is a video with another examples.
+    </p>
+    <figure>
+      <caption>Linear Approximation (10 minutes)</caption>
+      <video youtube="hWyCDqjb-6A"/>
+    </figure> 
+    <paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on tangent planes and linear approximation.
+    </p>
+  </paragraphs>
   </subsection>
+ 
   <subsection xml:id="subsec-gradient">
     <title>The Directional Derivative and Gradient Vector</title>
     <p>
-      
+      A directional derivative, is a partial derivative that points along the vector <m>\mathbf{u}</m>. Note that <m>\mathbf{u}</m> is a vector. Recall that a vector
+      has a magnitude (which equals 1 for the directional derivative) and direction and that to write a vector in component form given the vector's direction and magnitude,
+      you get <m>\langle \cos(\theta), \cos(\theta)\rangle</m>. We will do something similar for the directional derivative where the partial derivatives play the role of
+      the magnitude. The directional derivative along the unit vector <m>\mathbf{u}</m> with direction <m>\theta</m> is:
+      <md>
+        D_{\mathbf{v}}f(x,y) = f_x(x,y)\cos(\theta) + f_y(x,y)\sin(\theta)
+      </md>
+      </p>
+      <example>
+        <p>
+          Find the directional derivative of <m>f(x,y) = x^2+2y^2</m> in the direction <m>\theta = \frac{\pi}{4}</m>.
+        </p>
+        <p>
+          Calculate the partial derivatives
+          <md>
+            <mrow>f_x =\, \amp 2x</mrow>    
+            <mrow>f_y =\, \amp 4y</mrow> 
+          </md>
+                    Then the directional derivative is:
+          <m>D_{\mathbf{v}}f = \frac{\sqrt{2}}{2}2x+\frac{\sqrt{2}}{2}4y = \sqrt{2}x+2\sqrt{2}y</m>
+        </p>
+      </example>
+      <example>
+        <p>
+          Find the directional derivative of <m>f(x,y) = e^x\sin(y)</m> along the vector <m>\langle \frac{1}{2},\frac{\sqrt{3}}{2}\rangle</m>.
+        </p>
+        <p>
+          Calculate the partial derivatives
+          <md>
+            <mrow>f_x =\, \amp e^x\sin(y)</mrow>    
+            <mrow>f_y =\, \amp e^x\cos(y)</mrow> 
+          </md>
+          Next find the direction of the vector
+          <md>
+            \theta = \arctan\left(\frac{1}{2}\cdot\frac{2}{\sqrt{3}}\right) = \frac{\pi}{3}
+          </md>
+          Then the directional derivative is:
+          <md>D_{\mathbf{v}}f = \frac{1}{2}e^x\sin(y)+\frac{\sqrt{3}}{2}e^x\cos(y)</md>
+        </p>
+      </example>
+      <p>
+        Another way to define the directional derivative is using the gradient, The gradient vector is defined as <m>\nabla f(x,y) = \langle f_x,f_y \rangle</m>. 
+        <m>\nabla f</m>  is read as "del f". Del and the gradient will be used often in Calculus IV. The directional derivative may also be defined
+        using the gradient as <m>D_\mathbf{u}f(x,y) = \nabla f(x,y)\cdot\mathbf{u}</m>.
+      </p>
+      <p>
+        The gradient may also be used to find a plane tangent to a surface. Given a surface defined by an <em>equation</em> <m>F(x,y,z)=k</m> where <m>k</m> is a constant,
+        then the tangent plane at point <m>p = (a,b,c)</m> is <m>\nabla F \cdot \langle x-a, y-b, z-c \rangle = 0</m>. For a function <m>z=f(x,y)</m> we can rewrite this
+        as <m>F(x,y,z) = f(x,y)-z = 0</m>. The dot product here produces the same formula for the tangent plane given earlier.
+      </p>
+      <p>
+      Here is a video with more examples.
     </p>
-  </subsection>
+    <figure>
+      <caption>Directional Derivative and Gradient (28 minutes)</caption>
+      <video youtube="CnVes9TdnPo"/>
+    </figure>
+    <paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on the directional derivative.
+    </p>
+  </paragraphs>
+        </subsection>
   <subsection xml:id="subsec-3d-optimization">
     <title>The Second Derivative Test</title>
     <p>
-      
+      Finally, one of the most important applications is optimization; finding a maximum and minimum. In Calculus I (Math 151) we saw three ways to optimize a function
+      using derivatives: the Extreme Value Theorem, the First Derivative Test and the Second Derivative Test. There is a multi-variable analog to the Extreme Value Theorem,
+      called Lagrange multipliers that we will look at it in the next section. Recall that the First Derivative Test looks at what happens to the sign (positive or negative)
+      of a derivative around a critical value as you move along number line from left to right. Since we can move from left to right (along the <m>x</m>-axis) along different
+      <m>y-</m>lines in three dimensions, this would produce an infinite amount of results, so the First Derivative does not work in higher dimensions.
     </p>
+    <p>
+      The Second Derivative Test, which use concavity to find local maximum and minimum values, does work in three dimensions. Similar to the single-variable version of 
+      the Second Derivative Test, we first find critical points and then plug them into the second derivative to test their concavity.
+      Critical points in three dimensions are defined as points where:
+      <md>
+        <mrow>f_x(a,b) = 0 \,\,\,\text{or}\,\,\,\amp f_x(a,b) \,\,\,\text{does not exist, and}</mrow>
+        <mrow>f_y(a,b) = 0 \,\,\,\text{or}\,\,\,\amp f_y(a,b) \,\,\,\text{does not exist.} </mrow>
+      </md>
+      At a critical value, if the three-dimensional surface, is concave up in all directions, then you are at a local minimum and if the surface is concave down in all 
+      directions, then you are at a local maximum. If you are concave up in some directions but concave down in other directions, then you are at a saddle point. Since
+      there are both mixed, second partial derivatives and second partial derivatives of a single variable, we also define the discriminant for the second derivatives 
+      to tell us the concavity at a point as:
+      <md>D(a,b) = f_{xx}(a,b)\cdot f_{yy}(a,b) - f_{xy}^2(a,b)</md>
+      Then the Second Derivative Test is:
+    </p>
+    <assemblage xml:id="assemblage-2D3D-test">
+      <title>Second Derivative Test</title>
+      <p>
+        Let <m>P=(a,b)</m> be a critical point of <m>f(x,y)</m> and <m>D</m> be the discriminant of <m>f(x,y)</m>, then if:
+        <md>
+          <mrow>D\gt 0 \,\,\amp\text{and}\,\, f_{xx}(a,b)\gt 0, \,\,\text{then}\,\, f(a,b) \,\,\text{is a local minimum.} </mrow>
+          <mrow>D\gt 0 \,\,\amp\text{and}\,\, f_{xx}(a,b)\lt 0, \,\,\text{then}\,\, f(a,b) \,\,\text{is a local maximum.} </mrow>
+          <mrow>D\lt 0,  \,\,\amp\text{then}\,\, f(a,b) \,\,\text{is a saddle point.} </mrow>
+          <mrow>D = 0, \,\,\amp\text{then the test is inconclusive.} </mrow>
+        </md>
+        </p>
+    </assemblage>
+    <example>
+      <p>
+        Find and classify the critical points for the function <m>f(x,y)=x^3+y^3-12xy</m>.
+      </p>
+      <p>
+        Start by taking te partial derivatives:
+        <md>
+          <mrow>f_x =\, \amp 3x^2-12y</mrow>
+          <mrow>f_y =\, \amp 3y^2-12x</mrow>
+          <mrow>f_{xx} =\, \amp 6x</mrow>
+          <mrow>f_{yy} =\, \amp 6y</mrow>
+          <mrow>f_{xy} =\, \amp -12y</mrow>
+        </md>
+        Next find the critical points. (This is usually the most work for these problems.)
+        
+          <md> f_x = 0\, =3x^2-1y \quad\to\quad y = \frac{1}{4}x^2 </md>
+          <md> f_y = 0\, =3x^2-1y \,\,\,\text{plug the first equation into this second equation to get}</md>
+          <md> 3(x^2/4)^2 - 12x = \frac{3}{16}(x^3-64) \,\,\to\,\, x = 0, 4</md>
+          <md>\text{plugging these x-values into the first equation to get the critical points}</md>
+          <md> (0,0)\,\,\text{and}\,\,(4,4)</md>
+        
+        Plug these into the discriminant and second derivative to get 
+        <md>
+          <mrow>D(0,0) = -144 \lt 0\quad \amp \text{saddle point at (0,0)} </mrow>
+          <mrow>D(4,4) = 432 \gt 0\,\,\text{and}\,\, f_{xx} = 24 \gt 0\quad \amp \text{local minimum at (4,4)} </mrow>
+        </md>
+        Try plotting this surface to verify the solutions.
+      </p>
+    </example>
+    <example>
+      <p>
+        Find and classify the critical points for the function <m>f(x,y)=4x^2+9y^2+8x-36y+24</m>.
+      </p>
+      <p>
+        Start by taking te partial derivatives:
+        <md>
+          <mrow>f_x =\, \amp 8x+8</mrow>
+          <mrow>f_y =\, \amp 18y-36</mrow>
+          <mrow>f_{xx} =\, \amp 8</mrow>
+          <mrow>f_{yy} =\, \amp 0</mrow>
+          <mrow>f_{xy} =\, \amp 18</mrow>
+        </md>
+        Next find the critical points.
+        
+          <md> 8x+8=0 \quad \to \quad x = -1 </md>
+          <md> 18y-36=0 \quad \to \quad y=2 </md>
+        
+        The only critical point is (-1,2) Plug this into the discriminant and second derivative to get 
+        <md>
+        D(-1,2) = 144 \gt 0 \,\,\text{and}\,\, f_{xx} = 8 \gt 0
+        </md>
+        So (-1, 2) is a local minimum.
+      </p>
+    </example>
+    <example>
+      <p>
+       A shipping company handles rectangular boxes provided the sum of the length, width, and height of the box does not exceed 96 inches.
+       Find the dimensions of the box that meets this condition and has the largest volume.
+      </p>
+      <p>
+        Define two equations based on the given information.
+        <md>
+          l+w+h = 96 \quad \text{and} \quad V=lwh
+        </md>
+        Solve the first equation for one of the variables and plug the result into the second equation, eliminating one of the variables. I will eliminate <m>h</m>.
+        <md>
+          h= 96-l-w \quad \to \quad V=lw(96-l-w) = 96lw - l^2w-lw^2
+        </md>
+        This is the equation we will maximize.
+        <md>
+          <mrow>V_l =\, \amp 96w - 2lw - w^2</mrow>
+          <mrow>V_w =\, \amp 96l - l^2 - 2lw</mrow>
+          <mrow>V_{ll} = \, \amp -2w </mrow>
+          <mrow>V_{ww} = \, \amp -2l </mrow>
+          <mrow>V_{lw} = \, \amp 96 - 2l -2w </mrow>
+        </md>
+        Find the critical values
+        <md>
+          <mrow>96w-2lw-w^2 = 0 \quad\amp \to w(96-2l-w)=0</mrow>
+          <mrow>96l-l^2-2lw = 0 \quad\amp \to l(96-2w-l)=0</mrow>
+        </md>
+        Which gives one critical point at (0,0). Solve <m>96-2l-w = 0 </m> for <m>w</m> and plug it into the second for the second equation to get
+        <md>
+          96 - 2(96-2l)-l = 0 \quad \to \quad -96 +3l = 0 \quad \to \quad l = 32
+        </md>
+        Which when substituted back in the first equation gives <m>w=32</m> and we get a second critical point at (32,32). The critical point at (0, 0) gives a volume of
+        zero, which in the context of the problem is the minimum possible volume. <m>D(32,32) = -2(32)(-2)(32)-(-32)^2 = 3072 \gt 0</m> and <m>V_{ll}(32,32) = -64 \lt 0</m>
+        and (32, 32) is at a local maximum. The maximum volume occurs when <m>l=w=h=32</m> for a maximum volume of <m>V=32^3 = 32,768</m> cubic inches.
+      </p>
+    </example>
+    <p>
+      Here is a video with a few more examples:
+    </p>
+    <figure>
+    <caption>Second Derivative Test</caption>
+    <video youtube="UID893EosM8"/>
+  </figure>
+<paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on optimization.
+    </p>
+  </paragraphs>
   </subsection>
 </section>

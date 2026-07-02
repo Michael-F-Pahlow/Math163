@@ -3,8 +3,28 @@
   <title>3D Vectors</title>
   <introduction>
     <p>
-      blah blah blah
+      Three dimensional vectors are similar to two-dimensional (and four or <m>n</m>-dimensional) vectors. You can add and subtract them, find their magnitude and multiply them.
+      The notation for three-dimensional vectors is <md>\mathbf{v} = \langle x ,y, x \rangle = x\mathbf{\hat{i}} + y\mathbf{\hat{j}} + z\mathbf{\hat{k}} </md>. 
     </p>
+    <p>
+      Three-dimensional space is defined by the right hand rule (sorry left-handers). In the <m>x</m>-direction left is negative and right is positive and when viewed on
+      a two-dimensional plane, positive <m>y</m> is up and negative <m>y</m> is down. To define positive and negative in a third <m>z</m>-direction, we use our right hands.
+      Point the fingers on your right hand in the positive <m>x</m>-direction and curl them to the positive <m>y</m>-direction, then the thumb on your right hand is pointing 
+      in the positive <m>z</m>-direction. If the <m>x-y</m> plane is drawn as usual on a white/chalk board, then the positive <m>z</m>-direction points out of the board.
+    </p>
+    <figure xml:id="right-hand-rule">
+      <caption>The right-hand rule</caption>
+      <image source="assets/right-hand-rule.png" width="100%">
+        <description>
+
+      <p>
+        An image with two figures. The figure on the left shows a three-dimensional axes. The figure on the right has a hand demonstrating the right-hand rule with a three
+        dimensional axes superimposed over the hand.
+      </p>
+
+    </description>
+  </image>
+    </figure>
   </introduction>
   <objectives>
     <title>3D-Vectors</title>
@@ -29,17 +49,101 @@
       </li>
     </ul>
   </objectives>
-  <subsection xml:id="subsec-3d-operations">
+  <subsection xml:id="subsec-3d-vector-operations">
     <title>Operations and Properties</title>
     <p>
-      
+      The magnitude of a three-dimensional vector is calculated using the three-dimensional analog of the Pythagorean theorem. 
+      <md>
+        ||\mathbf{v}|| = \sqrt{x^2+y^2+z^2}
+      </md>
     </p>
-  </subsection>
-  <subsection xml:id="subsec-3d-vector-operations">
-    <title>Vector Operations and Properties</title>
+    <example>
+      <title>Magnitude</title>
+      <p>
+        <md>
+          ||\langle 5, -2, 7 \rangle || = \sqrt{5^2 + (-2)^2 + 7^2} = \sqrt{78}
+        </md>
+        
+      </p>
+    </example>
     <p>
-      
+      Addition and subtraction is done component-wise just like in two-dimensions.
     </p>
+    <example>
+      <title>Addition and Subtraction</title>
+      
+      
+      <p>
+        <md>
+        \langle 3, -6, 1 \rangle + \langle -4, 9, 2 \rangle = \langle -1, 3, 3 \rangle
+        </md>
+      </p>
+      <p>
+        <md>
+        \langle 3, -6, 1 \rangle - \langle -4, 9, 2 \rangle = \langle 7, -15, -1 \rangle
+        </md>
+      </p>
+    </example>
+    <p>
+      One way to multiply with three-dimensional vectors is <em>scalar multiplication</em> where we multiply a vector by a scalar to "rescale" the vector. We will look at the other
+      two ways to multiply with three-dimensional vectors.
+    </p>
+    <example>
+      <title>Scalar Multiplication</title>
+      <p>
+        <md>
+          3\langle 7, -4, 8 \rangle = \langle 21, -12, 24 \rangle
+        </md>
+      </p>
+      <p>
+        <md>
+          \frac{1}{2}\langle 7, -4, 8 \rangle = \langle \frac{7}{2}, -2, 4 \rangle
+        </md>
+      </p>
+      <p>
+        <md>
+          -\langle 7, -4, 8 \rangle = \langle -7, -4, -8 \rangle
+        </md>
+        Multiplying a vector by negative makes it point in the opposite direction!
+      </p>
+    </example>
+    <p>
+      A useful scalar multiplication is to multiply it by 1/magnitude. This creates what is called a unit vector since the magnitude of the rescaled vector is 
+      magnitude/magnitude = 1 unit.
+    </p>
+    <example>
+      <title>A Unit Vector</title>
+      <p>
+        Given the vector <m>\langle 2, -3, 1 \rangle </m>, the magnitude is <m>||\langle 2, -3, 1 \rangle|| = \sqrt{14}</m>. Then the unit vector is:
+        <md>
+          \frac{1}{\sqrt{14}}\langle 2, -3, 1 \rangle = \langle \frac{2}{\sqrt{14}}, -\frac{3}{\sqrt{14}}, \frac{1}{\sqrt{14}}\rangle
+        </md>
+      </p>
+          </example>
+
+  </subsection>
+  <subsection xml:id="geogebra-3d">
+    <title>GeoGebra 3D</title>
+    <p>
+      We will close this section with a video tutorial of using GeoGebra 3D. If you click on the calculator icon at the top of the page, the GeoGebra 3D calculator will
+      pop up in the lower right corner of your screen. Since we will be studying three dimensional space for the rest of the quarter and a standard graphing calculator does
+      not have 3D capabilities, GeoGebra 3D is a good option for us to visualize objects in three-dimensional space. Desmos also has a 3D option and I will introduce another
+      option in a future section.
+    </p>
+    <figure>
+      <caption>A Short Introduction to GeoGebra 3D (8 minutes).</caption>
+      <video youtube="xK32uosH4us"/>
+    </figure>
+    <p>
+      Here are three hour long webinar's from GeoGebra's official channel <url href="https://www.youtube.com/watch?v=uw-Seln32qw" visual="Part 1"/>, <url href="https://www.youtube.com/watch?v=WLlllUZdf1k" visual="Part 2"/>
+      and <url href="https://www.youtube.com/watch?v=f96Dm01DoqY" visual="Part 3"/> if you want to do a deep dive.
+    </p>
+    <paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on three-dimensional vectors.
+    </p>
+  </paragraphs>
   </subsection>
   
 </section>

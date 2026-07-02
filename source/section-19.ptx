@@ -3,7 +3,7 @@
   <title>Double Integrals Over General Regions</title>
   <introduction>
     <p>
-      blah blah blah
+      We need not use rectangles in the <m>xy-</m>plane as the base for our volume when calculating double integrals. We can integrate over any region in the <m>xy-</m>plane.
     </p>
   </introduction>
   <objectives>
@@ -32,14 +32,157 @@
   <subsection xml:id="subsec-double-integrals-general">
     <title>Double Integrals in General</title>
     <p>
-      
+      For more general regions in the <m>xy-</m>plane we have either 
+      <md>
+        \int_a^b \int_{y=f(x)}^{y=g(x)}f(x,y) dy dx \quad \text{or}\quad \int_c^d \int_{x=f(y)}^{x=g(y)}f(x,y) dx dy
+      </md>
+      We must always have constants as limits on the outer integral to evaluate the integral to a numerical result in the end.
     </p>
+    <p>
+      Like the area between curves in Calculus II (Math 152) it is helpful to sketch (or use technology) a graph of the region we are integrating over to help setup the 
+      integral.
+    </p>
+    <example>
+      <p>
+      Find the volume under the surface <m>f(x,y)=x^2y</m> over the region bounded by <m>y=\sqrt{x}</m>, <m>y=1/x</m> and <m>x=3</m>. A graph of this region looks like
+    </p>
+    <figure>
+      <caption>The region of integration.</caption>
+      <image source="assets/2integralregion1.png">
+        <description>
+          <p>
+            A graph of a region with square root of x on the top of the region, one over x on the bottom and bounded by x = 3 on the right.
+          </p>
+        </description>
+      </image>
+    </figure>
+    <p>
+      Since <m>y=\sqrt{x}</m> always defines the top of this region and <m>y=1/x</m> always defines the bottom of the region and <m>x</m> is bounded by constants 1 and 3, we
+      will integrate with respect to <m>y</m> first.
+      <md>
+        \int_1^3 \int_{y=1/x}^{y=\sqrt{x}} x^2y dy dx = \int_1^3 \left(\left. \frac{1}{2}x^2y^2 \right\vert_{y=1/x}^{y=\sqrt{x}}\right) dx = \int_1^3 \left(\frac{x^3}{2}- \frac{1}{2}\right)dx
+      </md>
+      Now integrate with respect to <m>x</m>.
+      <md>
+        \int_1^3 \left(\frac{x^3}{2}- \frac{1}{2}\right)dx = \left.\left(\frac{x^4}{8}-\frac{x}{2}\right \vert_1^3 \right) = 9
+      </md>
+    </p>
+    </example>
+    <example>
+      <p>
+        Calculate the volume under the surface <m>f(x,y)=2x+3y</m> over the region bounded by <m>y=x</m>, <m>y=x/2</m> and <m>y=2</m>. A graph of the region looks like
+      </p>
+      <figure>
+      <caption>The region of integration.</caption>
+      <image source="assets/2integralregion2.png">
+        <description>
+          <p>
+            A graph of a triangular region with y equals x on the right and y equals x over 2 on the left and y equals 2 on the top.
+          </p>
+        </description>
+      </image>
+    </figure>
+    <p>
+      Here <m>x=2y</m> is always on the right and <m>x=y</m> is always on the left. <m>y</m> is bounded by the constants 0 and 2,
+       so we integrate with respect to <m>x</m> first.
+       <md>
+        \int_0^2 \int_{x=y}^{x=2y} (2x+3y)dx dy = \int_0^2 \left(\left. (x^2 + 3xy)\right\vert_{x=y}^{x=2y}\right) dy = \int_0^2 6y^2dy
+       </md>
+       <md>
+        \int_0^2 6y^2dy = \left. 2y^3\right\vert_0^2 = 16
+       </md>
+    </p>
+    </example>
+    <example>
+      <p>
+        Calculate the volume under the surface <m>f(x,y)=e^{y^2}</m> over the region bounded by <m>y=2</m>, <m>y=x/2</m> and <m>x=0</m>. A graph of the region looks like 
+      </p>
+      <figure>
+      <caption>The region of integration.</caption>
+      <image source="assets/2integralregion3.png">
+        <description>
+          <p>
+            A graph of a triangular region bounded by the y axis and the lines y equals 2 and y equals x over 2.
+          </p>
+        </description>
+      </image>
+    </figure>
+    <p>
+      Here would could setup the double integral as either 
+      <md>
+        \int_0^4 \int_{y=x/2}^2 e^{y^2} dy dx \,\,\,\text{or}
+      </md>
+      <md>
+        \int_0^2 \int_{x=0}^{2y} e^{y^2} dx dy
+      </md>
+      The first integral is impossible to calculate by hand since <m>e^{y^2}</m> has no explicit antiderivative, so we will calculate the second version
+      <md>
+        \int_0^2 \int_{x=0}^{2y} e^{y^2} dx dy = \int_0^2 \left(\left. xe^{y^2}\right\vert_0^{2y}\right)dx = \int_0^2 2ye^{y^2} dy
+      </md>
+      Now we can use a substitution to calculate this integral. Let <m>s=y^2</m> then
+      <md>
+        \int_0^2 2ye^{y^2} dy = \int_0^4 e^s ds = e^4 - 1
+      </md>
+      </p>
+    </example>
+    <p>
+      For this last example we saw how that we can setup the double integral in either order of variables. It is theoretically possible to always do this, but sometimes
+      one order is easier based on the function we are integrating. And sometimes it is easier to setup the limits of integration for one order of integration than the 
+      other order of integration. We will best look at how to switch the order of integration when the limits are not constants. Here is a video with another example
+    </p>
+    <figure>
+    <caption>Double Integrals over Type I and Type II Regions</caption>
+    <video youtube="U8suhtVQdmU"/>
+  </figure>
   </subsection>
   <subsection xml:id="subsec-switching-order-of-integration">
     <title>Switching the Order of Integration</title>
     <p>
+      It is easiest to switch the order of integration by sketching the region given by a set of limits of integration and then write a new integral with the other order
+      of variables.
+    </p>
+    <example>
+      <p>
+        Evaluate the integral by changing the order of integration.
+        <md>
+          \int_1^9\int_{\sqrt{y}}^3 xe^y dx dy
+        </md>
+        A graph of the region based on the limits of integration looks like this. (See the left input panel for how I entered this in Desmos.)
+      </p>
+      <figure>
+      <caption>The region of integration.</caption>
+      <image source="assets/2integralregion4.png">
+        <description>
+          <p>
+            A graph of a triangular-like region bounded by y equals one on the bottom, x equals 3 on the right and y equals x squared as the "hypotenuse".
+          </p>
+        </description>
+      </image>
+    </figure>
+    <p>
+      From the figure we can see that we can rewrite the double integral as
+      <md>
+        \int_1^9\int_{\sqrt{y}}^3 xe^y dx dy = \int_1^3 \int_1^{y=x^2} xe^y dy dx = \int_1^3 \left(\left. xe^y\right\vert_1^{x^2}\right)dx = 
+      </md>
+      <md>
+        \int_1^3(xe^{x^2} - xe) dx = \left.\frac{1}{2}(e^{x^2}-x^2e)\right\vert_1^3 = \frac{1}{2}(e^9-9e)
+      </md>
       
     </p>
+    </example>
+    <p>
+      Here is a video with another example.
+    </p>
+<figure>
+    <caption>Change the order of integration to solve tricky integrals</caption>
+    <video youtube="LUvynduoUX0"/>
+  </figure>
+  <paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on double integrals over general regions.
+    </p>
+  </paragraphs>
   </subsection>
   
 </section>

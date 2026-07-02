@@ -3,7 +3,9 @@
   <title>The Cross Product</title>
   <introduction>
     <p>
-      blah blah blah
+      We have seen two ways to multiply with a vector. Scalar multiplication multiplies a scalar times a vectors and the result is a rescaled vector. The Dot product
+      multiplies two vectors by multiplying the like components from each vector together and then adding the results which gives a scalar. A third way to multiply vectors
+      is called the cross product. The cross product is <alert>only defined for three-dimensional vectors</alert> unlike the other two types.
     </p>
   </introduction>
   <objectives>
@@ -19,27 +21,172 @@
     <ul>
       <li>
         <p>
-          The definition of the dot product
+          The definition of the cross product
         </p>
       </li>
       <li>
         <p>
-          Applications of the dot product
+          Properties of the cross product
+        </p>
+      </li>
+      <li>
+        <p>
+          Applications of the cross product
         </p>
       </li>
           </ul>
   </objectives>
-  <subsection xml:id="subsec-cross-product">
+  <subsection xml:id="subsec-def-cross-product">
     <title>Definition of the Cross Product</title>
     <p>
-      
+      The cross product is defined as the determinant of a <m>3\times 3</m> matrix consisting of the two vectors and the <m>\mathbf{\hat{i}}</m>, <m>\mathbf{\hat{j}}</m> and
+      <m>\mathbf{\hat{k}}</m> unit vectors for the three dimensions.
     </p>
+    <assemblage>
+      <title>The Cross Product</title>
+      <p>
+        <md>
+          \mathbf{u}\times\mathbf{v} = \left|\begin{array}{ccc} \hat{i} \amp \hat{j} \amp \hat {k} \\ u_1 \amp u_2 \amp u_3 \\ v_1 \amp v_2 \amp v_3 \\ \end{array} \right|
+        </md>
+        Which is calculated as follows
+        <md>
+          \mathbf{u}\times\mathbf{v} = (u_2 v_3 - u_3 v_2)\mathbf{\hat{i}} - (u_1 v_3 - u_3 v_3)\mathbf{\hat{j}} + (u_1 v_2 - u_2 v_1)\mathbf{\hat{k}}
+        </md>
+              </p>
+              <p>
+                This may look daunting, but there is a quick way to calculate the cross product which with a little practice makes things easy. I learned this in a
+                physics class in college and still do it this way 25 years later.
+              </p>
+      <figure>
+        <caption>The easy way to calculate the cross product</caption>
+        <video youtube="_6bXdcdsVV8"/>
+      </figure>
+    </assemblage>
+  </subsection>
+   <subsection xml:id="subsec-prop-cross-product">
+    <title>Properties of the Cross Product</title>
+    <p>
+      Just like the dot product, the cross product has some important algebraic properties and a couple of nice geometric properties
+    </p>
+    <assemblage>
+      <title>Algebraic Properties of the Cross Product</title>
+      <p>
+        <md>
+          <mrow>\text{Anticommutative} \,\,\,\,\,\,\,\, \amp \mathbf{u}\times\mathbf{v} = - \mathbf{v}\times\mathbf{u}</mrow>
+          <mrow>\text{Distributive} \,\,\,\,\,\,\,\, \amp \mathbf{u}\times(\mathbf{v}+\mathbf{w}) = \mathbf{u}\times\mathbf{v} + \mathbf{u}\times\mathbf{w}</mrow>
+          <mrow>\text{Zero Product} \,\,\,\,\,\,\,\, \amp \mathbf{v}\times\mathbf{0} = \mathbf{0}\times\mathbf{v} = \mathbf{0}</mrow>
+          <mrow>\text{A vector cross itself}  \,\,\,\,\,\,\,\, \amp \mathbf{v}\times\mathbf{v} = \mathbf{0}</mrow>
+          <mrow>\text{Distribution with a scalar}\,\,\,\,\,\,\,\, \amp c(\mathbf{u}\times\mathbf{c}) = (c\mathbf{u})\times\mathbf{v} = \mathbf{u}\times(c\mathbf{v})</mrow>
+          <mrow>\text{Scalar triple product} \,\,\,\,\,\,\,\, \amp \mathbf{u}\cdot(\mathbf{v}\times\mathbf{w}) = (\mathbf{u}\times\mathbf{v})\cdot\mathbf{w}</mrow>
+        </md>
+      </p>
+    </assemblage>
+    <p>
+      Note that the cross product is anticommutative so that if you switch the order, you switch the sign. Also note that when you cross a vector with itself, the result is 
+      a zero vector. This is due to the geometric properties of the cross product.
+    </p>
+    <assemblage>
+      <title>Geometric Properties of the Cross Product</title>
+      <p>
+       When you cross two vectors, the resulting vector is orthogonal to both of the vectors you crossed. For the component unit vectors <m>\mathbf{\hat{i}}</m>, <m>\mathbf{\hat{j}}</m> and <m>\mathbf{\hat{k}}</m>
+      we get the cross products:<m>\mathbf{\hat{i}}\times\mathbf{\hat{j}} = \mathbf{\hat{k}}</m>, <m>\mathbf{\hat{j}}\times\mathbf{\hat{k}} = \mathbf{\hat{i}}</m> and <m>\mathbf{\hat{k}}\times\mathbf{\hat{i}} = \mathbf{\hat{j}}</m>.
+      </p>
+      <p>
+      The magnitude of the cross product is defined as 
+      <md>
+        ||\mathbf{u}\times\mathbf{v}|| = ||\mathbf{u}||\cdot||\mathbf{v}||\sin(\theta)
+      </md>
+      This is why a vector crossed with itself is zero, since the angle between the a vector and itself zero and <m>\sin(0) = 0</m>.
+      </p>
+    </assemblage>
   </subsection>
   <subsection xml:id="subsec-application-cross-product">
     <title>Applications of the Cross Product</title>
     <p>
-      
+      We will close this section by looking at examples of using the cross product. One geometric and one physics related.
     </p>
+      <example>
+        <title>Area of a Parallelogram</title>
+        <p>
+          The area of a parallelogram that is defined be vectors for two adjoining sides is equal to the magnitude of the cross product. 
+        </p>
+        <figure>
+          <caption>Area of a parallelogram</caption>
+          <image width="100%">
+            
+          
+          <prefigure label="parallelogram" xmlns="https://prefigure.org">
+          <diagram dimensions="(300,200)" margins="5">
+    <coordinates bbox="(-1,-1,6,4)">
+    <grid />
+    <line endpoints="((0,0), (4,0))" stroke="blue" thickness="2" arrows="1"/>
+    <line endpoints="((0,0), (1,3))" stroke="blue" thickness="2" arrows="1"/>
+    <line endpoints="((1,3), (5,3))" stroke="black" thickness="1"/>
+    <line endpoints="((4,0), (5,3))" stroke="black"  thickness="1"/>
+    <line endpoints="((1,0),(1,3))" stroke="black" dash="8 8" thickness = "1"/>
+  
+<label anchor="(0,0)" alignment="ne">
+      <m>\,\,\theta</m>
+    </label>
+    <label anchor="(2,0)" alignment="s">
+      <m>\mathbf{u}</m>
+    </label>
+    <label anchor="(0.5,1.5)" alignment="w">
+      <m>\mathbf{v}</m>
+    </label>
+    <label anchor="(1,1.5)" alignment="e">
+      <m>||\mathbf{v}||\sin(\theta)</m>
+    </label>
+  </coordinates>
+  <annotations>
+    <annotation ref="figure"
+                text="A parralelogram difined by vector u at its base and vector v along it other parallel sides. The height of the parallelogram is the magnitude of v times the sine of the angle between adjoining sides.">
+      
+      </annotation>
+  </annotations>
+</diagram>
+</prefigure>
+</image>
+        </figure>
+        <p>
+         The area of a parallelogram is equal to base times height. As we can see in this figure, the base is the magnitude of <m>\mathbf{u}</m>, so the area is
+         <m>A = ||\mathbf{u}||\cdot||\mathbf{v}||\sin(\theta) = ||\mathbf{u}\times\mathbf{v}||</m>.
+        </p>
+        <p>
+          So given a parallelogram formed by the vectors <m>\langle -1, 2, 3\rangle</m> and <m>\langle -2, -1, -4\rangle</m> the area is 
+          <m>\langle -1, 2, 3\rangle\times\langle -2, -1, -4\rangle = \langle -5, -10, 5 \rangle</m> and the magnitude of this vector is <m>\sqrt{150}.</m>
+        </p>
+      </example>
+    <p>
+      The area of triangle where two sides are formed from adjoining vectors is half the area of a parallelogram so <m>A = \frac{1}{2}||\mathbf{u}\times\mathbf{v}||</m>
+      and the volume of a parallelepiped - the three-dimensional analog of a parallelogram is the magnitude of the scalar triple product. One final example to end this section.
+    </p>
+    <example>
+      <title>Torque</title>
+      <p>
+        Several things in physics are defined as a cross product, one of those is torque <m>\tau = \mathbf{r}\times\mathbf{F}</m> where <m>\mathbf{r}</m> is the radius 
+        of the axis of the object to be rotated and <m>\mathbf{F}</m> is the force, Torque measures the tendency of a force to produce rotation about an axis.
+      </p>
+      <p>
+        Suppose 6 Newton force is used to a tighten a bolt using a 15-centimeter wrench starting from an angle of 40 degrees from the horizontal. Find the amount of torque
+        on the bolt.
+      </p>
+      <p>
+        We want to find the amount of torque which would be the magnitude of torque. We are given the magnitude of the force and the radius (wrench length), so that we
+        can use the magnitude of the cross product formula. We also need
+        to be careful about units. Force is measured in Newtons, so radius needs to be in meters (15 cm = 0.15 m) so that the result is in Newton-meters or Joules.
+        <md>
+          ||\tau|| = (0.15)(6)\sin(40^{\circ}) \approx 0.578 \,\,\, \text{Joules}
+        </md>
+        
+      </p>
+    </example>
+    <paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on the cross product.
+    </p>
+  </paragraphs>
   </subsection>
   
 </section>

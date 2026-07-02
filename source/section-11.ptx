@@ -3,7 +3,8 @@
   <title>Vector-Valued Functions</title>
    <introduction>
     <p>
-      blah blah blah
+      We will spend the next few sections looking vector-valued functions. As we saw in the last section, a vector-valued function is really just a set of parametric 
+      equations enclosed in a vector. Evaluating this function results in a vector. These are also called space curves.
     </p>
   </introduction>
   <objectives>
@@ -19,7 +20,7 @@
     <ul>
       <li>
         <p>
-          Graphs of Vector-valued functions using GeoGebra and Desmos.
+          Graphs of Vector-valued functions using GeoGebra, Desmos and CalcPlot3D.
         </p>
       </li>
       <li>
@@ -32,13 +33,113 @@
   <subsection xml:id="subsec-vvf-graphs">
     <title>Graphing Vector-Valued Functions</title>
     <p>
-      
+      We will begin this section by looking at three tools for graphing vector valued functions.
     </p>
+    <example>
+      <title>GeoGebra 3D</title>
+      <p>
+        To plot a space curve using GeoGebra 3D, use the command <em>curve(f(t),g(t),h(t),t,start,end)</em>. To plot the curve <m>\mathbf{r}(t)=\langle t\cos(t),t,t\sin(t)\rangle</m> we
+        would type in <alert>curve(tcos(t),t,tsin(t),t,0,10)</alert> and get the resulting plot.
+      </p>
+      <figure>
+        <caption>A pace curve in GeoGebra 3D</caption>
+        <image source="assests/geogebra3d.png">
+          <shortdescription>A plot of t times cosine t, t, t times sine t created using Geo Gebra 3D</shortdescription>
+        </image>
+      </figure>
+    </example>
+
+    <example>
+      <title>Desmos 3D</title>
+      <p>
+        To plot a space curve using Desoms 3D, simply type the space curve components surrounded by parentheses. Desmos will automatically put _<m>\leq t \leq</m>_ below
+        the equations where the user must fill in the start and end values. To plot the curve <m>\mathbf{r}(t)=\langle t\cos(t),t,t\sin(t)\rangle</m> we
+        would type in <alert>(tcos(t),t,tsin(t))</alert> and then fill in the blanks with 0 and 10, and get the resulting plot.
+      </p>
+      <figure>
+        <caption>A pace curve in Desmos 3D</caption>
+        <image source="assests/desmos3d">
+          <shortdescription>A plot of t times cosine t, t, t times sine t created using Desmos 3D</shortdescription>
+        </image>
+      </figure>
+    </example>
+
+    <example>
+      <title>CalcPlot3D</title>
+      <p>
+        To plot a space curve using CalcPlot3D, select <em>Space Curve: r(t)</em> from the drop down menu. Then fill in the equations for <m>x(t), y(t)</m> and <m>z(t)</m>.
+        You can then customize the domain, color, etc.
+      </p>
+      <figure>
+        <caption>A pace curve in CalcPlot3D</caption>
+        <image source="assests/calcplot3d">
+          <shortdescription>A plot of t times cosine t, t, t times sine t created using CalcPlot3D</shortdescription>
+        </image>
+      </figure>
+    </example>
+    
   </subsection>
   <subsection xml:id="subsec-vvf-limits">
     <title>Limits and Continuity</title>
     <p>
-      
+      Before we look at the calculus of vector-valued functions in the next two sections. We will look at the domain, limits and continuity of vector-valued functions.
     </p>
+    <p>
+      The limit domain of a vector valued function is first found component-wise and then the domain of each component is combined into a single set of values for <m>t</m>.
+      </p>
+      <example>
+        <p>
+          Consider the function <m>\mathbf{r}(t) = \langle \sqrt{4-t^2},e^{-3t},\ln(t+1) \rangle</m>
+        </p>
+        <p>
+          The domain of <m>\sqrt{4-t^2}</m> is <m>-2 \leq t \leq 2</m>. The domain of <m>e^{-3t}</m> is <m>(-\infty,\infty)</m>. And the domain of <m>\ln(t+1)</m> is <m>t \gt -1</m>.
+          Combining these gives a domain of <m>-1 \lt t \leq 2</m>.
+        </p>
+      </example>
+      <example>
+        <p>
+          Consider the function <m>\mathbf{r}(t) = \langle \frac{t-2}{t+2},\sin(t),\ln(9-t^2)\rangle</m>
+        </p>
+        <p>
+          The domain of <m>\frac{t+2}{t-2}</m> is <m>t\ne 2</m>. The domain of <m>\sin(t)</m> is <m>(-\infty,\infty)</m>. And the domain of <m>\ln(9-t^2)</m> is <m>-3 \lt t \lt 3</m>.
+          Combining these gives a domain of <m>-3 \lt t \lt 3</m> and <m>t \ne 2</m>.
+        </p>
+      </example>
+      <p>
+        The limit of a vector-valued function is also done component-wise. The limit of each component must exist for the overall limit to exist.
+      </p>
+      <example>
+        <p>
+          Consider the limit:
+          <md>
+          \lim_{t \to \infty} \left\langle \frac{1+t^2}{1-t^2} , \arctan(t), \frac{1-e^{-2t}}{t} \right\rangle = \left\langle 1, \frac{\pi}{2}, 0 \right\rangle
+          </md>
+          The first limits is 1 due to the long-run behavior of rational functions. The second limit is due to the definition of the arctangent. The third limit
+          is by one application of l'Hopital's rule.
+        </p>
+      </example>
+      <example>
+        <p>
+          Consider the limit:
+          <md>
+          \lim_{t \to 0} \left\langle \frac{e^t-1}{t} , \frac{\sqrt{1+t}-1}{t}, \frac{3}{t+1} \right\rangle = \left\langle 1, \frac{1}{2}, 3 \right\rangle
+          </md>
+          The first two limits are due to l'Hopital's rule and the third is by direct substitution.
+        </p>
+      </example>
+      <p>
+        Similar to a single-variable function, a vector-valued function is <em>continuous</em> if
+        <md>
+          \lim_{t\to c} \mathbf{r}(t) = \mathbf{r}(c)
+        </md>
+        Which means that <m>\mathbf{r}(c)</m> exists, i.e. <m>c</m> is in the domain of <m>\mathbf{r}</m>. Also the limit must exist and finally the limit equals the 
+        function-value.
+      </p>
+      <paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on vector-valued functions.
+    </p>
+  </paragraphs>
   </subsection>
 </section>

@@ -3,8 +3,36 @@
   <title>Double Integrals</title>
   <introduction>
     <p>
-      blah blah blah
+      We now turn our intentions to integration. Recall from Calculus II (Math 152) how we used integral to calculate the area between a function and the <m>x</m>-axis.
+      We took an area like this:
     </p>
+    <figure>
+    <caption>Area under curve</caption>
+      <image source="assets/integral1.jpg" width="60%">
+        <description>
+        <p>
+        A figure showing the area between a curve and the x-axis shaded and labeled as A1 (positive area) and A2 (negative area)
+        </p>
+        </description>
+      </image>
+</figure>
+<p>
+  and using rectangles to estimate the area. As we increase the number of rectangles, we improve the estimate and when we let the number of integral approach infinity
+  (calculus!) we get the exact area that we call the (definite) integral.
+  </p>
+  <figure>
+    <caption>Area under curve</caption>
+      <image source="assets/integral2.jpg" width="60%">
+        <description>
+        <p>
+        A figure showing are between a curve and the x-axis approximated by seven rectangles.
+        </p>
+        </description>
+      </image>
+</figure>
+<p>
+  We will now see how this idea can be extended to three dimensions
+</p>
   </introduction>
   <objectives>
     <title>Double Integrals</title>
@@ -32,15 +60,157 @@
   </objectives>
   <subsection xml:id="subsec-double-integrals-rectangles">
     <title>Double Integrals over Rectangles</title>
+   
     <p>
-      
+      In three dimensions, instead of calculating area under the curve, we calculate the volume between a surface and the <m>xy-</m>plane. In a similar way to area in
+      Math 152, we can divide a rectangle in the <m>xy-</m>plane into smaller rectangle and use these as the base for a box. The height of the box is found using a
+      <m>z=f(x,y)</m> value. If we add up the area of all of the boxes, we get an estimate for the volume. Here is an example of the volume under the surface
+      <m>z=1-0.2x^2+0.2y^2</m> with 100 boxes to estimate the volume.
     </p>
+    <figure>
+    <caption>Area under curve</caption>
+      <image source="assets/boxes.png" width="60%">
+        <description>
+        <p>
+        A figure showing volume being estimated by boxes under surface.
+        </p>
+        </description>
+      </image>
+</figure>
+<p>
+  Similar to area, volume below the <m>xy-</m>plane is negative due to the negative "height". When we increase the number of boxes toward infinity (calculus again!) we 
+  get the exact area between a surface and the <m>xy</m>-plane. This sets up a double integral.
+  <md>
+    \int_c^d \int_a^b f(x,y)dx dy
+  </md>
+  The small rectangles that form the bases of the boxes in the <m>xy-</m>plane have sides <m>dx</m> and <m>dy</m> and area <m>dx dy</m>. The function, <m>f(x,y)</m> provides
+  a height, so the double integral by definition calculates a volume. Similar to partial derivatives, double integrals are calculated using antiderivatives one variable 
+  at a time while holding the second variable as a constant. We work from the inside out and plug in the limits of integration to evaluate the integral and get our
+  final result (Fundamental Theorem of Calculus). Here is an example 
+</p>
+<example>
+  <p>
+    Evaluate
+    <md>
+      \int_{-1}^1 \int_{-2}^2 (2x+3y+5) dx dy
+    </md>
+    Start by calculating the inside integral with respect to <m>x</m> while holding <m>y</m> as a constant
+    <md>
+      \int_{-1}^1 \left.(x^2 + 3xy + 5x)\right\vert_{-2}^2 dy = \int_{-1}^1 (10+6y) dy
+    </md>
+    Now calculate the integral with respect to <m>y</m>.
+    <md>
+      \int_{-1}^1 (10+6y) dy = \left.(10y+3y^2)\right\vert_{-2}^2 = 40
+    </md>
+  </p>
+</example>
+<p>
+  This process of integrating one variable at a time is also called iterated integration and is always calculated starting with the inner most integral. This will be 
+  extended to triple integrals in Calculus IV. Here is a video with a few more examples
+</p>
+<figure>
+    <caption>Double Integrals (25 minutes)</caption>
+    <video youtube="BJ_0FURo9RE"/>
+  </figure>
+  <paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on double integrals.
+    </p>
+  </paragraphs>
   </subsection>
+  
   <subsection xml:id="subsec-iterated-integrals">
     <title>Iterated Integrals</title>
     <p>
-      
+      Iterated Integrals have one important property known as Fubini's Theorem. For a rectangular region in the <m>xy-</m>plane <m>[a,b]\times[c,d]</m>,
+      <md>
+        \int_c^d \int_a^b f(x,y)dx dy = \int_a^b \int_c^d f(x,y)dy dx
+      </md>
+      In other words, for rectangular regions only, you can switch the order of integration and get the same result. The situation is a little bit more complicated for 
+      regions that are now rectangles, and we will look at this in the next section.
+
     </p>
+    <p>
+      Another more specialized property that we will occasionally use is when the multi-variable function can be written as product of single-variable functions. 
+      If <m>f(x,y) = g(x)\cdot h(y)</m> then
+      <md>
+        \int_c^d \int_a^b f(x,y)dx dy \left(\int_a^b g(x) dx\right)\cdot \left(\int_c^d h(y) dx\right)
+      </md>
+      Here are a few more examples
+    </p>
+    <example>
+      <p>
+        Evaluate
+        <md>
+        \int_2^4\int_1^9 ye^x dy dx
+        </md>
+      Here the multi-variable function is the product of functions of each variable so
+      <md>
+        \int_2^4\int_1^9 ye^x dy dx = \left(\int_2^4 e^x dx \right)\left(\int_1^9 y dy\right) = \left(\left. e^x \right\vert_2^4 \right)\left(\left.\frac{y^2}{2}\right\vert_1^9\right)
+      </md>
+      <md>
+        =(e^4-e^2)\left(\frac{81}{2}-\frac{1}{2}\right) = 40(e^4-e^2)
+      </md>
+      </p>
+    </example>
+    <example>
+      <p>
+        Evaluate 
+        <md>
+          \int_0^4\int_0^3 \frac{dx dy}{\sqrt{3x+4y}}
+        </md>
+        Here we begin be integrating with respect to <m>x</m> since <m>x</m> is the "inside" variable (<m>dx</m> is to the left of <m>dy</m>).
+        <md>
+          \int_0^4\int_0^3 \frac{dx dy}{\sqrt{3x+4y}} = \int_0^4 \left(\left.\frac{2(3x+4y)^{1/2}}{3}\right\vert_0^3\right) = \frac{2}{3}\int_0^4 (\sqrt{4y+9}-\sqrt{4y}) dy
+        </md>
+        Now calculate the integral with respect to <m>y</m>
+        <md>
+          \frac{2}{3}\int_0^4 (\sqrt{4y+9}-\sqrt{4y}) dy = \left(\left.\frac{2}{3}\left( \frac{2}{3}\frac{(4y+9)^{3/2}}{4} -
+           \frac{2}{3}\frac{(4y)^{3/2}}{4}\right\vert_0^4\right)\right) = \frac{34}{9}
+        </md>
+        
+      </p>
+    </example>
+    <example>
+      <p>
+        Find the volume under the surface <m>f(x,y)=xe^{xy}</m> over the region <m>[0,1]\times[0,\ln(5)]</m>. Since we get to choose the order of integration, let's think
+        about this order is easier if we calculated
+        <md>
+          \int_0^1 \int_0^{\ln(5)} xe^{xy} dy dx
+        </md>
+        we would begin by substituting <m>s=xy</m> and <m>ds = xdy \,\,\to\,\, \frac{ds}{x} = dy</m> which would cancel out the <m>x</m> in front of the exponential.
+      </p>
+      <p>
+        If we instead calculate 
+        <md>
+        \int_0^{\ln(5)}\int_0^1  xe^{xy}  dx dy
+        </md>
+        we would begin by using integration by parts with the variable <m>x</m>. This would turn into a complicated mess. So let's proceed with the original order.
+      </p>
+      <p>
+        Making the substitution <m>s=xy</m>
+         <md>
+          \int_0^1 \int_{0}^{\ln(5)} xe^{xy} dy dx = \int_0^1 \int_{s=0}^{s=x\ln(5)} e^s ds dx = \int_0^1 (e^s\vert_{0}^{x\ln(5)})dx = \int_0^1 (e^{x\ln(5)}-1) dx
+        </md>
+        Calculate the integral with respect to <m>x</m> now
+        <md>
+          \int_0^1 (e^{x\ln(5)}-1) dx = \int_0^1 (e^{\ln(5^x)}-1) dx = \int_0^1 (5^x-1) dx = \left.\left(\frac{5^x}{\ln(5)} - x\right)\right\vert_0^1 = \frac{4}{\ln(5)}-1
+        </md>
+      </p>
+    </example>
+    <p>
+      And here is a video with one final example:
+    </p>
+    <figure>
+      <caption>An iterated integral example (9 minutes)</caption>
+      <video youtube="IO080wDQq8U"/>
+    </figure>
+    <paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on double integrals.
+    </p>
+  </paragraphs>
   </subsection>
- 
 </section>

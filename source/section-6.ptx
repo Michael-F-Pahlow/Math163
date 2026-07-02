@@ -3,7 +3,9 @@
   <title>2D Vectors</title>
  <introduction>
     <p>
-      blah blah blah
+      A vector is a directed line with a starting point, ending point and an arrow pointing in a specified direction. Vectors  have many uses in physics and engineering such 
+      as the calculation of work and torque. Since vectors are by definition geometric objects, they are also useful in mathematics for calculating things like area and volume.
+      Vectors are also widely used in Linear Algebra (Math 238) and Calculus IV (Math 254).
     </p>
   </introduction>
   <objectives>
@@ -36,19 +38,286 @@
   <subsection xml:id="subsec-vector-definitions">
     <title>Definitions and Notation</title>
     <p>
-      
+      While a vector can start and end at any point, it is convenient to use the origin (0, 0) as a common starting point. Then the vector can be defined by the ending point.
+      For example if we want a vector that starts at (0,0) and ends at (-5, 2), then we could write the vector as <m>\langle -5, 2 \rangle</m>.
     </p>
+    <figure>
+    <caption>An example vector</caption>
+     <image width="60%">
+    <prefigure label="vector1" xmlns="https://prefigure.org">
+      <diagram dimensions="(300,300)" margins="5">
+  <definition>v=(-2,5)</definition>
+  <coordinates bbox="(-6,-2,2,6)">
+    <grid-axes at="grid-axes" xlabel="x" ylabel="y"/>
+    <vector v="v" stroke="blue"/>
+    <label anchor="v" alignment="sw">
+      <m>{\mathbf v}=\langle -2, 5 \rangle </m>
+    </label>
+  </coordinates>
+</diagram>
+</prefigure>
+</image>
+</figure>
+    <p>
+      There are several ways to write and refer to vectors. When typesetting vectors, like in these notes, it is common to refer to vectors using boldface letter, such as <m>\mathbf{v}</m>.
+      When handwriting vectors, it is common to denote vectors with a small arrow written over the letter used for the vector, <m>\vec{v}</m>. The vector itself is usually written like a point
+      enclosed in angle brackets, <m>\langle, \rangle</m>. The numbers or variables written inside the brackets are called the <em>components</em>. 
+    </p>
+      <p> 
+        An alternative way to write a vector, that is common in physics and engineering is to write a vector as a sum of its components where each component is followed by <m>\mathbf{\hat{i}}</m> or 
+      <m>\mathbf{\hat{j}}</m> pronounced as i-hat and j-hat. <m>\mathbf{\hat{i}}</m> corresponds to the <m>x-</m>component and <m>\mathbf{\hat{j}}</m> corresponds to the
+      <m>y-</m>component. So
+      <md>
+        \langle -2, 5 \rangle = -2\mathbf{\hat{i}} + 5\mathbf{\hat{j}}
+      </md>
+      This is called i-j-k notation. (We'll add the <m>\mathbf{\hat{k}}</m> in the next section.)
+    </p>
+    <p>
+      When studying vectors, we want to distinguish them from regular numbers (or variables) which we call <em>scalars</em>. Scalars are written as normal and typeset in regular text.
+      One reason we want to distinguish between scalars and vectors is that while there is only way to multiply scalars, there are three different ways to multiply with vectors!
+    </p>
+    <p>
+      Two other important properties of vectors are their magnitude and direction. The <em>magnitude</em> of a vector is its length. We use <m>||\mathbf{v}||</m>
+      to denote the magnitude of a vector. To find the length of slanted line which forms the hypotenuse of a right triangle, we use the Pythagorean theorem. So
+      <md>
+        ||\mathbf{v}|| = \sqrt{x^2+y^2}
+      </md>
+    where <m>x</m> and <m>y</m> are the components of the vector.
+    </p>
+       <figure>
+    <caption>An example vector and its components</caption>
+     <image width="60%">
+    <prefigure label="vector2" xmlns="https://prefigure.org">
+     <diagram dimensions="(300,300)" margins="5">
+  <definition>v=(-2,5)</definition>
+  <coordinates bbox="(-6,-2,2,6)">
+    <grid-axes at="grid-axes" xlabel="x" ylabel="y"/>
+    <vector v="v" stroke="blue"/>
+    <line p1="(0,0)" p2="(-2,0)" stroke="green"/>
+    <line p1="(-2,0)" p2="(-2,5)" stroke="green"/>
+    <label anchor="(-1,3)" alignment="e">
+      <m>||{\mathbf v}|| = \sqrt{29} </m>
+    </label>
+    <label anchor = "(-1,0)" alignment ="s">
+      <m>x = -2</m>
+      </label>
+      <label anchor = "(-2,2.5)" alignment ="w">
+      <m>y = 5</m>
+      </label>
+  </coordinates>
+</diagram>
+</prefigure>
+</image>
+</figure>
+<p>
+ The direction of a two-dimensional vector is the angle, in radians, it makes with the positive <m>x</m>-axis. We define this as <m> \theta = \arctan(y/x) </m>. The
+  arctangent only gives positive angles in the first and quadrant, so if our vector is pointing in the second or third quadrant, we need to add <m> \pi</m> to our result and to 
+  get a positive result in the fourth quadrant, we need to add <m> 2\pi</m>.
+</p>
+<p>
+  If we know the magnitude and direction of a two-dimensional vector, we can write the components of the vector using the formulas. <m> x = ||\mathbf{v}||\cos(\theta) </m> 
+  and <m> y =||\mathbf{v}||\sin(\theta)</m>.
+</p>
+<p>
+  If this all looks familiar, converting from component form to direction and magnitude is the same thing as converting from rectangular coordinates to polar coordinates.
+</p>
   </subsection>
   <subsection xml:id="subsec-vector-operations">
-    <title>Vector Operationsand Properties</title>
+    <title>Vector Operations and Properties</title>
     <p>
+      Similar to scalars, vectors can be added and multiplied. Subtraction is just adding negative numbers and division is a little more complicated because of the three ways
+      that vectors can be used in multiplication. Vector addition/subtraction is done component-wise.
+    </p>
+    <example>
+      <title>Vector Addition</title>
       
+      <p>
+        <md>\langle 5, 4 \rangle + \langle -3, 7 \rangle = \langle 5-3, 4+7 \rangle = \langle 2, 11 \rangle</md>
+      </p>
+    </example>
+    <p>
+      Vector addition/subtraction, like many aspects of vectors that we shall see, has a geometric interpretation. Adding or subtracting two vectors gives the diagonal of
+      a parallelogram. The longer diagonal represents addition and the shorter diagonal represents subtraction. We can see this in the following Desmos demonstration. 
+      Click on <em>Vector u + v</em> or <em>Vector u -v</em> and on the <em>Sides of parallelogram</em>
+    </p>
+    <figure>
+      <caption>Vector Addition and Subtraction - Geometric Representation</caption>
+      <interactive desmos="4o0qkafary" width="100%" aspect="3:2" />
+    </figure>
+  
+    <p>
+      You can also change the components of the vector <m>\mathbf{u}</m> by using the sliders for <em>a</em> and <em>b</em>. You can change the components of
+      the vector <m>\mathbf{v}</m> by using the sliders for <em>c</em> and <em>d</em>. As you move change the vectors, the sum always stays as the longer diagonal of the
+      parallelogram and the difference is the shorter diagonal.
+    </p>
+    <p>
+      This "parallelogram" law shows two more things about vector addition. One is that vector addition is commutative. If you change the order of addition, you get the 
+      same result. Starting at the origin, <m>\mathbf{u} + \mathbf{v}</m> would represent the two sides of the parallelogram below the diagonal, when all of the components are positive and 
+      <m>\mathbf{v} + \mathbf{u}</m> would represent the two sides of the parallelogram above the diagonal. A second thing we see is that subtraction is anti-commutative.
+      <md>||\mathbf{u}-\mathbf{v}|| = ||\mathbf{v}-\mathbf{u}||</md> (same magnitude = same length) but the vectors point in the opposite direction.
     </p>
   </subsection>
   <subsection xml:id="subsec-vector-applications">
     <title>Applications of Vectors</title>
     <p>
-      
+      We will close this section be looking at a few examples of how we can apply two-dimensional vectors.
     </p>
+    <example>
+      <title>Forces</title>
+      <p>
+        Three forces act on object: <m>\mathbf{F}_1 = \langle 2, 5 \rangle, \mathbf{F}_2= \langle 8, 3 \rangle, \mathbf{F}_3 = \langle 0, -7 \rangle</m>. Find the net force
+        on the object.
+        <md>
+          \mathbf{F}_{net} = \mathbf{F}_1 + \mathbf{F}_2 + \mathbf{F}_3 = \langle 10, -2\rangle
+        </md>
+        Note that an equal force pointing in the opposite direction (Newton's third law) would "balance" the net force. This is the vector <m>\langle -10, 2\rangle</m>.
+      </p>
+      </example>
+   
+    <example>
+      <title>A Long Walk</title>
+      <p>
+        A person starts walking from home and walks 4 miles east, 7 miles southeast, 6 miles south, 5 miles southwest and 3 miles east. How far have they walked?
+      </p>
+      <p>
+        Note that the walk information is given as magnitudes and directions. The total distance walked is the sum of the magnitudes - 24 miles. 
+        A very long walk, this is more than my maximum daily hike total of 22 miles.
+      </p>
+      <p>
+        If they walked straight home, how far would they have to walk and and in what direction?
+      </p>
+      <figure>
+        <caption>A Long walk in vector form.</caption>
+        <image width="100%">
+          <prefigure label="longwalk1" xmlns="https://prefigure.org">
+          <diagram dimensions="(200,300)" margins="(5,5,50,5)">
+<coordinates bbox="(-1,-16,10,1)">
+   <line endpoints="((0,0), (4,0))" stroke="blue"
+          thickness="2" arrows="1"/>
+    <line endpoints="((4,0), (8.95,-4.95))" stroke="blue"
+          thickness="2" arrows="1"/>
+    <line endpoints="((8.95,-4.95), (8.95,-10.95))" stroke="blue"
+          thickness="2" arrows="1"/>
+    <line endpoints="((8.95,-10.95), (5.41,-14.5))" stroke="blue"
+          thickness="2" arrows="1"/>
+    <line endpoints="((5.41,-14.5), (2.41,-14.5))" stroke="blue"
+          thickness="2" arrows="1"/>
+    <point p="(0,0)" size="3" fill = "black"/>
+    <label anchor="(2,0)" alignment="n" scale="0.6">
+      <m>\mathbf{w}_1 = \langle 4, 0 \rangle</m>
+    </label>
+    <label anchor="(6.5,-2.5)" alignment="ne" scale="0.6">
+      <m>\mathbf{w}_2 = \langle \frac{7\sqrt{2}}{2}, -\frac{7\sqrt{2}}{2} \rangle</m>
+    </label>
+    <label anchor="(9,-8)" alignment="e" scale="0.6">
+      <m>\mathbf{w}_3 = \langle 0, -6 \rangle</m>
+    </label>
+    <label anchor="(7.25,-12.5)" alignment="se" scale="0.6">
+      <m>\mathbf{w}_4 = \langle -\frac{5\sqrt{2}}{2}, -\frac{5\sqrt{2}}{2} \rangle</m>
+    </label>
+    <label anchor="(3.9,-14.5)" alignment="s" scale="0.6">
+      <m>\mathbf{w}_5 = \langle -3, 0 \rangle</m>
+    </label>
+    <label anchor="(0,0)" alignment="s" scale="0.6">
+      Home
+    </label>
+  </coordinates>
+</diagram>
+</prefigure>
+</image>
+      </figure>
+      <p>
+        As we can see in the figure above, where each vector has been converted to component form from the given magnitudes and directions, the distance home is the magnitude 
+        of the vector that stretch from home to the tip of the arrow of <m>\mathbf{w}_5</m>. This is also the sum of the five walk vectors.
+        <md>
+          \mathbf{w}_{total} = \mathbf{w}_1 +\mathbf{w}_2 +\mathbf{w}_3 +\mathbf{w}_4 + \mathbf{w}_5 = \langle 1+\sqrt{2}, -6-6\sqrt{2} \rangle \approx \langle 2.41, -14.49 \rangle
+        </md>
+      The magnitude of this vector is approximately 14.68 miles. To find the direction, home lets add the total walk vector to the figure.
+      </p>
+           <figure>
+        <caption>A Long walk in vector form.</caption>
+        <image width="100%">
+          <prefigure label="longwalk2" xmlns="https://prefigure.org">
+          <diagram dimensions="(200,300)" margins="(5,5,50,5)">
+<coordinates bbox="(-1,-16,10,1)">
+   <line endpoints="((0,0), (4,0))" stroke="blue"
+          thickness="2" arrows="1"/>
+    <line endpoints="((4,0), (8.95,-4.95))" stroke="blue"
+          thickness="2" arrows="1"/>
+    <line endpoints="((8.95,-4.95), (8.95,-10.95))" stroke="blue"
+          thickness="2" arrows="1"/>
+    <line endpoints="((8.95,-10.95), (5.41,-14.5))" stroke="blue"
+          thickness="2" arrows="1"/>
+    <line endpoints="((5.41,-14.5), (2.41,-14.5))" stroke="blue"
+          thickness="2" arrows="1"/>
+          <line endpoints="((2.41,-14.5), (0,0))" stroke="blue"
+          thickness="2" arrows="2"/>
+    <point p="(0,0)" size="3" fill = "black"/>
+    <label anchor="(2,0)" alignment="n" scale="0.6">
+      <m>\mathbf{w}_1 = \langle 4, 0 \rangle</m>
+    </label>
+    <label anchor="(6.5,-2.5)" alignment="ne" scale="0.6">
+      <m>\mathbf{w}_2 = \langle \frac{7\sqrt{2}}{2}, -\frac{7\sqrt{2}}{2} \rangle</m>
+    </label>
+    <label anchor="(9,-8)" alignment="e" scale="0.6">
+      <m>\mathbf{w}_3 = \langle 0, -6 \rangle</m>
+    </label>
+    <label anchor="(7.25,-12.5)" alignment="se" scale="0.6">
+      <m>\mathbf{w}_4 = \langle -\frac{5\sqrt{2}}{2}, -\frac{5\sqrt{2}}{2} \rangle</m>
+    </label>
+    <label anchor="(3.9,-14.5)" alignment="s" scale="0.6">
+      <m>\mathbf{w}_5 = \langle -3, 0 \rangle</m>
+    </label>
+    <label anchor="(1,-7)" alignment="e" scale="0.6">
+      <m>\mathbf{w}_{total} = \langle 1+\sqrt{2},-6-6\sqrt{2}\rangle</m>
+    </label>
+    <label anchor="(0,0)" alignment="se" scale="0.6">
+      Home
+    </label>
+  </coordinates>
+</diagram>
+</prefigure>
+</image>
+      </figure>
+      <p>
+        The direction of the total velocity vector is <m>\theta = \arctan(-14.48/2.41) \approx -1.406 </m> radians. This angle is in the fourth quadrant, but the
+        direction home is clearly pointing in the second quadrant. This is because the total walk vector points from home to the tip of the fifth walk vector. To get the 
+        direction home, we can simply reverse the direction of this vector by rotating it 180 degrees or <m>\pi</m> radians. So the direction home is <m>\theta \approx -1.406 + \pi \approx 1.736</m> radians.
+      </p>
+    </example>
+    <example>
+      <title>Velocity</title>
+      <p>
+        Suppose an airplane is heading north at an airspeed of 500 kilometers per hour, but there is a wind blowing from the southeast at 80 kilometers per hour. How many
+        degrees off course will the plane end up flying and what is the speeds relative to the ground?
+      </p>
+      <p>
+        Velocity can be considered as a vector in physics. The information for the plane and wind's velocity are given as magnitudes and directions. Converting these to 
+        component form gives with the direction north at 90 degrees and the wind direction blowing from the southeast to the northwest at 135 degrees
+        <md>
+          <mrow>\text{Plane:}\,\, \mathbf{P} = \amp \langle 500\cos(90^{\circ}), 500\sin(90^{\circ}) = \langle 0, 500 \rangle</mrow>
+          <mrow>\text{Wind:}\,\, \mathbf{W} = \amp \langle 80\cos(135^{\circ}), 80\sin(135^{\circ}) = \langle -40\sqrt{2}, 40\sqrt{2}\rangle</mrow>
+        </md>
+        Adding these velocity vectors gives the total velocity vector <m>\langle -40\sqrt{2}, 500+40\sqrt{2} \rangle \approx \langle -56.57, 556.57\rangle</m>. Find the magnitude 
+        of this vector will give the plane's relative speed. The magnitude is speed = <m>\sqrt{(-56.57)^2+5556.57^2}\approx 559.436</m> kilometers per hour.
+      </p>
+      <p>
+        Finding the direction of the total velocity vector and subtracting it from 90 degrees (the plane's intended direction) will give that angle that the plane is off course.
+        Direction = <m>\arctan(-556.57/56.57) + \pi\approx 0.101</m> radians. Converting this to degrees gives 5.8 degrees off course.
+      </p>
+    </example>
+    <p>
+      Here is a video with a few more application problems from a physics perspective
+    </p>
+    <figure>
+    <caption>Vectors in Physics (12 minutes)</caption>
+    <video youtube="EwSHKuSxX_8"/>
+  </figure>
+    <paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on two-dimensional vectors.
+    </p>
+  </paragraphs>
   </subsection>
 </section>

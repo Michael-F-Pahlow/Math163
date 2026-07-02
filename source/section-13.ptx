@@ -3,7 +3,7 @@
   <title>Applications of Vector-Valued Functions</title>
    <introduction>
     <p>
-      blah blah blah
+      Vector-valued functions or space curves are useful ways to analyze objects and motion in three-dimensional space.
     </p>
   </introduction>
   <objectives>
@@ -19,7 +19,7 @@
     <ul>
       <li>
         <p>
-          Calculating arclength.
+          Calculating arc length.
         </p>
       </li>
       <li>
@@ -42,25 +42,192 @@
   <subsection xml:id="subsec-arclength">
     <title>Arclength</title>
     <p>
-      
+     In Math 152 (Calculus II) you learned howto calculate arc length for a function, <m>y=f(x)</m>. Except for a few carefully crafted examples, arc length in general is 
+     difficult to calculate due the square root in the integral from the Pythagorean theorem. With vector-valued functions, we can write a more general formula for arc
+     length that is easily extended to three dimensions.
     </p>
+    <assemblage xml:id="assemblage-arclength">
+      <title>Arc Length Formulas</title>
+      <p>
+        <md>
+          <mrow>\text{Math 152 Formula} \quad\amp \int_a^b \sqrt{1+f'(x)^2}dx </mrow>
+          <mrow>\text{2D Space} \quad \amp \int_a^b \sqrt{x'(t)^2+y'(t)^2}dt </mrow>
+          <mrow>\text{3D Space} \quad \amp \int_a^b \sqrt{x'(t)^2+y'(t)^2+z'(t)^2}dt</mrow>
+          <mrow>\text{where} \quad\amp \mathbf{r}(t)=\langle x(t),y(t),z(t)\rangle</mrow>
+        </md>
+      </p>
+    </assemblage>
+    <example>
+      <p>
+        Find the arc length of <m>\langle 2(t-\sin(t)), 2(1-\cos(t))\rangle</m> for <m>0 \leq t \leq 2\pi</m>.
+      </p>
+      <p>
+        Start by calculating the derivatives <m>x'(t) = 2(1-\cos(t))</m> and <m>y'(t) = 2\sin(t)</m> Then arc length is 
+        <md>
+          \int_0^{2\pi} \sqrt{(2(1-\cos(t)))^2+(2\sin(t))^2}dt =\\ \int_0^{2\pi} \sqrt{4-8\cos(t)+4\cos^2(t)+4\sin^2(t)}dt=\\
+          \int_0^{2\pi}\sqrt{8-8\cos(t)}dt = \\\int_0^{2\pi}\sqrt{16\sin^2(t/2)}dt =\\ \int_0^{2\pi}4\sin(t/2) dt = 16 
+        </md>
+        
+      </p>
+    </example>
+<example>
+      <p>
+        Find the arc length of <m>\langle 3t+5, 7t-6, -4t+9\rangle</m> for <m>0 \leq t \leq 5</m>.
+      </p>
+      <p>
+        Start by calculating the derivatives <m>x'(t) = 3</m>, <m>y'(t) = 7</m> and <m>z'(t) = -4</m> Then arc length is 
+        <md>
+          \int_0^5 \sqrt{3^2+7^2+(-4)^2}dt = \int_0^5 \sqrt{74} dt = 5\sqrt{74}
+        </md>
+              </p>
+    </example>
+<p>
+  Notice in this last example, that the space "curve" was just a straight line and that the arc length was just the length of the line from <m>t=0</m> to <m>t=5</m>.
+  In terms of vectors, we calculate the magnitude of the linear vector. In fact we can define an arc length <em>function</em> for any space curve called the arc length 
+  parametrization:
+  <md>
+    \text{arc length} \,\,\, = s(t) = \int_a^t ||\mathbf{r}'(u)|| du
+  </md>
+  </p>
+  <example>
+    <p>
+      Find the arc length parametrization of the circle of radius 4 defined by <m>\mathbf{r}(t) = \langle 4\cos(t), 4\sin(t) \rangle</m>
+      <md>
+        s(t) = \int_0^t ||\langle -4\sin(u), 4\cos(u)\rangle|| du = \int_0^t\sqrt{16\sin^2(u)+16\cos^2(u)} du = \int_0^t 4du = 4t
+      </md>
+      This defines a relationship between arc length <m>s</m> and the original parameter <m>t</m>. If we take this to mean time, than one revolution of the circle 
+      which takes <m>2\pi</m> radians of time to traverse would have an arc length (circumference) of <m>4\cdot2\pi = 8\pi</m>.
+    </p>
+  </example>
+<p>
+  This arc length parametrization is key to defining the next application: curvature.
+</p>
   </subsection>
   <subsection xml:id="subsec-curvature">
     <title>Curvature</title>
     <p>
-      
+      The <em>curvature</em> of a space curve is defined as 
+      <md>\kappa = ||\mathbf{T}'(s)||</md>
+      where <m>\mathbf{T}</m> is the unit tangent vector and <m>s</m> is the arc length parametrization of the curve. Alternatively arc length can be calculated using the following formulas:
+      <md>
+        <mrow>\text{in terms of}\,\, t\quad \amp \kappa = \frac{||\mathbf{T}'(t)||}{||\mathbf{r}'(t)||}</mrow>
+        <mrow>\text{for 3D curves} \quad \amp \kappa = \frac{||\mathbf{r}'(t)\times\mathbf{r}''(t)||}{||\mathbf{r}'(t)||^3}</mrow>
+        <mrow>\text{for} \,\,y = f(x) \quad \amp \kappa = \frac{|y''|}{[1+(y')^2]^{3/2}} </mrow>
+      </md>
+      Here are three example videos on calculating curvature.
     </p>
+    <figure>
+    <caption>Calculating curvature using formula 1 (11 minutes)</caption>
+    <video youtube="T143lv8aKDU"/>
+  </figure>
+  <figure>
+    <caption>Calculating curvature using formula 2 (12 minutes)</caption>
+    <video youtube="NlcvU67YWpQ"/>
+  </figure>
+  <figure>
+    <caption>Calculating curvature using formula 3 (6 minutes)</caption>
+    <video youtube="2JKCwpxuKPY"/>
+  </figure>
   </subsection>
   <subsection xml:id="subsec-tnb-frame">
-    <title>The TNB Frame</title>
+    <title>The T-N-B Frame</title>
     <p>
-      
+      We already know about the unit tangent vector, a vector with magnitude of one that points along the tangent line to a space curve. By definition, a unit vector and
+      its derivative are orthogonal. We call this orthogonal unit vector the normal vector.
+      <md>\text{Unit Normal Vector}\,\,= \mathbf{N}(t) = \frac{\mathbf{T}'(t)}{||\mathbf{T}'(t)||}</md>
+      We can then create a third unit vector that is orthogonal to both the unit tangent vector and the unit normal vector called the binormal vector by calculating a 
+      cross product.
+      <md>
+        \text{Binormal Veector}\,\,=\mathbf{B}(t) = \mathbf{T}(t) \times \mathbf{N}(t)
+      </md>
+      Recall that order matters when you calculate the cross product. It's always <m>\mathbf{B} = \mathbf{T}\times\mathbf{N}</m> and <m>\mathbf{B} \ne \mathbf{N}\times\mathbf{T}</m>.
     </p>
+    <p>
+      These three vectors <m>\mathbf{T}</m>, <m>\mathbf{N}</m> and <m>\mathbf{B}</m> form a mini <m>xyz</m>-like axis that changes as you move along with the curve
+      this is called T-N-B frame or Frenet frame. Play around with following GeoGebra demonstration by moving the slider for <m>t</m> and also trying out different functions.
+    </p>
+    <figure>
+      <caption>The T-N-B frame in GeoGebra</caption>
+      <interactive geogebra="aq4CR5gP" width="100%" aspect="4:3"/>
+    </figure>
+    <p>
+      Here is a longer video (43 minutes) with more details (and Lego) on the T-N-B frame.
+    </p>
+    <figure>
+      <caption>TNB Frames (Frenet-Serret)</caption>
+      <video youtube="zZ6LZBxWf28"/>
+    </figure>
   </subsection>
   <subsection xml:id="subsec-3d-motion">
     <title>Motion in Three-Dimensional Space</title>
     <p>
-      
+      For motion in space we are interest in position, velocity and acceleration. The relevant formulas are 
     </p>
+    <assemblage xml:id="assemblage-3d-motion">
+      <title>Motion in Space</title>
+      <p>
+        For a space curve <m>\mathbf{r}(t)=\langle x(t), y(t),z(t)\rangle</m>
+       <md>
+        <mrow>\text{Velocity Vector}\quad \amp \mathbf{v}(t) = \mathbf{r}'(t)  </mrow>
+        <mrow>\text{Speed}\quad \amp v(t) = ||\mathbf{v}(t)||</mrow>
+        <mrow>\text{Acceleration Vector}\quad \amp \mathbf{a}(t) = \mathbf{v}'(t) = \mathbf(r)''(t) </mrow>
+        <mrow>\text{Acceleration} \quad\amp \mathbf{a} = a_{\mathbf{T}}\mathbf{T} +a_{\mathbf{N}}\mathbf{N} </mrow>
+       </md> 
+       The last formulas is a break down of the acceleration vector in terms of the unit tangent and normal vectors. <m>a_{\mathbf{T}}=v'(t)</m> and
+       <m>\kappa(t)v(t)^2 </m>. Here is a video that explains more about that.
+      </p>
+    </assemblage>
+    <figure>
+      <caption>Tangential and Normal components of Acceleration</caption>
+      <video youtube="LQNC7klG0F8"/>
+    </figure>
+    <example>
+      <p>
+      Find <m>\mathbf{r}(t)</m> given <m>\mathbf{a}(t) = \langle e^t, 2t, t+1\rangle </m>, <m>\mathbf{v}(0) = \langle 1, 0 ,1\rangle</m> and <m>\mathbf{v}(0) = \langle 2, 1,1\rangle</m> 
+      Here we need to integrate twice:
+      <md>
+        \mathbf{v}(t)=\int \langle  e^t, 2t, t+1\rangle dt = \langle e^t+c_1, t^2+c_2, \frac{1}{2}t^2+t+c_3\rangle
+      </md>
+      Plugging the values from the initial velocity vector gives
+      <md>
+        \mathbf{v}(0) = \langle 1, 0 ,1\rangle = \langle e^0 + c_1, 0^2 + c_2, \frac{1}{2}0^2 + 0 + c_3 \rangle \to c_1 = 0, c_2 = 0, c_3 = 1
+      </md>
+      Integrating this velocity function gives the position function
+      <md>
+    \mathbf{r}(t)=\int \langle  e^t, t^2, \frac{1}{2}t^2+t+1\rangle dt = \langle e^t+c_4, \frac{1}{3}t^3+c_5, \frac{1}{6}t^3+\frac{1}{2}t^2+t+c_6\rangle
+      </md>
+       Plugging the values from the initial position vector gives
+      <md>
+        \mathbf{r}(0) = \langle 2, 1 ,1\rangle = \langle e^0 + c_3, \frac{1}{3}0^3 + c_5, \frac{1}{6}0^3 + \frac{1}{2}0^2+0 + c_6 \rangle \to c_4 = 1, c_5 = 1, c_3 = 1
+      </md>
+      </p>
+      So the position vector function is <m>\mathbf{r}(t) = \langle e^t + 1, \frac{1}{3}t^2 + 1, \frac{1}{6}t^3 + \frac{1}{2}t^2 + t + 1 \rangle </m>.    
+      </example>
+  <p>
+     Another application for motion in space is projectile motion. Here is a video about that. The first 22 minutes is a derivation of the formulas and the remaining 25 minutes 
+     is a baseball example. Feel free to skip to the example.   
+  </p>
+  <figure>
+    <caption>Projectile Motion</caption>
+    <video youtube="M1PhQMmqVOg"/>
+  </figure>
+  <p>
+    And just for fun here is a projectile motion lab frm the University of Colorado's PhET project. See if you can hit the target with a pumpkin!
+  </p>
+  <figure>
+    <caption>Projectile Motion Lab</caption>
+<interactive  iframe="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_all.html" width="100%" aspect="15:10"/>
+  </figure>
+  And finally, here is a video with many more examples.
+<figure>
+  <caption>Long Lecture (1 hour) on Motion in Space</caption>
+  <video youtube="yq4Cj1_bmnE"/>
+</figure>
+<paragraphs>
+    <title>Reading Check-in</title>
+    <p>
+      Check our WAMAP course page for a few questions that go along with today's reading on motion in three dimensional space.
+    </p>
+  </paragraphs>
   </subsection>
 </section>

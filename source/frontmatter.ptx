@@ -9,10 +9,14 @@
       <location>Auburn, Washington</location>
       </affiliation>
       <email>mpahlow@greenriver.edu</email>
+      <image source="assests/grc-logo-green-2602.png">
+            <shortdescription>Green River College Logo</shortdescription>
+          </image>
     </author>
     <date><today/></date>
      </bibinfo>
         <titlepage>
           <titlepage-items/>
+          
         </titlepage>
 </frontmatter>
