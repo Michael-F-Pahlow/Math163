@@ -174,8 +174,8 @@
         <md>
           \sum_{n=1}^\infty \frac{x^n}{(2n-1)!}
         </md>
-        For any value of <m>x</m> that we choose, we get something that looks like a geometric series over a factorial. If we use the limit comparison test with <m>a_n = (x)^n/(2n-1)!</m>
-        and <m>b_n = (x)^n</m>, then the limit would always tend to zero because of the factorial in the denominator. So this power series converges for all values of<m>x</m>.
+        For any value of <m>x</m> that we choose, we get something that looks like a geometric series over a factorial. If we use the limit comparison test with <m>a_n = x^n/(2n-1)!</m>
+        and <m>b_n = x^n/(2n)!</m>, then the limit would always tend to one. So this power series converges for all values of <m>x</m>.
       </p>
       
     </example>

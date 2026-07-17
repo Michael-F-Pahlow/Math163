@@ -1,0 +1,141 @@
+<worksheet xml:id="ws-10">
+      <title>Multi-variable Functions</title>
+   <exercise>
+   <introduction>
+      <p>
+         Consider the following contour map for a function <m>f(x,y)</m>. Use a ruler to estimate the following derivatives at the points <m>(a_1,a_2)</m> and <m>(b_1, b_2)</m>.
+      </p>
+      <image source="assets/ws-derivativesandcontourmaps-q1.png">
+         <shortdescription>a contour map consisting of three concentric circles.</shortdescription>
+      </image>
+   </introduction>
+      <task workspace="0.1in">
+         <statement>
+            <p>
+               <m>\frac{\partial f}{\partial x}(a_1,a_2) = </m>
+            </p>
+         </statement>
+      </task>
+      <task workspace="0.1in">
+         <statement>
+            <p>
+               <m>\frac{\partial f}{\partial x}(b_1,b_2) = </m>
+            </p>
+         </statement>
+      </task>
+      <task workspace="0.1in">
+         <statement>
+            <p>
+               <m>\frac{\partial f}{\partial y}(a_1,a_2) = </m>
+            </p>
+         </statement>
+      </task>
+      <task workspace="0.1in">
+         <statement>
+            <p>
+               <m>\frac{\partial f}{\partial y}(b_1,b_2) = </m>
+            </p>
+         </statement>
+      </task>
+      <task workspace="0.1in">
+         <statement>
+            <p>
+               <m>|\nabla f(a_1,a_2)| </m>
+            </p>
+         </statement>
+      </task>
+      <task workspace="0.1in">
+         <statement>
+            <p>
+               <m>D_\mathbf{v}f(a_1,a_2)</m> where <m>\mathbf{v} = \langle 1/\sqrt{2}. 1/\sqrt{2} \rangle</m>
+            </p>
+         </statement>
+      </task>
+   </exercise>
+
+   <exercise>
+      <introduction>
+         <p>
+            Consider the following contour map for a function <m>g(x,y)</m>. The value of <m>g</m> on the <m>y-</m>axis is zero.
+         </p>   
+         <image source="assets/ws-derivativesandcontourmaps-q2.png">
+         <shortdescription>a contour map consisting of four vertical lines.</shortdescription>
+      </image>
+         
+      </introduction>
+      <task workspace="0.75in">
+         <statement>
+            <p>
+               What can you say about <m>\frac{\partial g}{\partial y}</m>?
+            </p>
+         </statement>
+      </task>
+      <task workspace="0.5in">
+         <statement>
+            <p>
+               Estimate the value of <m>\frac{\partial g}{\partial x}(a_1,a_2)</m>
+            </p>
+         </statement>
+      </task>
+      <task workspace="0.5in">
+         <statement>
+            <p>
+               Estimate the value of <m>\frac{\partial g}{\partial x}(b_1,b_2)</m>
+            </p>
+         </statement>
+      </task>
+      <task workspace="0.5in">
+         <statement>
+            <p>
+               Estimate the value of <m>\frac{\partial g}{\partial x}(c_1,c_2)</m>
+            </p>
+         </statement>
+      </task>
+      <task workspace="1.0in">
+         <statement>
+            <p>
+               What can you guess about the value of  <m>\frac{\partial^2 g}{\partial x^2}(c_1,c_2)</m>
+            </p>
+         </statement>
+      </task>
+   </exercise>
+   <exercise>
+      <introduction>
+         <p>
+            Here is a contour map for the function <m>h(x,y)=x^2y-xy</m>
+         </p>   
+         <image source="assets/ws-derivativesandcontourmaps-q3(1).png">
+         <shortdescription>a contour map of h(x,y).</shortdescription>
+      </image>
+         
+      </introduction>
+      <task>
+         <statement>
+            <p>
+               Plot the points (-1,1), (2,1), (-1,2) and (0.5,1) on the graph above.
+            </p>
+         </statement>
+      </task>
+      <task workspace="2.0in">
+         <statement>
+            <p>
+               Calculate the gradient vector at the points (-1,1), (2,1), (-1,2) and (0.5,1).
+            </p>
+         </statement>
+      </task>
+      <task>
+         <statement>
+            <p>
+               Plot the gradient vectors you calculated on the graph above, placing their tails at the corresponding points
+            </p>
+         </statement>
+      </task>
+      <task workspace="2.0in">
+         <statement>
+            <p>
+               Make a conjecture about the relationship between the gradient of a function and its level curves.
+            </p>
+         </statement>
+      </task>
+   </exercise>
+</worksheet>

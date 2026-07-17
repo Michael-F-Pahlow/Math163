@@ -1,0 +1,76 @@
+<worksheet xml:id="ws-11">
+     <title>Partial Derivatives</title>
+   <exercise>
+    <introduction>
+      <p>
+        Find the given partial derivative for the following functions
+      </p>
+    </introduction>
+
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          <md>
+            <mrow> f(x,y) =\,\amp\, \sin(xy)+4x^2y^{-2}\hspace{6.0in} </mrow>
+            <mrow> f_{xy} = \amp </mrow>
+          </md>
+        </p>
+      </statement>
+    </task>
+
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          <md>
+            <mrow> f(x,y) =\,\amp\, \cos(2x)-x^2e^{5y}+3y^2\hspace{6.0in} </mrow>
+            <mrow> f_{xxx} = \amp </mrow>
+          </md>
+        </p>
+      </statement>
+    </task>
+    
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          <md>
+            <mrow> f(x,y) =\,\amp\, \cos(2x)-x^2e^{5y}+3y^2\hspace{6.0in} </mrow>
+            <mrow> f_{yyy} = \amp </mrow>
+          </md>
+        </p>
+      </statement>
+    </task>
+
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          <md>
+            <mrow> f(x,y) =\,\amp\, \frac{4x^2}{y} + \frac{y^2}{2x}\hspace{6.0in} </mrow>
+            <mrow> f_{yx} = \amp </mrow>
+          </md>
+        </p>
+      </statement>
+    </task>
+
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          <md>
+            <mrow> f(x,y) =\,\amp\, \cos\left(\frac{x}{y}\right)-x^7y^4+y^10\hspace{6.0in} </mrow>
+            <mrow> f_{yy} = \amp </mrow>
+          </md>
+        </p>
+      </statement>
+    </task>
+
+    <task workspace="1.5in">
+      <statement>
+        <p>
+          <md>
+            <mrow> f(x,y,z) =\,\amp\, z^3 y^2\ln(x)\hspace{6.0in} </mrow>
+            <mrow> f_{xxyzz} = \amp </mrow>
+          </md>
+        </p>
+      </statement>
+    </task>
+   </exercise>
+</worksheet>

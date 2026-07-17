@@ -1,0 +1,18 @@
+<worksheet xml:id="ws-9">
+    <title>The T-N-B Frame</title>
+    <exercise workspace="6.0in">
+      <p>
+        For the vector-valued function
+        <md>
+            \mathbf{r}(t) = \langle 2\sin(t), 5t, 2\cos(t)\rangle
+        </md>
+        find the unit vectors <m>\mathbf{T}(t)</m>, <m>\mathbf{N}(t)</m> and <m>\mathbf{B}(t)</m>. Then find the curvature function. Evaluate all of them at the point <m>(\pi/4,3,\pi/4)</m>.
+    </p> 
+    </exercise>
+    <exercise workspace="3.0in">
+        <p>
+            Describe, using your own words, what the vectors <m>\mathbf{T}(t)</m>, <m>\mathbf{N}(t)</m> and <m>\mathbf{B}(t)</m> tell you about the curve. (A picture may be helpful in your description.)
+        </p>
+    </exercise>
+    
+</worksheet>

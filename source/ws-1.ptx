@@ -1,0 +1,77 @@
+<worksheet xml:id="ws-1">
+    <title>Sequences</title>
+   <exercise workspace="1.0in">
+      <p>
+        Find a formula for the general term of the sequence with terms
+        <md>
+          \left\{1, -\frac{1}{8}, \frac{1}{27}, -\frac{1}{64},...\right\} \hspace{6.0in}
+        </md>
+        </p>
+    </exercise>
+     <exercise workspace="1.0in">
+      <p>
+        Find a formula for the general term of the sequence with terms
+        <md>
+          \left\{0, 1, \sqrt{2},\sqrt{3},...\right\}\hspace{6.0in}
+        </md>
+        </p>
+    </exercise>
+     <exercise workspace="1.0in">
+      <p>
+        Find a formula for the general term of the sequence with terms
+        <md>
+          \left\{\frac{1}{2},\frac{2}{4},\frac{6}{8},\frac{24}{16},...\right\}\hspace{6.0in}
+        </md>
+        </p>
+    </exercise>
+    <exercise>
+      <introduction>
+        <p>
+         Find the limit of the following sequences to determine if they converge or diverge. 
+        </p>
+      </introduction>
+              
+        <task workspace="1.0in">
+        <statement>
+          <p>
+            <md>
+              a_n=\tan\left(\frac{2n\pi}{1+8n}\right) \hspace{6.0in}
+            </md>
+          </p>
+        </statement>
+      </task>
+      <task workspace="1.0in">
+        <statement>
+          <p>
+            <md>
+              b_n=\frac{(-1)^n n^3}{n^3 + 2n^2 +1}\hspace{6.0in}
+            </md>
+          </p>
+        </statement>
+      </task>
+      <task workspace="1.0in">
+        <statement>
+          <p>
+            <md>
+              c_n=\sqrt{\frac{n+1}{9n+1}}\hspace{6.0in}
+            </md>
+          </p>
+        </statement>
+      </task>
+      <task workspace="1.0in">
+        <statement>
+          <p>
+            <md>
+              d_n=\frac{\cos^2(n)}{2^n}\hspace{6.0in}
+            </md>
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise workspace="2.0in">
+      <p>
+        A fish farmer has 5000 catfish in a pond. THe number of catfish increases by 8% per month and the farmer harvests 300 catfish per month. Write a recursive formula
+        for the fish population in the pond with <m>P_0 = 0</m>. How many catfish are in the pond after six months?
+      </p>
+    </exercise>
+</worksheet>

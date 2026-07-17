@@ -1,0 +1,47 @@
+<worksheet xml:id="ws-3">
+    <title>Power Series</title>
+    <exercise workspace="3.0in">
+        <p>
+            Find the radius of convergence for the series
+            <md>
+                \sum_{n=1}^{\infty} \frac{(2x)^n}{n}\hspace{7.0in}
+            </md>
+        </p>
+    </exercise>
+    <exercise workspace="3.0in">
+        <p>
+            Find the radius of convergence for the series
+            <md>
+                \sum_{n=1}^{\infty} \frac{10^nx^n}{n!}\hspace{7.0in}
+            </md>
+        </p>
+    </exercise>
+    <exercise>
+        <introduction>
+            <p>
+              Given that <m>\frac{1}{1-x} = \sum_{n=0}^{\infty} x^n</m> has a radius of conversion of (-1, 1). 
+        Find the power series and determine the radius of convergence for the following functions.  
+            </p>
+        </introduction>
+        <task workspace="2.0">
+        <statement>
+            <p>
+                <md>
+                   f(x) = \frac{1}{x} \hspace{7.0in}
+                </md>
+                
+            </p>
+        </statement>
+       </task>
+       <task workspace="2.0">
+        <statement>
+            <p>
+                <md>
+                   f(x) = \frac{1}{1-4x^2} \hspace{7.0in}
+                </md>
+                
+            </p>
+        </statement>
+       </task>
+    </exercise>
+</worksheet>

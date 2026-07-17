@@ -1,0 +1,26 @@
+<worksheet xml:id="ws-4">
+     <title>Taylor Series</title>
+      <exercise workspace="2.0in">
+        <p>
+          Use the definition of the Taylor series to find the coefficients of the Taylor series for <m>\cos(x)</m> centered at 
+          <m>x=0</m>. Once you recognize a pattern, write down a formula for the power series of <m>\cos(x)</m>
+        </p>
+      </exercise>
+      <exercise workspace="2.0in">
+        <p>
+          Repeat the previous exercise to find the Taylor series for <m>\sin(x)</m>
+        </p>
+      </exercise>
+      <exercise workspace="3.0in">
+        <p>
+          Use Euler's formula: <m>e^{ix} = \cos(x) + i\sin(x)</m> to write down a formula for the Taylor series of
+          <m>e^x</m> centered at <m>x=0</m>. 
+        </p>
+      </exercise>
+      <exercise workspace="3.0in">
+        <p>
+          Finally, modify your formula from the previous exercise to write down a formula for the Taylor series of the function
+          <m>f(x) = x^4e^{-3x^2}</m> centered at <m>x=0</m>.
+        </p>
+      </exercise>
+</worksheet>

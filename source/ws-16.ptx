@@ -1,0 +1,22 @@
+<worksheet xml:id="ws-16">
+    <title>Double Integrals in Polar Coordinates</title>
+    <exercise workspace="6.0in">
+        <p>
+            Evaluate the following double integral by converting to polar coordinates over the region in the third quadrant between
+            <m>x^2+y^2=1</m> and <m>x^2+y^2=9</m>
+            <md>
+                \iint_D (y^2+3x) dA \hspace{6.0in}
+            </md>
+        </p>
+    </exercise>
+    <exercise workspace="6.0in">
+        <p>
+            Calculate the area of the region of one "petal" in the four-petal rose <m>r=\sin(2\theta)</m> pictured below.
+        </p>
+        <image source="assets/4petalrose.png">
+            <shortdescription>a four petal rose with one petal, in the first quadrant shaded.</shortdescription>
+        </image>
+    </exercise>
+    </worksheet>
+
+   

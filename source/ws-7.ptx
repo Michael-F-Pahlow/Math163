@@ -1,0 +1,33 @@
+<worksheet xml:id="ws-7">
+<title>Applications of Vectors</title>
+    <exercise workspace="3.0in">
+      <p>
+        A football thrown by a quarterback has an initial speed of 70 miles per hour and an angle of elevation of 
+        <m>30^{\circ}</m>. Determine the velocity vector.
+      </p>
+    </exercise>
+    <exercise workspace="3.0in">
+      <p>
+        Let <m>\mathbf{F}_1 = \langle 10,6,3 \rangle</m>, <m>\mathbf{F}_2 = \langle 0,4,9 \rangle</m> and <m>\mathbf{F}_1 = \langle 10,-3,-9 \rangle</m> be three forces
+        acting on an object. What is the net force acting on the object? Find a fourth force acting on the object such that the net force is the zero vector.
+      </p>
+    </exercise>
+    <exercise workspace="3.0in">
+      <p>
+        Calculate the work done be the force <m>\mathbf{F} = \langle 5,6,-2\rangle</m> Newtons that moves a particle from the point (3, -1, 0) to the point (2, 3, 1) along a 
+        straight line.
+      </p>
+    </exercise>
+    <exercise workspace="3.0in">
+      <p>
+        A boy applies the brakes on a bicycle by applying a force of 20 pounds on the pedal when the 6-inch crank makes a 40 degree angle with the horizontal as in the following figure.
+        Find the torque at point P. Express your solution in foot-pounds.
+
+      </p>
+      <image source="assets/biketorque.png">
+        <shortdescription>an image of a the gears and pedals of a bicycle where the pedal attaches to the bicycle at point p.</shortdescription>
+      </image>
+    </exercise>
+    
+    
+</worksheet>

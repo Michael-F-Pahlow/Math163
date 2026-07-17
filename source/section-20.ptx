@@ -40,7 +40,7 @@
     <title>Double Integrals in Polar Coordinates</title>
     <p>
       When integrating over the <m>xy-</m>plane and using <m>x</m> and <m>y</m> as our variables, we divide up the region into tiny rectangles whose base is <m>dx \cdot dy</m>.
-      In polar coordinates, the plane is divided up into circular sectors shaped like slices of pizza or pieces of pie. The area of a sector is radius times arc length and\\ 
+      In polar coordinates, the plane is divided up into circular sectors shaped like slices of pizza or pieces of pie. The area of a sector is radius times arc length and
       <m>A = r\cdot s = r(r\theta)</m> as we shrink the area down to the d-level (calculus!) we get <m>dA = dr(r d\theta)</m>. Since <m>\theta</m> is measured in radians and
       is unitless, <m>r dr d\theta</m> has units of area units squared. <m>f(r,\theta)</m> provides the height and so the double integral 
       <md>
@@ -115,7 +115,7 @@
     <video youtube="YQfta_poP1k"/>
   </figure>
 <figure>
-    <caption>Double integral in polar coordinates example 1</caption>
+    <caption>Double integral in polar coordinates example 2</caption>
     <video youtube="xmwN1K3nF3I"/>
   </figure>
 <paragraphs>
@@ -128,12 +128,6 @@
   </subsection>
   <subsection xml:id="subsec-center-of-mass">
     <title>Center of Mass</title>
-    <p>
-      
-    </p>
-  </subsection>
-  <subsection xml:id="subsec-double-integral-applications">
-    <title>Applications of Double Integrals</title>
     <p>
       Recall from Math 152, that the center of mass of a region with uniform density is <m>(\bar{x},\bar{y}) = (M_y/M, M_x/M)</m> where <m>M</m> is the mass or area and
       <m>M_y</m> and <m>M_x</m> are the moments of mass. Defining center of mass with double integrals is more straight-forward:
@@ -168,7 +162,7 @@
       <p>
         Recall that the center of mass must lie along line of symmetry. Here the <m>y-</m>axis is a line of symmetry so <m>\bar{x}=0</m>. The area is 
         <md>
-          \int_{-1}^1 (1 - x^2)dx = \left. (x - \frac{1}{3}x^3)\right\vert_{-1}^1 = \frac{4}{3]}
+          \int_{-1}^1 (1 - x^2)dx = \left. \left(x - \frac{1}{3}x^3\right)\right\vert_{-1}^1 = \frac{4}{3}
         </md>
         The double integral we need to calculate is 
         <md>
@@ -224,22 +218,71 @@
   
 </p>
     </example>
+      
+    
+  </subsection>
+  <subsection xml:id="subsec-double-integral-applications">
+    <title>Applications of Double Integrals</title>
+    
     <p>
-     Here are a few more examples using double integrals
+     Here are a few more examples using double integrals.
     </p>
     <example>
       <p>
-        Under Construction
+        A double integral may be used to calculate a polar <em>area</em>. Calculate the area inside the four-petal rose <m>r=2\cos(2\theta)</m> pictured below.
+      </p>
+      <figure>
+        <caption>A four-petal rose</caption>
+        <image source="assets/polararea1.png">
+          <shortdescription>A four petal rose with petals of length two lying along each coordinate axis.</shortdescription>
+        </image>
+      </figure>
+      <p>
+        This curve is generated during one revolution <m>0 \leq \theta \leq 2\pi</m>. <m>r</m> is bounded by the polar curve and zero, so the double integral is 
+        <md>
+          \int_0^{2\pi}\int_0^{r=2cos(2\theta)} 1 r dr d\theta = \int_0^{2\pi} \left(\frac{1}{2} (2\cos(2\theta))^2\right) d\theta = \left. 2\left(\frac{\theta}{2}+\frac{1}{4}\sin(2\theta)\right)\right\vert_0^{2\pi} = 2\pi
+        </md>
+    
       </p>
     </example>
     <example>
       <p>
-        Under Construction
+        Find the are inside the smaller loop of <m>r=1-2\sin(\theta)</m> pictured below.
       </p>
+      <figure>
+        <caption>a limacon</caption>
+        <image source="assets/polararea2">
+          <shortdescription>a limacon graphed from zero to 2 pi with pi over six to five pi over six highlighted as the smaller loop.</shortdescription>
+        </image>
+      </figure>
+      <p>
+      The inner loop is traced out when <m>\frac{\pi}{6} \leq \theta \leq \frac{5\pi}{6} </m> since these are the values where <m>1-2\sin(\theta)=0</m>. The double integral is
+      <md>
+        \int_{\pi/6}^{5\pi/6} \int_0^{1-2\sin(\theta)} 1r dr d\theta = \int_{\pi/6}^{5\pi/6} \left(\frac{1}{2}(1-2\sin(\theta))^2\right)d\theta = \int_{\pi/6}^{5\pi/6} \left(\frac{1}{2}-2\sin(\theta)+2\sin(\theta)^2 \right) d\theta
+      </md>
+      <md>
+        =\left.\left(\frac{\theta}{2}+2\cos(\theta)+\theta-\frac{1}{2}\sin(2\theta)\right)\right\vert|_{\pi/6}^{5\pi/6} = \pi -\frac{3\sqrt{3}}{2}
+      </md>
+    </p>
     </example>
     <example>
       <p>
-        Under Construction
+        A lamp has two bulbs of a type with an average lifetime of 1000 hours. Assuming that we can model the probability of failure of these bulbs by an exponential density function
+        with mean of 1000 hours. Find the probability that both bulbs fail within 1000 hours.
+      </p>
+      <p>
+        The exponential probability density function (pdf) is defined as <m>p(x,y) = \frac{1}{\mu_1\mu_2}e^{-x/\mu_1}e^{-y/\mu_2}</m> for <m>x\geq 0</m> and <m>y \geq 0</m> and zero otherwise.
+        Note <m>\mu_1</m> and <m>\mu_2</m> are the means. The probability under this surface. 
+        <md>
+          P\{x\lt 1000, y\lt 1000\} = \int_0^{1000}\int_0^{1000} \frac{1}{1000^2} e^{-x/1000}e^{-y/1000} dx dy = 
+        </md>
+        <md>
+          \frac{1}{1000^2}\left(\int_0^{1000} e^{-x/1000}dx\right)\left(\int_0^{1000} e^{-y/1000}dy\right) =
+        </md>
+        
+        <md>
+          \frac{1}{1000^2}\left(\left.-1000e^{-x/1000}\right\vert_0^{1000}\right)\left(\left.-1000e^{-x/1000}\right\vert_0^{1000}\right) = (1-e^{-1})^2 \approx 0.4
+        </md>
       </p>
     </example>
     <paragraphs>

@@ -29,6 +29,7 @@
     <xi:include href="./section-19.ptx" />
     <xi:include href="./section-20.ptx" />
     <xi:include href="./calculators.ptx" />
+    <xi:include href="./worksheets.ptx" />
   </article>
 
 </pretext>

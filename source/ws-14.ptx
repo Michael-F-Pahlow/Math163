@@ -1,0 +1,30 @@
+<worksheet xml:id="ws-14">
+    <title>Double Integrals I</title>
+   <exercise workspace="2.5in">
+    <p>
+        Calculate the double integral over the region <m>R=[1,4]\times[0,3]</m>
+        <md>\iint_R (6y\sqrt{x}-2y^3) dA \hspace{6.0in} </md>
+    </p>
+   </exercise>
+
+   <exercise workspace="3.0in">
+    <p>
+        Calculate the double integral over the region <m>R=[0,\pi]\times[0,\pi/2]</m>
+        <md>\iint_R (\sin(2x)\cos(3x)) dA \hspace{6.0in} </md>
+    </p>
+   </exercise>
+
+   <exercise workspace="3.0in">
+    <p>
+        Calculate the double integral over the region <m>R=[0,2]\times[0,\sqrt{8}]</m>
+        <md>\iint_R (y e^{y^2-4x}) dA \hspace{6.0in} </md>
+    </p>
+   </exercise>
+
+   <exercise workspace="3.0in">
+    <p>
+        Calculate the double integral over the region <m>R=[-1,0]\times[1,2]</m>
+        <md>\iint_R \left( \frac{e^x}{2y} - \frac{4x-1}{y^2}\right) dA \hspace{6.0in} </md>
+    </p>
+   </exercise>
+</worksheet>

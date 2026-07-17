@@ -1,0 +1,60 @@
+<worksheet xml:id="ws-6">
+     <title>Vectors</title>
+    <exercise>
+      <introduction>
+        <p>
+          Complete the following vector calculations using the vectors <m>\mathbf{u}=\langle 1, 0 ,-3\rangle</m> and <m>\mathbf{v} = \langle 6, -3, -4 \rangle</m>
+        </p>
+      </introduction>
+      <task workspace="1.0in">
+        <statement>
+          <p>
+            <m>2\mathbf{u}+5\mathbf{v} </m>
+          </p>
+        </statement>
+      </task>
+      <task workspace="1.0in">
+        <statement>
+          <p>
+            <m>\mathbf{u}-\mathbf{v} </m>
+          </p>
+        </statement>
+      </task>
+      <task workspace="1.0in">
+        <statement>
+          <p>
+            <m>\mathbf{u}\cdot\mathbf{v} </m>
+          </p>
+        </statement>
+      </task>
+      <task workspace="1.0in">
+        <statement>
+          <p>
+            <m>\mathbf{u}\times\mathbf{v} </m>
+          </p>
+        </statement>
+      </task>
+      <task workspace="1.0in">
+        <statement>
+          <p>
+            <m>\mathbf{v}\times\mathbf{u} </m>
+          </p>
+        </statement>
+      </task>
+    </exercise>
+    <exercise workspace="3.5in">
+      <p>
+        Calculate the area of the parallelogram with adjacent sides <m>\mathbf{a} = \langle 3,2,0\rangle </m> and <m>\mathbf{b}=\langle 0,2,1\rangle</m>
+      </p>
+    </exercise>
+    <exercise workspace="3.5in">
+      <p>
+        Non-zero line in the same plane if and only if the triple scalar product <m>\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c}) = 0</m>. Do the vectors
+        <m>\mathbf{a}=\langle 1, -1,4\rangle</m>, <m>\mathbf{b}=\langle 4, 2-2\rangle</m> and <m>\mathbf{c}=\langle -5, 4,-17\rangle</m>
+        lie in the same plane?
+      </p>
+    </exercise>
+    <p>
+      <alert>Bonus:</alert> Explain why the scalar triple product equaling zero must mean the vectors lie in the same plane.
+    </p>
+</worksheet>

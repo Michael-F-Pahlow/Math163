@@ -1,0 +1,33 @@
+<worksheet xml:id="ws-5">
+     <title>Applications of Taylor Series</title>
+    <exercise workspace="3.0in">
+      <p>
+        Use a Taylor series tp help you calculate the limit
+        <md>
+          \lim_{x\to 0} \frac{1-\cos(x)}{1+x-e^x}\hspace{5.0in}
+        </md>
+      </p>
+    </exercise>
+    <exercise workspace="3.0in">
+      <p>
+        Use the Taylor series of <m>\sin(x)</m> centered at <m>x=0</m> to find a series representation of the integral
+        <md>
+          \int_1^{10} \frac{\sin(x)}{x} dx
+        </md>
+        Then use the first five terms of the series to estimate the value of the integral. Finally compare the result with a 
+        numerical integral calculator like the one on your graphing calculator or on Wolfram Alpha.
+      </p>
+    </exercise>
+    <exercise workspace="4.0in">
+      <p>
+        The period of a pendulum with length <m>L</m> that makes a maximum angle <m>\theta_0</m> with the vertical angle is 
+        <md>
+          T= 4\sqrt{\frac{L}{g}}\int_0^{\pi/2} \frac{dx}{\sqrt{1-k^2\sin^2(x)}}
+        </md>
+        where <m>k=\sin(\frac{1}{2}\theta_0)</m> is a constant and <m>g</m> is the acceleration of gravity. This integral may be calculated using a numerical technique like 
+        Simpson's rule. Use the first order approximation of <m>\sin(x)</m> to calculate the integral by hand for a pendulum of length <m>L = 1</m> meter, <m>g = 9.81</m>
+        meters per second squared and <m>\theta_0 = 1.3^{\circ}</m> to calculate the integral by hand and then compare it with the result for the actual integral calculated
+        using a graphing calculator.
+      </p>
+    </exercise>
+</worksheet>

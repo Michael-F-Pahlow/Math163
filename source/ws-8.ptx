@@ -1,0 +1,65 @@
+<worksheet xml:id="ws-8">
+    <title>Vector-valued Functions</title>
+    <exercise>
+       <introduction>
+        <p>
+            Find the derivative of the following vector-valued functions
+        </p>
+       </introduction>
+       <task workspace="2.0in">
+        <statement>
+            <p>
+                <md>
+               f(t) = \langle 3e^t, 2e^{-3t}, 4e^2t \rangle \hspace{6.0in}
+                </md>
+            </p>
+        </statement>
+       </task>
+       <task workspace="2.0in">
+        <statement>
+            <p>
+                <md>
+               g(t) = \langle \tan(2t), \sec(2t), \sin^2(t) \rangle \hspace{6.0in}
+                </md>
+            </p>
+        </statement>
+       </task>
+       <task workspace="2.0in">
+        <statement>
+            <p>
+                <md>
+               h(t) = \langle te^t, t\ln(t), \sin(3t) \rangle \hspace{6.0in}
+                </md>
+            </p>
+        </statement>
+       </task>
+    </exercise>
+    
+    <exercise>
+       <introduction>
+        <p>
+            Calculate the integral of the following vector-valued functions
+        </p>
+       </introduction>
+       <task workspace="3.0in">
+        <statement>
+            <p>
+              <md>
+                \int \langle t^3, -\frac{2t}{t^2+1}, \cos^2(3t)\rangle dt \hspace{5.0in}
+              </md>
+              
+            </p>
+        </statement>
+       </task>
+       <task workspace="3.0in">
+        <statement>
+            <p>
+               <md>
+                \int_{-1}^2 \langle 6, 6t^2-4, te^{2t} \rangle dt \hspace{5.0in}
+               </md>
+               
+            </p>
+        </statement>
+       </task>
+           </exercise>
+</worksheet>

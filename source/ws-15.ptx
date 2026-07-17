@@ -1,0 +1,18 @@
+<worksheet xml:id="ws-15">
+    <title>Double Integrals II</title>
+   <exercise workspace="6.0in">
+    <p>
+        Find the volume of the solid under the surface <m>f(x,y) = xy+1</m> over the region enclosed by <m>x=-(1+y^2)</m> and 
+        <m>x = \sqrt{1-y^2}</m>
+    </p>
+   </exercise>
+
+   <exercise workspace="6.0in">
+    <p>
+        Evaluate the double integral by switching the order of integration
+        <md>
+            \int_0^3 \int_{2x}^6 \sqrt{y^2+2} dy dx \hspace{6.0in}
+        </md>
+    </p>
+   </exercise>
+</worksheet>

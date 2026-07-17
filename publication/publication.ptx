@@ -6,7 +6,7 @@
     </source>
 
     <common>
-        <worksheet margin="1in"/>
+        <worksheet margin="0.75in"/>
         <worksheet> 
             <first-page-header left="Group Names:" right="Math 163"/>   
             <running-header right="Math 163"/>
@@ -19,5 +19,6 @@
         </html>
     <numbering>
         <examples level="1"/>
+        <worksheets level="0"/>
     </numbering>
 </publication>

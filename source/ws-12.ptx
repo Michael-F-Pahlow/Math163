@@ -1,0 +1,27 @@
+<worksheet xml:id="ws-12">
+     <title>Applications of Partial Derivatives</title>
+   <exercise workspace="3.0in">
+    <p>
+      Find the plane tangent to <m>z=\ln(10x^2+2y^2+1)</m> at the point <m>P=(0,0,0)</m>
+    </p>
+   </exercise>
+
+   <exercise workspace="3.0in">
+    <p>
+      Find a linear approximation for <m>f(x,y,z) = \sqrt{x^2+y^2+z^2}</m> at the point (3, 2, 6) to approximate <m>\sqrt{(3.20)^2+(1.97)^2+(5.99)^2}</m>.
+    </p>
+   </exercise>
+
+   <exercise workspace="4.0in">
+    <p>
+      If a sound with frequency <m>f_s</m> is produced by a source traveling along a line with speed <m>v_s</m> and an observer is traveling along the same line but in the 
+      opposite direction toward the source with velocity <m>v_o</m>, then the frequency of the sound heard by the observer is 
+      <md>
+        f_o = \left(\frac{332-v_o}{332-v_s}\right)f_s
+      </md>
+    This is known as the Doppler effect. Suppose that at a particular moment, you are in a train traveling at 34 meters per second and accelerating at 12 meters per 
+    second squared. A train is approaching you from the opposite direction on the other track at 40 meters per second and accelerating at 1.4 meters per second squared and it 
+    sounds its whistle, which has a frequency of 460 Hertz. At that instant, what is the perceived frequency that you hear and how fast is it changing?
+    </p>
+   </exercise>
+</worksheet>

@@ -1,3 +1,2 @@
-Deploy
-finish section 20
-worksheets
+Redeploy
+

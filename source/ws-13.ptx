@@ -1,0 +1,13 @@
+<worksheet xml:id="ws-13">
+     <title>Optimization</title>
+   <exercise workspace="6.0in">
+    <p>
+       Find and classify (maximum, minimum or saddle point) all of the critical points for the function <m>f(x,y) = 3x^2y+y^3-3x^2-3y^2+2</m>
+    </p>
+   </exercise>
+   <exercise workspace="6.0in">
+    <p>
+       Find and classify (maximum, minimum or saddle point) all of the critical points for the function <m>f(x,y) = \frac{1}{2}x^4-4xy^2-2x^2+8y^2</m>
+    </p>
+   </exercise>
+</worksheet>
