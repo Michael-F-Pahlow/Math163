@@ -1,2 +1,5 @@
-Redeploy
-
+proofread
+At ratio test to radius of convergence
+remove reading check-ins
+add takeaways
+redeploy
