@@ -69,7 +69,7 @@
     </p>
     <figure>
     <caption>Area under curve</caption>
-      <image source="boxes.png" width="60%">
+      <image source="boxes.PNG" width="60%">
         <description>
         <p>
         A figure showing volume being estimated by boxes under surface.

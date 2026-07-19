@@ -58,7 +58,7 @@
       </p>
       <figure>
         <caption>A pace curve in Desmos 3D</caption>
-        <image source="desmos3d">
+        <image source="desmos3d.png">
           <shortdescription>A plot of t times cosine t, t, t times sine t created using Desmos 3D</shortdescription>
         </image>
       </figure>
@@ -72,7 +72,7 @@
       </p>
       <figure>
         <caption>A pace curve in CalcPlot3D</caption>
-        <image source="calcplot3d">
+        <image source="calcplot3d.png">
           <shortdescription>A plot of t times cosine t, t, t times sine t created using CalcPlot3D</shortdescription>
         </image>
       </figure>

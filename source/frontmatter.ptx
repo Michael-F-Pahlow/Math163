@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <frontmatter xml:id="frontmatter" label="frontmatter">
-    <bibinfo>
-    <author>
-      <image source="grc-logo-green-2602.png">
+    <image source="grc-logo-green-2602.png">
         <shortdescription>Green River College Logo</shortdescription>
       </image>
+      <bibinfo>
+    <author>
+      
       <personname>Michael Pahlow</personname>
       <affiliation>
         <department>Math Division</department>

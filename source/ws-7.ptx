@@ -24,7 +24,7 @@
         Find the torque at point P. Express your solution in foot-pounds.
 
       </p>
-      <image source="biketorque.png">
+      <image source="biketorque.PNG">
         <shortdescription>an image of a the gears and pedals of a bicycle where the pedal attaches to the bicycle at point p.</shortdescription>
       </image>
     </exercise>
