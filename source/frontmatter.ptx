@@ -2,6 +2,9 @@
 <frontmatter xml:id="frontmatter" label="frontmatter">
     <bibinfo>
     <author>
+      <image source="grc-logo-green-2602.png">
+        <shortdescription>Green River College Logo</shortdescription>
+      </image>
       <personname>Michael Pahlow</personname>
       <affiliation>
         <department>Math Division</department>
