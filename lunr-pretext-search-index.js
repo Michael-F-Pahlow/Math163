@@ -7,7 +7,7 @@ var ptx_lunr_docs = [
   "type": "Front Matter",
   "number": "",
   "title": "Front Matter",
-  "body": "    Green River College Logo   Michael Pahlow   Math Division  Green River College  Auburn, Washington   mpahlow@greenriver.edu        "
+  "body": "  Green River College Logo     Michael Pahlow   Math Division  Green River College  Auburn, Washington   mpahlow@greenriver.edu        "
 },
 {
   "id": "section-1",
