@@ -5,7 +5,7 @@
       <p>
          Consider the following contour map for a function <m>f(x,y)</m>. Use a ruler to estimate the following derivatives at the points <m>(a_1,a_2)</m> and <m>(b_1, b_2)</m>.
       </p>
-      <image source="assets/ws-derivativesandcontourmaps-q1.png">
+      <image source="ws-derivativesandcontourmaps-q1.png">
          <shortdescription>a contour map consisting of three concentric circles.</shortdescription>
       </image>
    </introduction>
@@ -58,7 +58,7 @@
          <p>
             Consider the following contour map for a function <m>g(x,y)</m>. The value of <m>g</m> on the <m>y-</m>axis is zero.
          </p>   
-         <image source="assets/ws-derivativesandcontourmaps-q2.png">
+         <image source="ws-derivativesandcontourmaps-q2.png">
          <shortdescription>a contour map consisting of four vertical lines.</shortdescription>
       </image>
          
@@ -104,7 +104,7 @@
          <p>
             Here is a contour map for the function <m>h(x,y)=x^2y-xy</m>
          </p>   
-         <image source="assets/ws-derivativesandcontourmaps-q3(1).png">
+         <image source="ws-derivativesandcontourmaps-q3(1).png">
          <shortdescription>a contour map of h(x,y).</shortdescription>
       </image>
          

@@ -58,7 +58,7 @@
       </p>
       <figure>
         <caption>An annulus</caption>
-        <image source="assets/2dpolar1.png">
+        <image source="2dpolar1.png">
           <shortdescription>an annulus or the area between a circle of radius 2 and a circle of radius 4 for angles between zero and pi over 2.</shortdescription>
         </image>
       </figure>
@@ -87,7 +87,7 @@
       </p>
 <figure>
   <caption>A quarter of a shifted circle</caption>
-  <image source="assets/2dpolar2.png">
+  <image source="2dpolar2.png">
     <shortdescription>The top right section of a circle of radius 1 with center at (1,0).</shortdescription>
   </image>
 </figure>
@@ -151,7 +151,7 @@
       </p>
       <figure>
     <caption>Our region</caption>
-      <image source="assets/comass1.png">
+      <image source="comass1.png">
         <description>
         <p>
         a graph where the region between y = 1 minus x squared and the x axis is shaded.
@@ -183,7 +183,7 @@
       </p>
       <figure>
     <caption>Annulus in the first quadrant</caption>
-      <image source="assets/comass2.png">
+      <image source="comass2.png">
         <description>
         <p>
         An annulus in the first quadrant with outer radius 8 and inner radius 4.
@@ -233,7 +233,7 @@
       </p>
       <figure>
         <caption>A four-petal rose</caption>
-        <image source="assets/polararea1.png">
+        <image source="polararea1.png">
           <shortdescription>A four petal rose with petals of length two lying along each coordinate axis.</shortdescription>
         </image>
       </figure>
@@ -251,7 +251,7 @@
       </p>
       <figure>
         <caption>a limacon</caption>
-        <image source="assets/polararea2">
+        <image source="polararea2">
           <shortdescription>a limacon graphed from zero to 2 pi with pi over six to five pi over six highlighted as the smaller loop.</shortdescription>
         </image>
       </figure>

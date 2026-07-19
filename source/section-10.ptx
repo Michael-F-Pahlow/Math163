@@ -56,7 +56,7 @@
       </p>
       <figure>
         <caption>An example plane</caption>
-       <image source="assets/plane.png"/>
+       <image source="plane.png"/>
     
       </figure>
     </example>
@@ -68,7 +68,7 @@
       </p>
       <figure>
         <caption>An example cylinder</caption>
-       <image source="assets/cylinder.png"/>
+       <image source="cylinder.png"/>
       </figure>
     </example>
     <example>
@@ -78,7 +78,7 @@
       </p>
       <figure>
         <caption>An example sphere</caption>
-       <image source="assets/sphere.png"/>
+       <image source="sphere.png"/>
       </figure>
     </example>
     <p>
@@ -132,7 +132,7 @@
       </p>
       <figure>
         <caption>Spherical Coordinates</caption>
-        <image source="assets/sphericalcoordinates.png"/>
+        <image source="sphericalcoordinates.png"/>
       </figure>
       <p>
         <alert>Spherical to Cartesian</alert>
@@ -170,7 +170,7 @@
     </p>
     <figure>
       <caption>An example helix</caption>
-     <image source="assets/helix.png"/>
+     <image source="helix.png"/>
     </figure>
     <p>
       More on parametric equations in future sections.

@@ -48,7 +48,7 @@
     </p>
     <figure>
       <caption>The region of integration.</caption>
-      <image source="assets/2integralregion1.png">
+      <image source="2integralregion1.png">
         <description>
           <p>
             A graph of a region with square root of x on the top of the region, one over x on the bottom and bounded by x = 3 on the right.
@@ -74,7 +74,7 @@
       </p>
       <figure>
       <caption>The region of integration.</caption>
-      <image source="assets/2integralregion2.png">
+      <image source="2integralregion2.png">
         <description>
           <p>
             A graph of a triangular region with y equals x on the right and y equals x over 2 on the left and y equals 2 on the top.
@@ -99,7 +99,7 @@
       </p>
       <figure>
       <caption>The region of integration.</caption>
-      <image source="assets/2integralregion3.png">
+      <image source="2integralregion3.png">
         <description>
           <p>
             A graph of a triangular region bounded by the y axis and the lines y equals 2 and y equals x over 2.
@@ -151,7 +151,7 @@
       </p>
       <figure>
       <caption>The region of integration.</caption>
-      <image source="assets/2integralregion4.png">
+      <image source="2integralregion4.png">
         <description>
           <p>
             A graph of a triangular-like region bounded by y equals one on the bottom, x equals 3 on the right and y equals x squared as the "hypotenuse".

@@ -13,7 +13,7 @@
         <p>
             Calculate the area of the region of one "petal" in the four-petal rose <m>r=\sin(2\theta)</m> pictured below.
         </p>
-        <image source="assets/4petalrose.png">
+        <image source="4petalrose.png">
             <shortdescription>a four petal rose with one petal, in the first quadrant shaded.</shortdescription>
         </image>
     </exercise>
