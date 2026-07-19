@@ -79,5 +79,77 @@ eBookConfig.enable_chatcodes =  false;
 <p class="byline">Michael Pahlow</p>
 </div></div></header><div class="ptx-page"><main class="ptx-main"><div id="ptx-content"><div class="interactive-iframe-container"><iframe src="?type=spacecurve;spacecurve=curve;curvename=r_%7B1%7D;x=cos(t);y=sin(t);z=0.1t;visible=true;width=2;view=0;tmin=-10;tmax=10;tsteps=500;color=rgb(255,0,0);showtrace=false;tval=0;constcol=false;twod=false;arrows=0;showpt=true;traceptsize=4;trace=true;vel=true;acc=true;accnorm=false;acctang=false;veceqs=true;osc=false;k=false;showtorsion=false;repeat=false;bounce=false;dashed=false;tanline=false;dropcurtain=false;vecwidth=2;numvfpts=10;unitvecscale=1;showtvector=false;shownvector=false;showbvector=false;showtnbeqs=false;showtnblabels=false;showoscplane=false;showrectplane=false;shownormplane=false;optimizecurve=true;maxjointangle=10\amp;type=window;showfunnot=true;hsrmode=0;nomidpts=true;anaglyph=-1;center=9.192594954343342,3.1480002136884746,2.3635339345978155,1;focus=0,0,0,1;up=-0.19864286589359426,0.19026889812995426,0.961425378401253,1;transparent=false;alpha=140;twoviews=false;unlinkviews=false;axisextension=0.7;shownormals=false;shownormalsatpts=false;xaxislabel=x;yaxislabel=y;zaxislabel=z;edgeson=true;faceson=true;showbox=true;showaxes=true;showticks=true;perspective=true;centerxpercent=0.5;centerypercent=0.5;rotationsteps=30;autospin=true;xygrid=false;yzgrid=false;xzgrid=false;gridsonbox=true;gridplanes=false;gridcolor=rgb(128,128,128);lastaddedsurfaceactive=true;disabletrace=false;activefun=-1;xmin=-1;xmax=1;ymin=-1;ymax=1;zmin=-1;zmax=1;xscale=0.5;yscale=0.5;zscale=0.5;zcmin=-2;zcmax=2;xscalefactor=1;yscalefactor=1;zscalefactor=1;tracemode=0;keep2d=false;zoom=2.470688" id="subsec-parametrics-3-2" style="width:600px; height:600px; display: block; "></iframe></div></div></main></div>
 <script>diagcess.Base.init()</script>
+<script data-pretext-tools-inverse-search="true">
+(function() {
+  if (window.__pretextInverseSearchInjected) return;
+  window.__pretextInverseSearchInjected = true;
+  var lastHighlighted = null;
+
+  function findIdAncestor(el) {
+    while (el && el !== document.body && el !== document.documentElement) {
+      if (el.id && el.id.length > 0) return el;
+      el = el.parentElement;
+    }
+    return null;
+  }
+
+  // Hover highlight
+  document.addEventListener("mouseover", function(e) {
+    var target = findIdAncestor(e.target);
+    if (lastHighlighted && lastHighlighted !== target) {
+      lastHighlighted.style.outline = "";
+    }
+    if (target) {
+      target.style.outline = "2px solid rgba(0,122,204,0.4)";
+      lastHighlighted = target;
+    }
+  });
+
+  document.addEventListener("mouseout", function(e) {
+    if (lastHighlighted) {
+      lastHighlighted.style.outline = "";
+      lastHighlighted = null;
+    }
+  });
+
+  // Forward search: parent webview sends scrollTo messages
+  window.addEventListener("message", function(event) {
+    var msg = event.data;
+    if (msg && msg.command === "scrollTo" && msg.id) {
+      console.log("[ForwardSearch] scrollTo:", msg.id);
+      var el = document.getElementById(msg.id);
+      if (el) {
+        el.scrollIntoView({ behavior: "instant", block: "center" });
+        el.style.outline = "3px solid #007acc";
+        setTimeout(function() { el.style.outline = ""; }, 2000);
+      } else {
+        console.log("[ForwardSearch] element not found:", msg.id);
+      }
+    }
+  });
+
+  // Single click anywhere — find nearest ancestor with an id and jump
+  document.addEventListener("click", function(e) {
+    if (e.target.tagName === "A" || e.target.closest("a")) return;
+    var target = findIdAncestor(e.target);
+    if (target) {
+      e.preventDefault();
+      target.style.outline = "3px solid #d4a017";
+      setTimeout(function() { target.style.outline = ""; }, 1500);
+      // Extract a text snippet from the clicked element for text-based search
+      var textSnippet = "";
+      var clickedEl = e.target.closest(".para, p, div.para") || e.target;
+      if (clickedEl) {
+        textSnippet = (clickedEl.textContent || "").trim().substring(0, 80);
+      }
+      window.parent.postMessage({
+        command: "jumpToSource",
+        id: target.id,
+        text: textSnippet
+      }, "*");
+    }
+  }, true);
+})();
+</script>
 </body>
 </html>

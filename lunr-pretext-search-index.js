@@ -7,7 +7,7 @@ var ptx_lunr_docs = [
   "type": "Front Matter",
   "number": "",
   "title": "Front Matter",
-  "body": "   Michael Pahlow   Math Division  Green River College  Auburn, Washington   mpahlow@greenriver.edu   Green River College Logo         "
+  "body": "   Michael Pahlow   Math Division  Green River College  Auburn, Washington   mpahlow@greenriver.edu        "
 },
 {
   "id": "section-1",
@@ -295,7 +295,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3",
   "title": "Power Series",
-  "body": " Power Series   A power series is an infinite polynomial that all of the functions we know and love are equal to. Power series are a foundational part of the study of functions. I have a calculus textbook from the 1950's that covers power series first before it covers limits, derivatives and integrals. ( Calculus by Tomlinson Fort, D. C. Heath and Company, Boston, 1951). Power series are also how a calculator or computer actually calculates function values. When you type <sin(5)> into your calculator, it is not actually actually evaluating the sine function but instead using the related power series for sine to make its calculation! For now, I will introduce a few power series for well-known functions and when they converge and diverge before we look at how we can build a power series from scratch in the next section.    Power Series   In this section we will look at:     Power series of some well-known functions.    Determine the radius of convergence of power series.      Some Well Known Power Series  We will now look at a few examples of some well-known power series and also a couple of examples of how we can use a known power series to find a new power series.   A Geometric Series  One power series we can define easily is a series base on a geometric series. We saw in the last section that If we let and then     Another Geometric Series  We can find other similar series by some factoring and substitution. We try to write a power series as a product of sequence of coefficients times powers of .    A Third Geometric Series       Power Series of  Since a power series is just an infinite polynomial, we can differentiate or integrate a known power series using the power rule to get a new power series. Since      A Power Series from Differentiation  Since:  Note that when differentiating, we change the starting point of our sum from zero to one, since the is a constant in the starting series and becomes zero when we take the derivative and the new series starts at the term.    Power Series of Sine, Cosine and  Three of the most used series are the series for and . We will see in the next section, how to build these series from scratch. for now we define. Note that the derivative of the sine series is the cosine series. Also note if you replace in the exponential series with where is the imaginary number then the sum of the cosine series plus the sine series equals the exponential series! (Euler's formula)    Euler's Formula on Numberphile (22 minutes).      Intervals of Convergence  A key thing we want to know for a power series is where it converges. This is analogous to finding the domain of a function. This is where we need to know a few convergence\/divergence tests from the previous section. When we find the values where a series converges, this interval is known as the interval of convergence. For example, the base geometric series is known to converge when which can also be written as an interval or a trilinear inequality    An Interval of Convergence that Includes Only One Endpoint  Consider the power series: We need to think about what happens when we plug in various values of . If , the resulting series is the harmonic series which is known to converge. If we get an alternating series which converges by the alternating series test. If The result is a geometric-like series which we can use the limit comparison test with a geometric series to show converges. Finally, if the or , then the resulting sequence inside the series would not tend to zero, so it would diverge by the divergence test. Putting this all together gives and interval of convergence of     An Interval of Convergence that Includes Both Endpoints  Consider the power series: Again we can try various values of . If , the resulting series is one where the sequence inside the series is and the series can be shown to converge by the integral test, since . If , the resulting series is an alternating series that converges by the alternating series test. Since the series converges at and , it makes sense that it also converges for values between these two points. Like in the previous example, if is not between 1 and 3, then the resulting series would diverge by the divergence test.    An Infinite Interval of Convergence  Consider the series: For any value of that we choose, we get something that looks like a geometric series over a factorial. If we use the limit comparison test with and , then the limit would always tend to zero because of the factorial in the denominator. So this power series converges for all values of .    An Interval of Convergence that Includes Only One Point  Consider the series: If we let then the resulting series would just be . For any other value of , the resulting series would diverge by the divergence test. So this series only converges for .    Professor Dave Explains Power Series (7 minutes).     Reading Check-in  Check our WAMAP course page for a few questions that go along with today's reading on power series.    "
+  "body": " Power Series   A power series is an infinite polynomial that all of the functions we know and love are equal to. Power series are a foundational part of the study of functions. I have a calculus textbook from the 1950's that covers power series first before it covers limits, derivatives and integrals. ( Calculus by Tomlinson Fort, D. C. Heath and Company, Boston, 1951). Power series are also how a calculator or computer actually calculates function values. When you type <sin(5)> into your calculator, it is not actually actually evaluating the sine function but instead using the related power series for sine to make its calculation! For now, I will introduce a few power series for well-known functions and when they converge and diverge before we look at how we can build a power series from scratch in the next section.    Power Series   In this section we will look at:     Power series of some well-known functions.    Determine the radius of convergence of power series.      Some Well Known Power Series  We will now look at a few examples of some well-known power series and also a couple of examples of how we can use a known power series to find a new power series.   A Geometric Series  One power series we can define easily is a series base on a geometric series. We saw in the last section that If we let and then     Another Geometric Series  We can find other similar series by some factoring and substitution. We try to write a power series as a product of sequence of coefficients times powers of .    A Third Geometric Series       Power Series of  Since a power series is just an infinite polynomial, we can differentiate or integrate a known power series using the power rule to get a new power series. Since      A Power Series from Differentiation  Since:  Note that when differentiating, we change the starting point of our sum from zero to one, since the is a constant in the starting series and becomes zero when we take the derivative and the new series starts at the term.    Power Series of Sine, Cosine and  Three of the most used series are the series for and . We will see in the next section, how to build these series from scratch. for now we define. Note that the derivative of the sine series is the cosine series. Also note if you replace in the exponential series with where is the imaginary number then the sum of the cosine series plus the sine series equals the exponential series! (Euler's formula)    Euler's Formula on Numberphile (22 minutes).      Intervals of Convergence  A key thing we want to know for a power series is where it converges. This is analogous to finding the domain of a function. This is where we need to know a few convergence\/divergence tests from the previous section. When we find the values where a series converges, this interval is known as the interval of convergence. For example, the base geometric series is known to converge when which can also be written as an interval or a trilinear inequality    An Interval of Convergence that Includes Only One Endpoint  Consider the power series: We need to think about what happens when we plug in various values of . If , the resulting series is the harmonic series which is known to converge. If we get an alternating series which converges by the alternating series test. If The result is a geometric-like series which we can use the limit comparison test with a geometric series to show converges. Finally, if the or , then the resulting sequence inside the series would not tend to zero, so it would diverge by the divergence test. Putting this all together gives and interval of convergence of     An Interval of Convergence that Includes Both Endpoints  Consider the power series: Again we can try various values of . If , the resulting series is one where the sequence inside the series is and the series can be shown to converge by the integral test, since . If , the resulting series is an alternating series that converges by the alternating series test. Since the series converges at and , it makes sense that it also converges for values between these two points. Like in the previous example, if is not between 1 and 3, then the resulting series would diverge by the divergence test.    An Infinite Interval of Convergence  Consider the series: For any value of that we choose, we get something that looks like a geometric series over a factorial. If we use the limit comparison test with and , then the limit would always tend to one. So this power series converges for all values of .    An Interval of Convergence that Includes Only One Point  Consider the series: If we let then the resulting series would just be . For any other value of , the resulting series would diverge by the divergence test. So this series only converges for .    Professor Dave Explains Power Series (7 minutes).     Reading Check-in  Check our WAMAP course page for a few questions that go along with today's reading on power series.    "
 },
 {
   "id": "section-3-3",
@@ -394,7 +394,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.10",
   "title": "An Infinite Interval of Convergence.",
-  "body": " An Infinite Interval of Convergence  Consider the series: For any value of that we choose, we get something that looks like a geometric series over a factorial. If we use the limit comparison test with and , then the limit would always tend to zero because of the factorial in the denominator. So this power series converges for all values of .  "
+  "body": " An Infinite Interval of Convergence  Consider the series: For any value of that we choose, we get something that looks like a geometric series over a factorial. If we use the limit comparison test with and , then the limit would always tend to one. So this power series converges for all values of .  "
 },
 {
   "id": "subsec-intervals-of-convergence-6",
@@ -1798,7 +1798,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "20",
   "title": "Applications of Double Integrals",
-  "body": " Applications of Double Integrals   In this final section we will look at a few applications. First we will look at integrating using polar coordinates, which is not technically an application but polar coordinates are often used in physics and engineering applications to simplify calculations. Then we will look at calculating center of mass before wrapping up with a few more application examples.    Applications of Double Integrals   In this section we will look at:     Double integrals in polar coordinates    Center of mass.    Applications      Double Integrals in Polar Coordinates  When integrating over the plane and using and as our variables, we divide up the region into tiny rectangles whose base is . In polar coordinates, the plane is divided up into circular sectors shaped like slices of pizza or pieces of pie. The area of a sector is radius times arc length and\\\\ as we shrink the area down to the d-level (calculus!) we get . Since is measured in radians and is unitless, has units of area units squared. provides the height and so the double integral calculates a volume. Integrating in polar coordinates simplifies calculations greatly for circular-like regions.   Calculate the double integral over the area pictured below. (This region is called an annulus.)   An annulus   an annulus or the area between a circle of radius 2 and a circle of radius 4 for angles between zero and pi over 2.    The region can be described in polar coordinates as and . We also need to convert the function to polar coordinates using and . The double integral is then       Calculate the double integral over the region pictured below:   A quarter of a shifted circle   The top right section of a circle of radius 1 with center at (1,0).    This region can be described in polar coordinates as since the point is in polar coordinates. And since the circle has polar equation and the line has polar equation . Note that so our double integral is      Here are two more video examples:   Double integral in polar coordinates example 1     Double integral in polar coordinates example 1     Reading Check-in  Check our WAMAP course page for a few questions that go along with today's reading on...     Center of Mass      Applications of Double Integrals  Recall from Math 152, that the center of mass of a region with uniform density is where is the mass or area and and are the moments of mass. Defining center of mass with double integrals is more straight-forward:   Center of Mass  For a region with area and uniform density: Note that with this more general definition, it is easy to convert to polar coordinates and also to generalize to higher dimensions.    Find the center of mass of the region bounded by and the axis.  A picture is always helpful.   Our region    a graph where the region between y = 1 minus x squared and the x axis is shaded.     Recall that the center of mass must lie along line of symmetry. Here the axis is a line of symmetry so . The area is The double integral we need to calculate is  So and .   This method is easily adaptable for a non-uniform density.   Find the center of mass of the region pictured below with density .   Annulus in the first quadrant    An annulus in the first quadrant with outer radius 8 and inner radius 4.     Mass is density times area or in terms of double integrals . The moments of mass are similarly defined as In this example it is easier to calculate with polar coordinates. We make the following conversions: We have there double integrals to calculate over the region and . And the center of mass is    Here are a few more examples using double integrals   Under Construction    Under Construction    Under Construction    Reading Check-in  Check our WAMAP course page for a few questions that go along with today's reading on applications of double integrals.    "
+  "body": " Applications of Double Integrals   In this final section we will look at a few applications. First we will look at integrating using polar coordinates, which is not technically an application but polar coordinates are often used in physics and engineering applications to simplify calculations. Then we will look at calculating center of mass before wrapping up with a few more application examples.    Applications of Double Integrals   In this section we will look at:     Double integrals in polar coordinates    Center of mass.    Applications      Double Integrals in Polar Coordinates  When integrating over the plane and using and as our variables, we divide up the region into tiny rectangles whose base is . In polar coordinates, the plane is divided up into circular sectors shaped like slices of pizza or pieces of pie. The area of a sector is radius times arc length and as we shrink the area down to the d-level (calculus!) we get . Since is measured in radians and is unitless, has units of area units squared. provides the height and so the double integral calculates a volume. Integrating in polar coordinates simplifies calculations greatly for circular-like regions.   Calculate the double integral over the area pictured below. (This region is called an annulus.)   An annulus   an annulus or the area between a circle of radius 2 and a circle of radius 4 for angles between zero and pi over 2.    The region can be described in polar coordinates as and . We also need to convert the function to polar coordinates using and . The double integral is then       Calculate the double integral over the region pictured below:   A quarter of a shifted circle   The top right section of a circle of radius 1 with center at (1,0).    This region can be described in polar coordinates as since the point is in polar coordinates. And since the circle has polar equation and the line has polar equation . Note that so our double integral is      Here are two more video examples:   Double integral in polar coordinates example 1     Double integral in polar coordinates example 2     Reading Check-in  Check our WAMAP course page for a few questions that go along with today's reading on...     Center of Mass  Recall from Math 152, that the center of mass of a region with uniform density is where is the mass or area and and are the moments of mass. Defining center of mass with double integrals is more straight-forward:   Center of Mass  For a region with area and uniform density: Note that with this more general definition, it is easy to convert to polar coordinates and also to generalize to higher dimensions.    Find the center of mass of the region bounded by and the axis.  A picture is always helpful.   Our region    a graph where the region between y = 1 minus x squared and the x axis is shaded.     Recall that the center of mass must lie along line of symmetry. Here the axis is a line of symmetry so . The area is The double integral we need to calculate is  So and .   This method is easily adaptable for a non-uniform density.   Find the center of mass of the region pictured below with density .   Annulus in the first quadrant    An annulus in the first quadrant with outer radius 8 and inner radius 4.     Mass is density times area or in terms of double integrals . The moments of mass are similarly defined as In this example it is easier to calculate with polar coordinates. We make the following conversions: We have there double integrals to calculate over the region and . And the center of mass is      Applications of Double Integrals  Here are a few more examples using double integrals.   A double integral may be used to calculate a polar area . Calculate the area inside the four-petal rose pictured below.   A four-petal rose   A four petal rose with petals of length two lying along each coordinate axis.    This curve is generated during one revolution . is bounded by the polar curve and zero, so the double integral is     Find the are inside the smaller loop of pictured below.   a limacon   a limacon graphed from zero to 2 pi with pi over six to five pi over six highlighted as the smaller loop.    The inner loop is traced out when since these are the values where . The double integral is      A lamp has two bulbs of a type with an average lifetime of 1000 hours. Assuming that we can model the probability of failure of these bulbs by an exponential density function with mean of 1000 hours. Find the probability that both bulbs fail within 1000 hours.  The exponential probability density function (pdf) is defined as for and and zero otherwise. Note and are the means. The probability under this surface.       Reading Check-in  Check our WAMAP course page for a few questions that go along with today's reading on applications of double integrals.    "
 },
 {
   "id": "section-20-3",
@@ -1843,52 +1843,52 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "20.6",
   "title": "",
-  "body": " Double integral in polar coordinates example 1   "
+  "body": " Double integral in polar coordinates example 2   "
 },
 {
-  "id": "subsec-double-integral-applications-4",
+  "id": "subsec-center-of-mass-4",
   "level": "2",
-  "url": "section-20.html#subsec-double-integral-applications-4",
+  "url": "section-20.html#subsec-center-of-mass-4",
   "type": "Example",
   "number": "20.7",
   "title": "",
   "body": " Find the center of mass of the region bounded by and the axis.  A picture is always helpful.   Our region    a graph where the region between y = 1 minus x squared and the x axis is shaded.     Recall that the center of mass must lie along line of symmetry. Here the axis is a line of symmetry so . The area is The double integral we need to calculate is  So and .  "
 },
 {
-  "id": "subsec-double-integral-applications-6",
+  "id": "subsec-center-of-mass-6",
   "level": "2",
-  "url": "section-20.html#subsec-double-integral-applications-6",
+  "url": "section-20.html#subsec-center-of-mass-6",
   "type": "Example",
   "number": "20.9",
   "title": "",
   "body": " Find the center of mass of the region pictured below with density .   Annulus in the first quadrant    An annulus in the first quadrant with outer radius 8 and inner radius 4.     Mass is density times area or in terms of double integrals . The moments of mass are similarly defined as In this example it is easier to calculate with polar coordinates. We make the following conversions: We have there double integrals to calculate over the region and . And the center of mass is   "
 },
 {
-  "id": "subsec-double-integral-applications-8",
+  "id": "subsec-double-integral-applications-3",
   "level": "2",
-  "url": "section-20.html#subsec-double-integral-applications-8",
+  "url": "section-20.html#subsec-double-integral-applications-3",
   "type": "Example",
   "number": "20.11",
   "title": "",
-  "body": " Under Construction  "
+  "body": " A double integral may be used to calculate a polar area . Calculate the area inside the four-petal rose pictured below.   A four-petal rose   A four petal rose with petals of length two lying along each coordinate axis.    This curve is generated during one revolution . is bounded by the polar curve and zero, so the double integral is   "
 },
 {
-  "id": "subsec-double-integral-applications-9",
+  "id": "subsec-double-integral-applications-4",
   "level": "2",
-  "url": "section-20.html#subsec-double-integral-applications-9",
-  "type": "Example",
-  "number": "20.12",
-  "title": "",
-  "body": " Under Construction  "
-},
-{
-  "id": "subsec-double-integral-applications-10",
-  "level": "2",
-  "url": "section-20.html#subsec-double-integral-applications-10",
+  "url": "section-20.html#subsec-double-integral-applications-4",
   "type": "Example",
   "number": "20.13",
   "title": "",
-  "body": " Under Construction  "
+  "body": " Find the are inside the smaller loop of pictured below.   a limacon   a limacon graphed from zero to 2 pi with pi over six to five pi over six highlighted as the smaller loop.    The inner loop is traced out when since these are the values where . The double integral is    "
+},
+{
+  "id": "subsec-double-integral-applications-5",
+  "level": "2",
+  "url": "section-20.html#subsec-double-integral-applications-5",
+  "type": "Example",
+  "number": "20.15",
+  "title": "",
+  "body": " A lamp has two bulbs of a type with an average lifetime of 1000 hours. Assuming that we can model the probability of failure of these bulbs by an exponential density function with mean of 1000 hours. Find the probability that both bulbs fail within 1000 hours.  The exponential probability density function (pdf) is defined as for and and zero otherwise. Note and are the means. The probability under this surface.     "
 },
 {
   "id": "sec-additional-resources",
@@ -1907,6 +1907,429 @@ var ptx_lunr_docs = [
   "number": "21.1",
   "title": "",
   "body": " The Numworks Calculator   "
+},
+{
+  "id": "worksheets",
+  "level": "1",
+  "url": "worksheets.html",
+  "type": "Section",
+  "number": "22",
+  "title": "In-Class Worksheets",
+  "body": " In-Class Worksheets   Sequences   Find a formula for the general term of the sequence with terms     Find a formula for the general term of the sequence with terms     Find a formula for the general term of the sequence with terms      Find the limit of the following sequences to determine if they converge or diverge.                                 A fish farmer has 5000 catfish in a pond. THe number of catfish increases by 8% per month and the farmer harvests 300 catfish per month. Write a recursive formula for the fish population in the pond with . How many catfish are in the pond after six months?     Infinite Series   Use the integral test to determine if the following series converges or diverges.     Use the integral test to determine if the following series converges or diverges.      Use the limit comparison test to determine if the following series converges or diverges. Compare each series to a series or geometric series                           Power Series   Find the radius of convergence for the series     Find the radius of convergence for the series      Given that has a radius of conversion of (-1, 1). Find the power series and determine the radius of convergence for the following functions.                    Taylor Series   Use the definition of the Taylor series to find the coefficients of the Taylor series for centered at . Once you recognize a pattern, write down a formula for the power series of     Repeat the previous exercise to find the Taylor series for     Use Euler's formula: to write down a formula for the Taylor series of centered at .    Finally, modify your formula from the previous exercise to write down a formula for the Taylor series of the function centered at .     Applications of Taylor Series   Use a Taylor series tp help you calculate the limit     Use the Taylor series of centered at to find a series representation of the integral Then use the first five terms of the series to estimate the value of the integral. Finally compare the result with a numerical integral calculator like the one on your graphing calculator or on Wolfram Alpha.    The period of a pendulum with length that makes a maximum angle with the vertical angle is where is a constant and is the acceleration of gravity. This integral may be calculated using a numerical technique like Simpson's rule. Use the first order approximation of to calculate the integral by hand for a pendulum of length meter, meters per second squared and to calculate the integral by hand and then compare it with the result for the actual integral calculated using a graphing calculator.     Vectors    Complete the following vector calculations using the vectors and                                         Calculate the area of the parallelogram with adjacent sides and     Non-zero line in the same plane if and only if the triple scalar product . Do the vectors , and lie in the same plane?    Bonus: Explain why the scalar triple product equaling zero must mean the vectors lie in the same plane.    Applications of Vectors   A football thrown by a quarterback has an initial speed of 70 miles per hour and an angle of elevation of . Determine the velocity vector.    Let , and be three forces acting on an object. What is the net force acting on the object? Find a fourth force acting on the object such that the net force is the zero vector.    Calculate the work done be the force Newtons that moves a particle from the point (3, -1, 0) to the point (2, 3, 1) along a straight line.    A boy applies the brakes on a bicycle by applying a force of 20 pounds on the pedal when the 6-inch crank makes a 40 degree angle with the horizontal as in the following figure. Find the torque at point P. Express your solution in foot-pounds.   an image of a the gears and pedals of a bicycle where the pedal attaches to the bicycle at point p.      Vector-valued Functions    Find the derivative of the following vector-valued functions                           Calculate the integral of the following vector-valued functions                    The T-N-B Frame   For the vector-valued function find the unit vectors , and . Then find the curvature function. Evaluate all of them at the point .    Describe, using your own words, what the vectors , and tell you about the curve. (A picture may be helpful in your description.)     Multi-variable Functions    Consider the following contour map for a function . Use a ruler to estimate the following derivatives at the points and .   a contour map consisting of three concentric circles.                                          where        Consider the following contour map for a function . The value of on the axis is zero.   a contour map consisting of four vertical lines.      What can you say about ?      Estimate the value of       Estimate the value of       Estimate the value of       What can you guess about the value of        Here is a contour map for the function    a contour map of h(x,y).      Plot the points (-1,1), (2,1), (-1,2) and (0.5,1) on the graph above.      Calculate the gradient vector at the points (-1,1), (2,1), (-1,2) and (0.5,1).      Plot the gradient vectors you calculated on the graph above, placing their tails at the corresponding points      Make a conjecture about the relationship between the gradient of a function and its level curves.       Partial Derivatives    Find the given partial derivative for the following functions                                                Applications of Partial Derivatives   Find the plane tangent to at the point     Find a linear approximation for at the point (3, 2, 6) to approximate .    If a sound with frequency is produced by a source traveling along a line with speed and an observer is traveling along the same line but in the opposite direction toward the source with velocity , then the frequency of the sound heard by the observer is This is known as the Doppler effect. Suppose that at a particular moment, you are in a train traveling at 34 meters per second and accelerating at 12 meters per second squared. A train is approaching you from the opposite direction on the other track at 40 meters per second and accelerating at 1.4 meters per second squared and it sounds its whistle, which has a frequency of 460 Hertz. At that instant, what is the perceived frequency that you hear and how fast is it changing?     Optimization   Find and classify (maximum, minimum or saddle point) all of the critical points for the function     Find and classify (maximum, minimum or saddle point) all of the critical points for the function      Double Integrals I   Calculate the double integral over the region      Calculate the double integral over the region      Calculate the double integral over the region      Calculate the double integral over the region       Double Integrals II   Find the volume of the solid under the surface over the region enclosed by and     Evaluate the double integral by switching the order of integration      Double Integrals in Polar Coordinates   Evaluate the following double integral by converting to polar coordinates over the region in the third quadrant between and      Calculate the area of the region of one \"petal\" in the four-petal rose pictured below.   a four petal rose with one petal, in the first quadrant shaded.     "
+},
+{
+  "id": "ws-1-2",
+  "level": "2",
+  "url": "worksheets.html#ws-1-2",
+  "type": "Worksheet Exercise",
+  "number": "22.1.1",
+  "title": "",
+  "body": " Find a formula for the general term of the sequence with terms   "
+},
+{
+  "id": "ws-1-3",
+  "level": "2",
+  "url": "worksheets.html#ws-1-3",
+  "type": "Worksheet Exercise",
+  "number": "22.1.2",
+  "title": "",
+  "body": " Find a formula for the general term of the sequence with terms   "
+},
+{
+  "id": "ws-1-4",
+  "level": "2",
+  "url": "worksheets.html#ws-1-4",
+  "type": "Worksheet Exercise",
+  "number": "22.1.3",
+  "title": "",
+  "body": " Find a formula for the general term of the sequence with terms   "
+},
+{
+  "id": "ws-1-5",
+  "level": "2",
+  "url": "worksheets.html#ws-1-5",
+  "type": "Worksheet Exercise",
+  "number": "22.1.4",
+  "title": "",
+  "body": "  Find the limit of the following sequences to determine if they converge or diverge.                               "
+},
+{
+  "id": "ws-1-6",
+  "level": "2",
+  "url": "worksheets.html#ws-1-6",
+  "type": "Worksheet Exercise",
+  "number": "22.1.5",
+  "title": "",
+  "body": " A fish farmer has 5000 catfish in a pond. THe number of catfish increases by 8% per month and the farmer harvests 300 catfish per month. Write a recursive formula for the fish population in the pond with . How many catfish are in the pond after six months?  "
+},
+{
+  "id": "ws-2-2",
+  "level": "2",
+  "url": "worksheets.html#ws-2-2",
+  "type": "Worksheet Exercise",
+  "number": "22.2.1",
+  "title": "",
+  "body": " Use the integral test to determine if the following series converges or diverges.   "
+},
+{
+  "id": "ws-2-3",
+  "level": "2",
+  "url": "worksheets.html#ws-2-3",
+  "type": "Worksheet Exercise",
+  "number": "22.2.2",
+  "title": "",
+  "body": " Use the integral test to determine if the following series converges or diverges.   "
+},
+{
+  "id": "ws-2-4",
+  "level": "2",
+  "url": "worksheets.html#ws-2-4",
+  "type": "Worksheet Exercise",
+  "number": "22.2.3",
+  "title": "",
+  "body": "  Use the limit comparison test to determine if the following series converges or diverges. Compare each series to a series or geometric series                        "
+},
+{
+  "id": "ws-3-2",
+  "level": "2",
+  "url": "worksheets.html#ws-3-2",
+  "type": "Worksheet Exercise",
+  "number": "22.3.1",
+  "title": "",
+  "body": " Find the radius of convergence for the series   "
+},
+{
+  "id": "ws-3-3",
+  "level": "2",
+  "url": "worksheets.html#ws-3-3",
+  "type": "Worksheet Exercise",
+  "number": "22.3.2",
+  "title": "",
+  "body": " Find the radius of convergence for the series   "
+},
+{
+  "id": "ws-3-4",
+  "level": "2",
+  "url": "worksheets.html#ws-3-4",
+  "type": "Worksheet Exercise",
+  "number": "22.3.3",
+  "title": "",
+  "body": "  Given that has a radius of conversion of (-1, 1). Find the power series and determine the radius of convergence for the following functions.                 "
+},
+{
+  "id": "ws-4-2",
+  "level": "2",
+  "url": "worksheets.html#ws-4-2",
+  "type": "Worksheet Exercise",
+  "number": "22.4.1",
+  "title": "",
+  "body": " Use the definition of the Taylor series to find the coefficients of the Taylor series for centered at . Once you recognize a pattern, write down a formula for the power series of   "
+},
+{
+  "id": "ws-4-3",
+  "level": "2",
+  "url": "worksheets.html#ws-4-3",
+  "type": "Worksheet Exercise",
+  "number": "22.4.2",
+  "title": "",
+  "body": " Repeat the previous exercise to find the Taylor series for   "
+},
+{
+  "id": "ws-4-4",
+  "level": "2",
+  "url": "worksheets.html#ws-4-4",
+  "type": "Worksheet Exercise",
+  "number": "22.4.3",
+  "title": "",
+  "body": " Use Euler's formula: to write down a formula for the Taylor series of centered at .  "
+},
+{
+  "id": "ws-4-5",
+  "level": "2",
+  "url": "worksheets.html#ws-4-5",
+  "type": "Worksheet Exercise",
+  "number": "22.4.4",
+  "title": "",
+  "body": " Finally, modify your formula from the previous exercise to write down a formula for the Taylor series of the function centered at .  "
+},
+{
+  "id": "ws-5-2",
+  "level": "2",
+  "url": "worksheets.html#ws-5-2",
+  "type": "Worksheet Exercise",
+  "number": "22.5.1",
+  "title": "",
+  "body": " Use a Taylor series tp help you calculate the limit   "
+},
+{
+  "id": "ws-5-3",
+  "level": "2",
+  "url": "worksheets.html#ws-5-3",
+  "type": "Worksheet Exercise",
+  "number": "22.5.2",
+  "title": "",
+  "body": " Use the Taylor series of centered at to find a series representation of the integral Then use the first five terms of the series to estimate the value of the integral. Finally compare the result with a numerical integral calculator like the one on your graphing calculator or on Wolfram Alpha.  "
+},
+{
+  "id": "ws-5-4",
+  "level": "2",
+  "url": "worksheets.html#ws-5-4",
+  "type": "Worksheet Exercise",
+  "number": "22.5.3",
+  "title": "",
+  "body": " The period of a pendulum with length that makes a maximum angle with the vertical angle is where is a constant and is the acceleration of gravity. This integral may be calculated using a numerical technique like Simpson's rule. Use the first order approximation of to calculate the integral by hand for a pendulum of length meter, meters per second squared and to calculate the integral by hand and then compare it with the result for the actual integral calculated using a graphing calculator.  "
+},
+{
+  "id": "ws-6-2",
+  "level": "2",
+  "url": "worksheets.html#ws-6-2",
+  "type": "Worksheet Exercise",
+  "number": "22.6.1",
+  "title": "",
+  "body": "  Complete the following vector calculations using the vectors and                                       "
+},
+{
+  "id": "ws-6-3",
+  "level": "2",
+  "url": "worksheets.html#ws-6-3",
+  "type": "Worksheet Exercise",
+  "number": "22.6.2",
+  "title": "",
+  "body": " Calculate the area of the parallelogram with adjacent sides and   "
+},
+{
+  "id": "ws-6-4",
+  "level": "2",
+  "url": "worksheets.html#ws-6-4",
+  "type": "Worksheet Exercise",
+  "number": "22.6.3",
+  "title": "",
+  "body": " Non-zero line in the same plane if and only if the triple scalar product . Do the vectors , and lie in the same plane?  "
+},
+{
+  "id": "ws-7-2",
+  "level": "2",
+  "url": "worksheets.html#ws-7-2",
+  "type": "Worksheet Exercise",
+  "number": "22.7.1",
+  "title": "",
+  "body": " A football thrown by a quarterback has an initial speed of 70 miles per hour and an angle of elevation of . Determine the velocity vector.  "
+},
+{
+  "id": "ws-7-3",
+  "level": "2",
+  "url": "worksheets.html#ws-7-3",
+  "type": "Worksheet Exercise",
+  "number": "22.7.2",
+  "title": "",
+  "body": " Let , and be three forces acting on an object. What is the net force acting on the object? Find a fourth force acting on the object such that the net force is the zero vector.  "
+},
+{
+  "id": "ws-7-4",
+  "level": "2",
+  "url": "worksheets.html#ws-7-4",
+  "type": "Worksheet Exercise",
+  "number": "22.7.3",
+  "title": "",
+  "body": " Calculate the work done be the force Newtons that moves a particle from the point (3, -1, 0) to the point (2, 3, 1) along a straight line.  "
+},
+{
+  "id": "ws-7-5",
+  "level": "2",
+  "url": "worksheets.html#ws-7-5",
+  "type": "Worksheet Exercise",
+  "number": "22.7.4",
+  "title": "",
+  "body": " A boy applies the brakes on a bicycle by applying a force of 20 pounds on the pedal when the 6-inch crank makes a 40 degree angle with the horizontal as in the following figure. Find the torque at point P. Express your solution in foot-pounds.   an image of a the gears and pedals of a bicycle where the pedal attaches to the bicycle at point p.   "
+},
+{
+  "id": "ws-8-2",
+  "level": "2",
+  "url": "worksheets.html#ws-8-2",
+  "type": "Worksheet Exercise",
+  "number": "22.8.1",
+  "title": "",
+  "body": "  Find the derivative of the following vector-valued functions                        "
+},
+{
+  "id": "ws-8-3",
+  "level": "2",
+  "url": "worksheets.html#ws-8-3",
+  "type": "Worksheet Exercise",
+  "number": "22.8.2",
+  "title": "",
+  "body": "  Calculate the integral of the following vector-valued functions                 "
+},
+{
+  "id": "ws-9-2",
+  "level": "2",
+  "url": "worksheets.html#ws-9-2",
+  "type": "Worksheet Exercise",
+  "number": "22.9.1",
+  "title": "",
+  "body": " For the vector-valued function find the unit vectors , and . Then find the curvature function. Evaluate all of them at the point .  "
+},
+{
+  "id": "ws-9-3",
+  "level": "2",
+  "url": "worksheets.html#ws-9-3",
+  "type": "Worksheet Exercise",
+  "number": "22.9.2",
+  "title": "",
+  "body": " Describe, using your own words, what the vectors , and tell you about the curve. (A picture may be helpful in your description.)  "
+},
+{
+  "id": "ws-10-2",
+  "level": "2",
+  "url": "worksheets.html#ws-10-2",
+  "type": "Worksheet Exercise",
+  "number": "22.10.1",
+  "title": "",
+  "body": "  Consider the following contour map for a function . Use a ruler to estimate the following derivatives at the points and .   a contour map consisting of three concentric circles.                                          where     "
+},
+{
+  "id": "ws-10-3",
+  "level": "2",
+  "url": "worksheets.html#ws-10-3",
+  "type": "Worksheet Exercise",
+  "number": "22.10.2",
+  "title": "",
+  "body": "  Consider the following contour map for a function . The value of on the axis is zero.   a contour map consisting of four vertical lines.      What can you say about ?      Estimate the value of       Estimate the value of       Estimate the value of       What can you guess about the value of     "
+},
+{
+  "id": "ws-10-4",
+  "level": "2",
+  "url": "worksheets.html#ws-10-4",
+  "type": "Worksheet Exercise",
+  "number": "22.10.3",
+  "title": "",
+  "body": "  Here is a contour map for the function    a contour map of h(x,y).      Plot the points (-1,1), (2,1), (-1,2) and (0.5,1) on the graph above.      Calculate the gradient vector at the points (-1,1), (2,1), (-1,2) and (0.5,1).      Plot the gradient vectors you calculated on the graph above, placing their tails at the corresponding points      Make a conjecture about the relationship between the gradient of a function and its level curves.    "
+},
+{
+  "id": "ws-11-2",
+  "level": "2",
+  "url": "worksheets.html#ws-11-2",
+  "type": "Worksheet Exercise",
+  "number": "22.11.1",
+  "title": "",
+  "body": "  Find the given partial derivative for the following functions                                             "
+},
+{
+  "id": "ws-12-2",
+  "level": "2",
+  "url": "worksheets.html#ws-12-2",
+  "type": "Worksheet Exercise",
+  "number": "22.12.1",
+  "title": "",
+  "body": " Find the plane tangent to at the point   "
+},
+{
+  "id": "ws-12-3",
+  "level": "2",
+  "url": "worksheets.html#ws-12-3",
+  "type": "Worksheet Exercise",
+  "number": "22.12.2",
+  "title": "",
+  "body": " Find a linear approximation for at the point (3, 2, 6) to approximate .  "
+},
+{
+  "id": "ws-12-4",
+  "level": "2",
+  "url": "worksheets.html#ws-12-4",
+  "type": "Worksheet Exercise",
+  "number": "22.12.3",
+  "title": "",
+  "body": " If a sound with frequency is produced by a source traveling along a line with speed and an observer is traveling along the same line but in the opposite direction toward the source with velocity , then the frequency of the sound heard by the observer is This is known as the Doppler effect. Suppose that at a particular moment, you are in a train traveling at 34 meters per second and accelerating at 12 meters per second squared. A train is approaching you from the opposite direction on the other track at 40 meters per second and accelerating at 1.4 meters per second squared and it sounds its whistle, which has a frequency of 460 Hertz. At that instant, what is the perceived frequency that you hear and how fast is it changing?  "
+},
+{
+  "id": "ws-13-2",
+  "level": "2",
+  "url": "worksheets.html#ws-13-2",
+  "type": "Worksheet Exercise",
+  "number": "22.13.1",
+  "title": "",
+  "body": " Find and classify (maximum, minimum or saddle point) all of the critical points for the function   "
+},
+{
+  "id": "ws-13-3",
+  "level": "2",
+  "url": "worksheets.html#ws-13-3",
+  "type": "Worksheet Exercise",
+  "number": "22.13.2",
+  "title": "",
+  "body": " Find and classify (maximum, minimum or saddle point) all of the critical points for the function   "
+},
+{
+  "id": "ws-14-2",
+  "level": "2",
+  "url": "worksheets.html#ws-14-2",
+  "type": "Worksheet Exercise",
+  "number": "22.14.1",
+  "title": "",
+  "body": " Calculate the double integral over the region    "
+},
+{
+  "id": "ws-14-3",
+  "level": "2",
+  "url": "worksheets.html#ws-14-3",
+  "type": "Worksheet Exercise",
+  "number": "22.14.2",
+  "title": "",
+  "body": " Calculate the double integral over the region    "
+},
+{
+  "id": "ws-14-4",
+  "level": "2",
+  "url": "worksheets.html#ws-14-4",
+  "type": "Worksheet Exercise",
+  "number": "22.14.3",
+  "title": "",
+  "body": " Calculate the double integral over the region    "
+},
+{
+  "id": "ws-14-5",
+  "level": "2",
+  "url": "worksheets.html#ws-14-5",
+  "type": "Worksheet Exercise",
+  "number": "22.14.4",
+  "title": "",
+  "body": " Calculate the double integral over the region    "
+},
+{
+  "id": "ws-15-2",
+  "level": "2",
+  "url": "worksheets.html#ws-15-2",
+  "type": "Worksheet Exercise",
+  "number": "22.15.1",
+  "title": "",
+  "body": " Find the volume of the solid under the surface over the region enclosed by and   "
+},
+{
+  "id": "ws-15-3",
+  "level": "2",
+  "url": "worksheets.html#ws-15-3",
+  "type": "Worksheet Exercise",
+  "number": "22.15.2",
+  "title": "",
+  "body": " Evaluate the double integral by switching the order of integration   "
+},
+{
+  "id": "ws-16-2",
+  "level": "2",
+  "url": "worksheets.html#ws-16-2",
+  "type": "Worksheet Exercise",
+  "number": "22.16.1",
+  "title": "",
+  "body": " Evaluate the following double integral by converting to polar coordinates over the region in the third quadrant between and    "
+},
+{
+  "id": "ws-16-3",
+  "level": "2",
+  "url": "worksheets.html#ws-16-3",
+  "type": "Worksheet Exercise",
+  "number": "22.16.2",
+  "title": "",
+  "body": " Calculate the area of the region of one \"petal\" in the four-petal rose pictured below.   a four petal rose with one petal, in the first quadrant shaded.   "
 }
 ]
 

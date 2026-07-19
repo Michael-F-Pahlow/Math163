@@ -78,5 +78,77 @@ eBookConfig.enable_chatcodes =  false;
 <div style="text-align: center;">Reloading this page will reset a start location</div>
 <div class="video-box" style="width: 100%;padding-top: 56.25%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/35rHKc6WDSE?&amp;modestbranding=1&amp;rel=0&amp;autoplay=1" id="section-17-5-3-2"></iframe></div>
 </div></main></div>
+<script data-pretext-tools-inverse-search="true">
+(function() {
+  if (window.__pretextInverseSearchInjected) return;
+  window.__pretextInverseSearchInjected = true;
+  var lastHighlighted = null;
+
+  function findIdAncestor(el) {
+    while (el && el !== document.body && el !== document.documentElement) {
+      if (el.id && el.id.length > 0) return el;
+      el = el.parentElement;
+    }
+    return null;
+  }
+
+  // Hover highlight
+  document.addEventListener("mouseover", function(e) {
+    var target = findIdAncestor(e.target);
+    if (lastHighlighted && lastHighlighted !== target) {
+      lastHighlighted.style.outline = "";
+    }
+    if (target) {
+      target.style.outline = "2px solid rgba(0,122,204,0.4)";
+      lastHighlighted = target;
+    }
+  });
+
+  document.addEventListener("mouseout", function(e) {
+    if (lastHighlighted) {
+      lastHighlighted.style.outline = "";
+      lastHighlighted = null;
+    }
+  });
+
+  // Forward search: parent webview sends scrollTo messages
+  window.addEventListener("message", function(event) {
+    var msg = event.data;
+    if (msg && msg.command === "scrollTo" && msg.id) {
+      console.log("[ForwardSearch] scrollTo:", msg.id);
+      var el = document.getElementById(msg.id);
+      if (el) {
+        el.scrollIntoView({ behavior: "instant", block: "center" });
+        el.style.outline = "3px solid #007acc";
+        setTimeout(function() { el.style.outline = ""; }, 2000);
+      } else {
+        console.log("[ForwardSearch] element not found:", msg.id);
+      }
+    }
+  });
+
+  // Single click anywhere — find nearest ancestor with an id and jump
+  document.addEventListener("click", function(e) {
+    if (e.target.tagName === "A" || e.target.closest("a")) return;
+    var target = findIdAncestor(e.target);
+    if (target) {
+      e.preventDefault();
+      target.style.outline = "3px solid #d4a017";
+      setTimeout(function() { target.style.outline = ""; }, 1500);
+      // Extract a text snippet from the clicked element for text-based search
+      var textSnippet = "";
+      var clickedEl = e.target.closest(".para, p, div.para") || e.target;
+      if (clickedEl) {
+        textSnippet = (clickedEl.textContent || "").trim().substring(0, 80);
+      }
+      window.parent.postMessage({
+        command: "jumpToSource",
+        id: target.id,
+        text: textSnippet
+      }, "*");
+    }
+  }, true);
+})();
+</script>
 </body>
 </html>
